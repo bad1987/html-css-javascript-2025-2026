@@ -113,13 +113,6 @@ Ce cours complet de 2 mois (16 sessions) est spécialement conçu pour les débu
 - **Évaluation par les pairs**
 - **Feedback constructif**
 
-### Certification
-- **Attestation de compétences** HTML/CSS/JavaScript avec niveaux détaillés
-- **Portfolio professionnel** avec projets réalisés et code source
-- **Recommandation** pour stages/emplois juniors avec évaluation des compétences
-- **Accès privilégié** aux formations avancées et communauté alumni
-- **Badge numérique** vérifiable pour LinkedIn/GitHub
-
 ## Débouchés Professionnels
 
 ### Carrières Possibles
@@ -128,57 +121,6 @@ Ce cours complet de 2 mois (16 sessions) est spécialement conçu pour les débu
 - **Développeur Full-Stack Junior**
 - **Spécialiste UX/UI**
 - **Développeur d'Applications Web**
-
-### Salaire Moyen (Cameroun)
-- **Débutant** : 150,000 - 250,000 FCFA/mois
-- **Après 6 mois d'expérience** : 300,000 - 500,000 FCFA/mois
-- **Full-stack confirmé** : 500,000 - 1,000,000 FCFA/mois
-
-### Entreprises Partenaires
-- Startups technologiques locales
-- Agences de communication digitale
-- Grandes entreprises du numérique
-- Organisations internationales
-
-## Conditions d'Admission
-
-### Critères d'Admission
-- **Motivation** et intérêt pour le numérique
-- **Aucun diplôme** informatique requis
-- **Niveau lycée** minimum recommandé
-- **Accès internet** régulier
-
-### Processus d'Inscription
-1. **Candidature en ligne** avec CV/motivation
-2. **Test d'évaluation** des aptitudes logiques
-3. **Entretien individuel** avec formateur
-4. **Inscription définitive** sous 48h
-
-### Frais de Formation
-- **Frais total** : 150,000 FCFA
-- **Paiement échelonné** possible
-- **Matériel fourni** (accès plateforme)
-- **Remise** pour paiement comptant
-
-## Infrastructure et Ressources
-
-### Plateforme d'Apprentissage
-- **Accès 24/7** aux ressources
-- **Vidéos de cours** enregistrées
-- **Exercices interactifs** en ligne
-- **Forum communautaire** d'entraide
-
-### Équipement Requis
-- **Ordinateur portable** (Windows/Mac/Linux)
-- **Connexion internet** stable (4G minimum)
-- **Casque audio** pour sessions synchrones
-- **Espace de travail** calme et dédié
-
-### Support Technique
-- **Assistance 24/7** pendant la formation
-- **Sessions de dépannage** hebdomadaires
-- **Groupe Telegram** pour questions rapides
-- **Documentation complète** en ligne
 
 ## Calendrier Prévisionnel
 
@@ -198,35 +140,6 @@ Ce cours complet de 2 mois (16 sessions) est spécialement conçu pour les débu
 - Semaine 7-8 : Consolidation et spécialisation
 - Focus : Projet professionnel et débouchés
 
-## Garanties et Engagements
-
-### Satisfaction Garantie
-- **Remboursement** intégral si insatisfaction (15 premiers jours)
-- **Accompagnement** personnalisé assuré
-- **Actualisation** continue du contenu
-- **Placement** facilité en entreprise
-
-### Qualité Pédagogique
-- **Formateurs experts** avec 5+ ans d'expérience
-- **Méthodes éprouvées** depuis 3 ans
-- **Taux de réussite** > 85%
-- **Satisfaction apprenants** : 4.8/5
-
-## Contact et Informations
-
-### Coordonnées
-- **Email** : contact@devweb-cm.com
-- **Téléphone** : +237 XXX XXX XXX
-- **Site web** : www.devweb-cm.com
-- **Adresse** : [Adresse physique]
-
-### Sessions d'Information
-- **Webinaires gratuits** tous les mercredis
-- **Journées portes ouvertes** sur rendez-vous
-- **Visites d'entreprises** partenaires
-- **Témoignages** d'anciens apprenants
-
----
 
 **Prêt à commencer votre carrière en développement web ?**
 **Inscrivez-vous dès maintenant et transformez votre avenir numérique !** 🚀
