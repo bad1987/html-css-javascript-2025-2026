@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+  <link rel="manifest" href="{{ config.site_url }}manifest.json">
+  <link rel="icon" type="image/x-icon" href="{{ config.site_url }}assets/images/favicon.ico">
+  <meta name="theme-color" content="#3f51b5">
+  <meta name="apple-mobile-web-app-title" content="Web Dev Course">
+  <meta name="application-name" content="Web Dev Course">
+  
+  <!-- iOS Safari support -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="apple-touch-icon" href="{{ config.site_url }}assets/img/icon-192.png">
+  
+  <!-- Add custom styles if needed -->
+  <style>
+    /* Custom PWA styling can go here */
+  </style>
+{% endblock %}
+
+{% block site_scripts %}
+  {{ super() }}
+  <script>
+    // Register service worker
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('{{ config.site_url }}sw.js')
+          .then(function(registration) {
+            console.log('ServiceWorker registration successful with scope: ', registration.scope);
+          })
+          .catch(function(err) {
+            console.log('ServiceWorker registration failed: ', err);
+          });
+      });
+    }
+  </script>
+{% endblock %}

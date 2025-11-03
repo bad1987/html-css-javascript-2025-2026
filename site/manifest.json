@@ -1,0 +1,23 @@
+{
+  "name": "HTML/CSS/JavaScript Course 2025-2026",
+  "short_name": "Web Dev Course",
+  "description": "Complete HTML, CSS, and JavaScript course for beginners",
+  "start_url": "/html-css-javascript-2025-2026/",
+  "scope": "/html-css-javascript-2025-2026/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#3f51b5",
+  "icons": [
+    {
+      "src": "/html-css-javascript-2025-2026/assets/img/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/html-css-javascript-2025-2026/assets/img/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

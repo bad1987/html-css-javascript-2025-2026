@@ -3,3 +3,4 @@ mkdocs-material
 pymdown-extensions
 mkdocs-minify-plugin
 mkdocs-print-site-plugin
+mkdocs-pdf-export-plugin

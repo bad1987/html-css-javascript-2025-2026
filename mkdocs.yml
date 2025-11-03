@@ -6,6 +6,7 @@ site_author: Auteur du Cours
 # Theme configuration
 theme:
   name: material
+  custom_dir: docs/.overrides
   language: fr
   palette:
     - media: "(prefers-color-scheme: light)"
