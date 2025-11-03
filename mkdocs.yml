@@ -1,0 +1,121 @@
+site_name: Cours HTML, CSS et JavaScript 2025-2026
+site_url: https://bad1987.github.io/html-css-javascript-2025-2026
+site_description: Cours complet de développement web pour débutants
+site_author: Auteur du Cours
+
+# Theme configuration
+theme:
+  name: material
+  language: fr
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.indexes
+    - toc.follow
+    - content.code.annotate
+
+# Repository configuration
+repo_name: html-css-javascript-2025-2026
+repo_url: https://github.com/bad1987/html-css-javascript-2025-2026
+
+# Plugins
+plugins:
+  - search:
+      lang: fr
+  - minify:
+      minify_html: true
+  - print-site:
+      add_to_navigation: true
+      print_page_title: 'Imprimer tout le cours'
+
+# Navigation menu - include all modules that exist
+nav:
+  - Accueil: index.md
+  - Module 1 - Introduction au Développement Web:
+    - module-01-introduction/README.md
+    - module-01-introduction/cas-pratique.md
+    - module-01-introduction/exercices-maison.md
+  - Module 2 - Structure et Sémantique HTML:
+    - module-02-html-structure/README.md
+    - module-02-html-structure/cas-pratique.md
+    - module-02-html-structure/exercices-maison.md
+  - Module 3 - Notions Fondamentales du CSS:
+    - module-03-css-fundamentals/README.md
+    - module-03-css-fundamentals/cas-pratique.md
+    - module-03-css-fundamentals/exercices-maison.md
+  - Module 4 - Mise en Page et Design Responsive avec CSS:
+    - module-04-css-layout/README.md
+    - module-04-css-layout/cas-pratique.md
+    - module-04-css-layout/exercices-maison.md
+  - Module 5 - Notions de Base JavaScript:
+    - module-05-javascript-basics/README.md
+    - module-05-javascript-basics/cas-pratique.md
+    - module-05-javascript-basics/exercices-maison.md
+  - Module 6 - Fonctions et Objets JavaScript:
+    - module-06-javascript-functions-objects/README.md
+    - module-06-javascript-functions-objects/cas-pratique.md
+    - module-06-javascript-functions-objects/exercices-maison.md
+  - Module 7 - JavaScript Avancé et APIs:
+    - module-07-advanced-javascript-apis/README.md
+    - module-07-advanced-javascript-apis/cas-pratique.md
+    - module-07-advanced-javascript-apis/exercices-maison.md
+  - Module 8 - Applications Web Full-Stack:
+    - module-08-fullstack-web-applications/README.md
+    - module-08-fullstack-web-applications/cas-pratique.md
+    - module-08-fullstack-web-applications/exercices-maison.md
+  - Module 9 - Sujets Avancés et Bonnes Pratiques:
+    - module-09-advanced-topics-best-practices/README.md
+    - module-09-advanced-topics-best-practices/cas-pratique.md
+    - module-09-advanced-topics-best-practices/exercices-maison.md
+
+# Extra CSS & JavaScript
+extra_css:
+  - stylesheets/extra.css
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - meta
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
