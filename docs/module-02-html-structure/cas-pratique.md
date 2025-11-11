@@ -1,80 +1,80 @@
-# Cas Pratique : Site Web de Recettes de Cuisine
+# Practical Project: Cooking Recipes Website
 
-## Contexte du Projet
-Vous maîtrisez maintenant les bases du HTML et vous voulez créer un site web utile et pratique. Ce projet vous permettra de pratiquer tous les éléments HTML sémantiques, les liens, les images et les tableaux vus dans ce module.
+## Project Context
+You now master the basics of HTML and want to create a useful and practical website. This project will allow you to practice all the semantic HTML elements, links, images, and tables covered in this module.
 
-## Objectif
-Créer un site web complet de recettes de cuisine avec plusieurs pages, utilisant HTML sémantique pour une bonne accessibilité et SEO.
+## Objective
+Create a complete cooking recipes website with multiple pages, using semantic HTML for good accessibility and SEO.
 
-## Structure du Projet
+## Project Structure
 ```
-recettes-cuisine/
-├── index.html           # Page d'accueil
-├── recettes.html        # Liste des recettes
-├── contact.html         # Page de contact
+cooking-recipes/
+├── index.html           # Home page
+├── recipes.html         # Recipe list
+├── contact.html         # Contact page
 ├── assets/
-│   └── images/          # Dossier pour les images
+│   └── images/          # Folder for images
 └── README.md           # Documentation
 ```
 
-## Étapes de Réalisation
+## Implementation Steps
 
-### Étape 1 : Configuration du Projet
-1. Créez un dossier `recettes-cuisine`
-2. Créez les fichiers HTML nécessaires
-3. Préparez des images d'exemple (ou utilisez des URLs d'images en ligne)
+### Step 1: Project Setup
+1. Create a folder `cooking-recipes`
+2. Create the necessary HTML files
+3. Prepare example images (or use online image URLs)
 
-### Étape 2 : Page d'Accueil (index.html)
-Créez une page d'accueil attractive avec :
+### Step 2: Home Page (index.html)
+Create an attractive home page with:
 
-#### En-tête avec navigation
+#### Header with navigation
 ```html
 <header>
-    <h1>🍳 Mes Délicieuses Recettes</h1>
+    <h1>🍳 My Delicious Recipes</h1>
     <nav>
         <ul>
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="recettes.html">Recettes</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="recipes.html">Recipes</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
 </header>
 ```
 
-#### Section d'introduction
+#### Introduction section
 ```html
 <main>
     <section id="hero">
-        <h2>Découvrez des Recettes Simples et Délicieuses</h2>
-        <p>Apprenez à cuisiner des plats savoureux avec nos recettes faciles à suivre.</p>
-        <a href="recettes.html" class="btn-primary">Voir les Recettes</a>
+        <h2>Discover Simple and Delicious Recipes</h2>
+        <p>Learn to cook tasty dishes with our easy-to-follow recipes.</p>
+        <a href="recipes.html" class="btn-primary">View Recipes</a>
     </section>
 </main>
 ```
 
-#### Section des recettes populaires
+#### Popular recipes section
 ```html
 <section id="featured-recipes">
-    <h2>Recettes Populaires</h2>
+    <h2>Popular Recipes</h2>
     <div class="recipe-grid">
         <article class="recipe-card">
-            <img src="assets/images/pasta.jpg" alt="Pâtes à la carbonara" width="300" height="200">
-            <h3><a href="recettes.html#pasta">Pâtes à la Carbonara</a></h3>
-            <p>Une recette italienne classique, crémeuse et savoureuse.</p>
+            <img src="assets/images/pasta.jpg" alt="Spaghetti Carbonara" width="300" height="200">
+            <h3><a href="recipes.html#pasta">Spaghetti Carbonara</a></h3>
+            <p>A classic Italian recipe, creamy and savory.</p>
             <div class="recipe-meta">
                 <span>⏱️ 25 min</span>
-                <span>👥 4 personnes</span>
+                <span>👥 4 people</span>
                 <span>⭐ 4.8/5</span>
             </div>
         </article>
 
         <article class="recipe-card">
-            <img src="assets/images/salad.jpg" alt="Salade César" width="300" height="200">
-            <h3><a href="recettes.html#salad">Salade César</a></h3>
-            <p>Fraîche et croquante, parfaite pour l'été.</p>
+            <img src="assets/images/salad.jpg" alt="Caesar Salad" width="300" height="200">
+            <h3><a href="recipes.html#salad">Caesar Salad</a></h3>
+            <p>Fresh and crunchy, perfect for summer.</p>
             <div class="recipe-meta">
                 <span>⏱️ 15 min</span>
-                <span>👥 2 personnes</span>
+                <span>👥 2 people</span>
                 <span>⭐ 4.5/5</span>
             </div>
         </article>
@@ -82,127 +82,127 @@ Créez une page d'accueil attractive avec :
 </section>
 ```
 
-### Étape 3 : Page des Recettes (recettes.html)
-Créez une page complète avec plusieurs recettes :
+### Step 3: Recipes Page (recipes.html)
+Create a complete page with multiple recipes:
 
-#### Structure sémantique
+#### Semantic structure
 ```html
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recettes - Mes Délicieuses Recettes</title>
+    <title>Recipes - My Delicious Recipes</title>
 </head>
 <body>
     <header>
-        <h1>🍳 Mes Délicieuses Recettes</h1>
+        <h1>🍳 My Delicious Recipes</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="recettes.html">Recettes</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="recipes.html">Recipes</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <h2>Notre Collection de Recettes</h2>
+        <h2>Our Recipe Collection</h2>
 
         <section class="recipe-filters">
-            <h3>Filtrer par Catégorie</h3>
+            <h3>Filter by Category</h3>
             <ul>
-                <li><a href="#pasta">Pâtes</a></li>
-                <li><a href="#salads">Salades</a></li>
+                <li><a href="#pasta">Pasta</a></li>
+                <li><a href="#salads">Salads</a></li>
                 <li><a href="#desserts">Desserts</a></li>
             </ul>
         </section>
 
         <article id="pasta" class="recipe">
             <header>
-                <h3>Pâtes à la Carbonara</h3>
+                <h3>Spaghetti Carbonara</h3>
                 <div class="recipe-info">
-                    <p><strong>Temps de préparation :</strong> 10 minutes</p>
-                    <p><strong>Temps de cuisson :</strong> 15 minutes</p>
-                    <p><strong>Pour :</strong> 4 personnes</p>
-                    <p><strong>Difficulté :</strong> Moyenne</p>
+                    <p><strong>Preparation time:</strong> 10 minutes</p>
+                    <p><strong>Cooking time:</strong> 15 minutes</p>
+                    <p><strong>Serves:</strong> 4 people</p>
+                    <p><strong>Difficulty:</strong> Medium</p>
                 </div>
             </header>
 
             <section class="ingredients">
-                <h4>Ingrédients</h4>
+                <h4>Ingredients</h4>
                 <ul>
-                    <li>400g de spaghetti</li>
-                    <li>200g de lardons</li>
-                    <li>4 jaunes d'œufs</li>
-                    <li>100g de parmesan râpé</li>
-                    <li>Poivre noir moulu</li>
-                    <li>Sel</li>
+                    <li>400g spaghetti</li>
+                    <li>200g bacon</li>
+                    <li>4 egg yolks</li>
+                    <li>100g grated parmesan</li>
+                    <li>Ground black pepper</li>
+                    <li>Salt</li>
                 </ul>
             </section>
 
             <section class="instructions">
                 <h4>Instructions</h4>
                 <ol>
-                    <li>Faire cuire les pâtes dans une grande quantité d'eau salée.</li>
-                    <li>Dans une poêle, faire revenir les lardons jusqu'à ce qu'ils soient dorés.</li>
-                    <li>Dans un bol, mélanger les jaunes d'œufs et le parmesan.</li>
-                    <li>Égoutter les pâtes en gardant un peu d'eau de cuisson.</li>
-                    <li>Mélanger rapidement hors du feu avec la sauce.</li>
-                    <li>Servir immédiatement avec du poivre fraîchement moulu.</li>
+                    <li>Cook the pasta in plenty of salted boiling water.</li>
+                    <li>In a pan, cook the bacon until golden.</li>
+                    <li>In a bowl, mix the egg yolks and parmesan.</li>
+                    <li>Drain the pasta, keeping some cooking water.</li>
+                    <li>Quickly mix off the heat with the sauce.</li>
+                    <li>Serve immediately with freshly ground pepper.</li>
                 </ol>
             </section>
 
             <aside class="recipe-tips">
-                <h4>Conseils du Chef</h4>
+                <h4>Chef's Tips</h4>
                 <ul>
-                    <li>Ne mettez jamais la poêle sur le feu après avoir ajouté les œufs</li>
-                    <li>Utilisez du parmesan fraîchement râpé pour plus de saveur</li>
-                    <li>Servez immédiatement pour éviter que la sauce ne tourne</li>
+                    <li>Never put the pan back on the heat after adding the eggs</li>
+                    <li>Use freshly grated parmesan for more flavor</li>
+                    <li>Serve immediately to prevent the sauce from curdling</li>
                 </ul>
             </aside>
         </article>
 
         <article id="salad" class="recipe">
             <header>
-                <h3>Salade César</h3>
+                <h3>Caesar Salad</h3>
                 <div class="recipe-info">
-                    <p><strong>Temps de préparation :</strong> 15 minutes</p>
-                    <p><strong>Pour :</strong> 2 personnes</p>
-                    <p><strong>Difficulté :</strong> Facile</p>
+                    <p><strong>Preparation time:</strong> 15 minutes</p>
+                    <p><strong>Serves:</strong> 2 people</p>
+                    <p><strong>Difficulty:</strong> Easy</p>
                 </div>
             </header>
 
             <section class="ingredients">
-                <h4>Ingrédients</h4>
+                <h4>Ingredients</h4>
                 <ul>
-                    <li>1 laitue romaine</li>
-                    <li>200g de poulet grillé</li>
-                    <li>50g de parmesan</li>
-                    <li>100g de croûtons</li>
-                    <li>Sauce César (achetée ou faite maison)</li>
+                    <li>1 romaine lettuce</li>
+                    <li>200g grilled chicken</li>
+                    <li>50g parmesan</li>
+                    <li>100g croutons</li>
+                    <li>Caesar dressing (store-bought or homemade)</li>
                 </ul>
             </section>
 
             <section class="instructions">
                 <h4>Instructions</h4>
                 <ol>
-                    <li>Laver et couper la laitue en morceaux.</li>
-                    <li>Couper le poulet en lamelles.</li>
-                    <li>Râper le parmesan.</li>
-                    <li>Dans un saladier, mélanger tous les ingrédients.</li>
-                    <li>Verser la sauce et mélanger délicatement.</li>
-                    <li>Servir frais.</li>
+                    <li>Wash and cut the lettuce into pieces.</li>
+                    <li>Cut the chicken into slices.</li>
+                    <li>Grate the parmesan.</li>
+                    <li>In a salad bowl, mix all ingredients.</li>
+                    <li>Pour the dressing and mix gently.</li>
+                    <li>Serve fresh.</li>
                 </ol>
             </section>
         </article>
     </main>
 
     <footer>
-        <p>&copy; 2024 Mes Délicieuses Recettes. Tous droits réservés.</p>
+        <p>&copy; 2024 My Delicious Recipes. All rights reserved.</p>
         <nav>
-            <a href="index.html">Accueil</a> |
-            <a href="recettes.html">Recettes</a> |
+            <a href="index.html">Home</a> |
+            <a href="recipes.html">Recipes</a> |
             <a href="contact.html">Contact</a>
         </nav>
     </footer>
@@ -210,204 +210,204 @@ Créez une page complète avec plusieurs recettes :
 </html>
 ```
 
-### Étape 4 : Page de Contact (contact.html)
-Créez une page de contact avec un formulaire et des informations :
+### Step 4: Contact Page (contact.html)
+Create a contact page with a form and information:
 
 ```html
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Mes Délicieuses Recettes</title>
+    <title>Contact - My Delicious Recipes</title>
 </head>
 <body>
     <header>
-        <h1>🍳 Mes Délicieuses Recettes</h1>
+        <h1>🍳 My Delicious Recipes</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="recettes.html">Recettes</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="recipes.html">Recipes</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <h2>Contactez-nous</h2>
+        <h2>Contact Us</h2>
 
         <section class="contact-info">
-            <h3>Informations de Contact</h3>
+            <h3>Contact Information</h3>
             <address>
-                <p>📧 Email : <a href="mailto:contact@recettes.com">contact@recettes.com</a></p>
-                <p>📱 Téléphone : +33 1 23 45 67 89</p>
-                <p>📍 Adresse : 123 Rue de la Cuisine, Paris, France</p>
+                <p>📧 Email: <a href="mailto:contact@recipes.com">contact@recipes.com</a></p>
+                <p>📱 Phone: +33 1 23 45 67 89</p>
+                <p>📍 Address: 123 Cooking Street, Paris, France</p>
             </address>
         </section>
 
         <section class="contact-form">
-            <h3>Envoyez-nous un Message</h3>
+            <h3>Send Us a Message</h3>
             <form action="#" method="post">
                 <div class="form-group">
-                    <label for="name">Nom complet :</label>
+                    <label for="name">Full name:</label>
                     <input type="text" id="name" name="name" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="email">Email :</label>
+                    <label for="email">Email:</label>
                     <input type="email" id="email" name="email" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="subject">Sujet :</label>
+                    <label for="subject">Subject:</label>
                     <select id="subject" name="subject">
-                        <option value="general">Question générale</option>
-                        <option value="recipe">Suggestion de recette</option>
-                        <option value="feedback">Retour d'expérience</option>
-                        <option value="other">Autre</option>
+                        <option value="general">General question</option>
+                        <option value="recipe">Recipe suggestion</option>
+                        <option value="feedback">Feedback</option>
+                        <option value="other">Other</option>
                     </select>
                 </div>
 
                 <div class="form-group">
-                    <label for="message">Message :</label>
+                    <label for="message">Message:</label>
                     <textarea id="message" name="message" rows="5" required></textarea>
                 </div>
 
-                <button type="submit" class="btn-primary">Envoyer le Message</button>
+                <button type="submit" class="btn-primary">Send Message</button>
             </form>
         </section>
 
         <section class="faq">
-            <h3>Questions Fréquentes</h3>
+            <h3>Frequently Asked Questions</h3>
             <dl>
-                <dt>Comment soumettre une recette ?</dt>
-                <dd>Utilisez le formulaire de contact ci-dessus avec le sujet "Suggestion de recette".</dd>
+                <dt>How to submit a recipe?</dt>
+                <dd>Use the contact form above with the subject "Recipe suggestion".</dd>
 
-                <dt>Les recettes sont-elles testées ?</dt>
-                <dd>Toutes nos recettes sont testées en cuisine avant publication.</dd>
+                <dt>Are the recipes tested?</dt>
+                <dd>All our recipes are tested in the kitchen before publication.</dd>
 
-                <dt>Puis-je modifier les recettes ?</dt>
-                <dd>Absolument ! Les recettes sont faites pour être adaptées à vos goûts.</dd>
+                <dt>Can I modify the recipes?</dt>
+                <dd>Absolutely! Recipes are meant to be adapted to your tastes.</dd>
             </dl>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Mes Délicieuses Recettes. Tous droits réservés.</p>
+        <p>&copy; 2024 My Delicious Recipes. All rights reserved.</p>
     </footer>
 </body>
 </html>
 ```
 
-### Étape 5 : Tableau d'Informations Nutritionnelles
-Ajoutez un tableau d'informations nutritionnelles à une recette :
+### Step 5: Nutritional Information Table
+Add a nutritional information table to a recipe:
 
 ```html
 <section class="nutrition">
-    <h4>Informations Nutritionnelles (par portion)</h4>
+    <h4>Nutritional Information (per serving)</h4>
     <table>
-        <caption>Valeurs nutritionnelles pour la Salade César</caption>
+        <caption>Nutritional values for Caesar Salad</caption>
         <thead>
             <tr>
-                <th>Nutriment</th>
-                <th>Quantité</th>
-                <th>% AJR*</th>
+                <th>Nutrient</th>
+                <th>Amount</th>
+                <th>% DV*</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>Énergie</td>
+                <td>Energy</td>
                 <td>320 kcal</td>
                 <td>16%</td>
             </tr>
             <tr>
-                <td>Protéines</td>
+                <td>Protein</td>
                 <td>25g</td>
                 <td>50%</td>
             </tr>
             <tr>
-                <td>Glucides</td>
+                <td>Carbohydrates</td>
                 <td>8g</td>
                 <td>3%</td>
             </tr>
             <tr>
-                <td>Lipides</td>
+                <td>Fat</td>
                 <td>22g</td>
                 <td>31%</td>
             </tr>
             <tr>
-                <td>Fibres</td>
+                <td>Fiber</td>
                 <td>3g</td>
                 <td>12%</td>
             </tr>
         </tbody>
         <tfoot>
             <tr>
-                <td colspan="3">* AJR = Apports Journaliers Recommandés</td>
+                <td colspan="3">* DV = Daily Value</td>
             </tr>
         </tfoot>
     </table>
 </section>
 ```
 
-## Instructions de Test
+## Testing Instructions
 
-### Validation Fonctionnelle
-- [ ] Navigation entre les pages fonctionne correctement
-- [ ] Tous les liens internes et externes sont fonctionnels
-- [ ] Les images s'affichent avec des textes alternatifs appropriés
-- [ ] Les ancres permettent la navigation dans la page des recettes
+### Functional Validation
+- [ ] Navigation between pages works correctly
+- [ ] All internal and external links are functional
+- [ ] Images display with appropriate alt texts
+- [ ] Anchors allow navigation within the recipes page
 
-### Validation Sémantique
-- [ ] Utilisation appropriée des balises sémantiques (header, nav, main, section, article, aside, footer)
-- [ ] Structure hiérarchique correcte des titres (h1 → h2 → h3, etc.)
-- [ ] Balises meta appropriées pour le SEO et l'accessibilité
-- [ ] Utilisation correcte des listes (ul, ol, dl)
+### Semantic Validation
+- [ ] Appropriate use of semantic tags (header, nav, main, section, article, aside, footer)
+- [ ] Correct hierarchical structure of headings (h1 → h2 → h3, etc.)
+- [ ] Appropriate meta tags for SEO and accessibility
+- [ ] Correct use of lists (ul, ol, dl)
 
-### Validation Accessibilité
-- [ ] Tous les éléments `<img>` ont un attribut `alt` descriptif
-- [ ] Les liens ont des textes explicites (pas seulement "cliquez ici")
-- [ ] Le contraste des couleurs est suffisant
-- [ ] La navigation au clavier est possible
+### Accessibility Validation
+- [ ] All `<img>` elements have descriptive `alt` attributes
+- [ ] Links have explicit texts (not just "click here")
+- [ ] Color contrast is sufficient
+- [ ] Keyboard navigation is possible
 
-## Défis Supplémentaires
+## Additional Challenges
 
-### Niveau 1 : Amélioration du Contenu
-- Ajoutez 3 recettes supplémentaires avec des ingrédients variés
-- Créez une section "Conseils nutritionnels" pour chaque recette
-- Ajoutez des liens vers des vidéos de préparation (YouTube)
+### Level 1: Content Improvement
+- Add 3 additional recipes with varied ingredients
+- Create a "Nutritional Tips" section for each recipe
+- Add links to preparation videos (YouTube)
 
-### Niveau 2 : Fonctionnalités Interactives
-- Créez une page "Favoris" pour sauvegarder les recettes préférées
-- Ajoutez un système de notation par étoiles pour les recettes
-- Implémentez une fonction de recherche de recettes
+### Level 2: Interactive Features
+- Create a "Favorites" page to save preferred recipes
+- Add a star rating system for recipes
+- Implement a recipe search function
 
-### Niveau 3 : Structure Avancée
-- Organisez les recettes par catégories (végétarien, végan, sans gluten)
-- Ajoutez une section blog avec des articles sur les techniques culinaires
-- Créez une page "À propos" avec l'histoire du site
+### Level 3: Advanced Structure
+- Organize recipes by categories (vegetarian, vegan, gluten-free)
+- Add a blog section with articles on cooking techniques
+- Create an "About" page with the site's history
 
-## Critères d'Évaluation
+## Evaluation Criteria
 
-### Structure et Sémantique (30%)
-- Utilisation correcte des éléments HTML sémantiques
-- Hiérarchie de contenu logique et accessible
-- Code HTML valide et bien structuré
+### Structure and Semantics (30%)
+- Correct use of semantic HTML elements
+- Logical and accessible content hierarchy
+- Valid and well-structured HTML code
 
-### Contenu et Fonctionnalité (30%)
-- Pages complètes et informatives
-- Navigation fluide entre les pages
-- Liens fonctionnels et utiles
+### Content and Functionality (30%)
+- Complete and informative pages
+- Smooth navigation between pages
+- Functional and useful links
 
-### Accessibilité et SEO (20%)
-- Images avec textes alternatifs appropriés
-- Structure sémantique favorisant le référencement
-- Navigation accessible
+### Accessibility and SEO (20%)
+- Images with appropriate alt texts
+- Semantic structure promoting search engine optimization
+- Accessible navigation
 
-### Qualité et Présentation (20%)
-- Code bien organisé et commenté
-- Contenu original et engageant
-- Respect des bonnes pratiques HTML
+### Quality and Presentation (20%)
+- Well-organized and commented code
+- Original and engaging content
+- Respect for HTML best practices
 
-## Prochaines Étapes
-Félicitations pour votre premier site web multi-pages ! Vous avez maintenant une base solide en HTML sémantique. Au prochain module, nous ajouterons du style avec CSS pour rendre vos pages visuellement attrayantes.
+## Next Steps
+Congratulations on your first multi-page website! You now have a solid foundation in semantic HTML. In the next module, we will add styling with CSS to make your pages visually attractive.

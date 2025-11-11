@@ -1,13 +1,13 @@
-site_name: Cours HTML, CSS et JavaScript 2025-2026
+site_name: HTML, CSS and JavaScript Course 2025-2026
 site_url: https://bad1987.github.io/html-css-javascript-2025-2026
-site_description: Cours complet de développement web pour débutants
-site_author: Auteur du Cours
+site_description: A complete HTML, CSS and JavaScript course for beginners (2025-2026).
+site_author: Course Author
 
 # Theme configuration
 theme:
   name: material
   custom_dir: docs/.overrides
-  language: fr
+  language: en
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
@@ -39,52 +39,52 @@ repo_url: https://github.com/bad1987/html-css-javascript-2025-2026
 # Plugins
 plugins:
   - search:
-      lang: fr
+      lang: en
   - minify:
       minify_html: true
   - print-site:
       add_to_navigation: true
-      print_page_title: 'Imprimer tout le cours'
+      print_page_title: 'Print the entire course'
 
 # Navigation menu - include all modules that exist
 nav:
-  - Accueil: index.md
-  - Module 1 - Introduction au Développement Web:
-    - module-01-introduction/README.md
-    - module-01-introduction/cas-pratique.md
-    - module-01-introduction/exercices-maison.md
-  - Module 2 - Structure et Sémantique HTML:
-    - module-02-html-structure/README.md
-    - module-02-html-structure/cas-pratique.md
-    - module-02-html-structure/exercices-maison.md
-  - Module 3 - Notions Fondamentales du CSS:
-    - module-03-css-fundamentals/README.md
-    - module-03-css-fundamentals/cas-pratique.md
-    - module-03-css-fundamentals/exercices-maison.md
-  - Module 4 - Mise en Page et Design Responsive avec CSS:
-    - module-04-css-layout/README.md
-    - module-04-css-layout/cas-pratique.md
-    - module-04-css-layout/exercices-maison.md
-  - Module 5 - Notions de Base JavaScript:
-    - module-05-javascript-basics/README.md
-    - module-05-javascript-basics/cas-pratique.md
-    - module-05-javascript-basics/exercices-maison.md
-  - Module 6 - Fonctions et Objets JavaScript:
-    - module-06-javascript-functions-objects/README.md
-    - module-06-javascript-functions-objects/cas-pratique.md
-    - module-06-javascript-functions-objects/exercices-maison.md
-  - Module 7 - JavaScript Avancé et APIs:
-    - module-07-advanced-javascript-apis/README.md
-    - module-07-advanced-javascript-apis/cas-pratique.md
-    - module-07-advanced-javascript-apis/exercices-maison.md
-  - Module 8 - Applications Web Full-Stack:
-    - module-08-fullstack-web-applications/README.md
-    - module-08-fullstack-web-applications/cas-pratique.md
-    - module-08-fullstack-web-applications/exercices-maison.md
-  - Module 9 - Sujets Avancés et Bonnes Pratiques:
-    - module-09-advanced-topics-best-practices/README.md
-    - module-09-advanced-topics-best-practices/cas-pratique.md
-    - module-09-advanced-topics-best-practices/exercices-maison.md
+  - Home: index.md
+  - Module 01 - Introduction to Web Development:
+    - Introduction: module-01-introduction/README.md
+    - Practical Project: module-01-introduction/cas-pratique.md
+    - Homework Exercises: module-01-introduction/exercices-maison.md
+  - Module 02 - HTML Structure and Semantics:
+    - Introduction: module-02-html-structure/README.md
+    - Practical Project: module-02-html-structure/cas-pratique.md
+    - Homework Exercises: module-02-html-structure/exercices-maison.md
+  - Module 03 - CSS Fundamentals:
+    - Introduction: module-03-css-fundamentals/README.md
+    - Practical Project: module-03-css-fundamentals/cas-pratique.md
+    - Homework Exercises: module-03-css-fundamentals/exercices-maison.md
+  - Module 04 - CSS Layout and Responsive Design:
+    - Introduction: module-04-css-layout/README.md
+    - Practical Project: module-04-css-layout/cas-pratique.md
+    - Homework Exercises: module-04-css-layout/exercices-maison.md
+  - Module 05 - JavaScript Basics:
+    - Introduction: module-05-javascript-basics/README.md
+    - Practical Project: module-05-javascript-basics/cas-pratique.md
+    - Homework Exercises: module-05-javascript-basics/exercices-maison.md
+  - Module 06 - JavaScript Functions and Objects:
+    - Introduction: module-06-javascript-functions-objects/README.md
+    - Practical Project: module-06-javascript-functions-objects/cas-pratique.md
+    - Homework Exercises: module-06-javascript-functions-objects/exercices-maison.md
+  - Module 07 - Advanced JavaScript and APIs:
+    - Introduction: module-07-advanced-javascript-apis/README.md
+    - Practical Project: module-07-advanced-javascript-apis/cas-pratique.md
+    - Homework Exercises: module-07-advanced-javascript-apis/exercices-maison.md
+  - Module 08 - Full-Stack Web Applications:
+    - Introduction: module-08-fullstack-web-applications/README.md
+    - Practical Project: module-08-fullstack-web-applications/cas-pratique.md
+    - Homework Exercises: module-08-fullstack-web-applications/exercices-maison.md
+  - Module 09 - Advanced Topics and Best Practices:
+    - Introduction: module-09-advanced-topics-best-practices/README.md
+    - Practical Project: module-09-advanced-topics-best-practices/cas-pratique.md
+    - Homework Exercises: module-09-advanced-topics-best-practices/exercices-maison.md
 
 # Extra CSS & JavaScript
 extra_css:

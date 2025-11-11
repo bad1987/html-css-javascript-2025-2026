@@ -1,92 +1,92 @@
-# Cas Pratique : Refactorisation et Optimisation d'une Application Web Existante
+# Practical Project: Refactoring and Optimizing an Existing Web Application
 
-## Contexte du Projet
-Vous avez maintenant acquis toutes les compétences fondamentales du développement web. Ce dernier projet pratique vous demande de prendre une application existante (celle du Module 8) et de l'optimiser en appliquant les bonnes pratiques avancées apprises : patterns de conception, performance, tests, et workflows modernes.
+## Project Context
+You have now acquired all the fundamental skills of web development. This final practical project asks you to take an existing application (from Module 8) and optimize it by applying the advanced best practices learned: design patterns, performance, testing, and modern workflows.
 
-## Objectif
-Refactoriser complètement une application web existante en appliquant les meilleures pratiques de développement : optimisation des performances, architecture modulaire, tests automatisés, CI/CD, et déploiement.
+## Objective
+Completely refactor an existing web application by applying best development practices: performance optimization, modular architecture, automated testing, CI/CD, and deployment.
 
-## Analyse de l'Application Existante
-Avant de commencer, identifiez les problèmes dans l'application actuelle :
+## Analysis of the Existing Application
+Before starting, identify the problems in the current application:
 
-### Problèmes Identifiés
-1. **Performance :** Code non optimisé, pas de lazy loading, bundle JavaScript volumineux
-2. **Architecture :** Code monolithique, pas de séparation claire des responsabilités
-3. **Tests :** Aucun test automatisé, débogage manuel uniquement
-4. **Sécurité :** Vulnérabilités potentielles, validation insuffisante
-5. **Maintenabilité :** Code dupliqué, fonctions longues, commentaires insuffisants
-6. **Déploiement :** Pas de CI/CD, déploiement manuel
+### Identified Issues
+1. **Performance:** Unoptimized code, no lazy loading, bulky JavaScript bundle
+2. **Architecture:** Monolithic code, no clear separation of responsibilities
+3. **Tests:** No automated tests, manual debugging only
+4. **Security:** Potential vulnerabilities, insufficient validation
+5. **Maintainability:** Duplicate code, long functions, insufficient comments
+6. **Deployment:** No CI/CD, manual deployment
 
-## Étapes de Réalisation
+## Implementation Steps
 
-### Étape 1 : Audit et Planification
-Créez un plan détaillé d'amélioration :
+### Step 1: Audit and Planning
+Create a detailed improvement plan:
 
 ```markdown
-# Plan d'Optimisation - Application de Recettes
+# Optimization Plan - Recipe Application
 
-## Problèmes Critiques
-- [ ] Bundle JS trop volumineux (chargement lent)
-- [ ] Pas de cache des images
-- [ ] Requêtes API inefficaces
-- [ ] Code non testé
+## Critical Issues
+- [ ] Large JS bundle (slow loading)
+- [ ] No image caching
+- [ ] Inefficient API requests
+- [ ] Untested code
 
-## Améliorations Prioritaires
-1. **Performance** (Semaine 1)
-   - Implémenter le code splitting
-   - Optimiser les images
-   - Ajouter un service worker
-   - Mettre en cache les API calls
+## Priority Improvements
+1. **Performance** (Week 1)
+   - Implement code splitting
+   - Optimize images
+   - Add service worker
+   - Cache API calls
 
-2. **Architecture** (Semaine 2)
-   - Refactoriser en modules
-   - Implémenter des design patterns
-   - Séparer les responsabilités
-   - Créer une architecture scalable
+2. **Architecture** (Week 2)
+   - Refactor into modules
+   - Implement design patterns
+   - Separate responsibilities
+   - Create scalable architecture
 
-3. **Tests** (Semaine 3)
-   - Tests unitaires pour les utilitaires
-   - Tests d'intégration pour l'API
-   - Tests end-to-end pour les parcours utilisateur
-   - Mise en place de Jest et Testing Library
+3. **Tests** (Week 3)
+   - Unit tests for utilities
+   - Integration tests for API
+   - End-to-end tests for user journeys
+   - Set up Jest and Testing Library
 
-4. **Sécurité** (Semaine 4)
-   - Audit de sécurité complet
-   - Implémenter Content Security Policy
-   - Renforcer la validation des données
-   - Mettre à jour les dépendances
+4. **Security** (Week 4)
+   - Complete security audit
+   - Implement Content Security Policy
+   - Strengthen data validation
+   - Update dependencies
 
-5. **CI/CD** (Semaine 5)
-   - Configurer GitHub Actions
-   - Automatiser les tests
-   - Déploiement automatique
-   - Monitoring des performances
+5. **CI/CD** (Week 5)
+   - Configure GitHub Actions
+   - Automate tests
+   - Verify code quality
+   - Automatic deployment
 
-## Métriques de Succès
-- [ ] Temps de chargement < 3 secondes
-- [ ] Score Lighthouse > 90
-- [ ] Coverage de tests > 80%
-- [ ] Zéro vulnérabilité critique
-- [ ] Déploiement automatisé opérationnel
+## Success Metrics
+- [ ] Loading time < 3 seconds
+- [ ] Lighthouse score > 90
+- [ ] Test coverage > 80%
+- [ ] Zero critical vulnerabilities
+- [ ] Automated deployment operational
 ```
 
-### Étape 2 : Optimisation des Performances
-Implémentez les améliorations de performance :
+### Step 2: Performance Optimization
+Implement performance improvements:
 
-#### Code Splitting et Lazy Loading
+#### Code Splitting and Lazy Loading
 ```javascript
-// js/app.js - Avant (tout dans un fichier)
+// js/app.js - Before (everything in one file)
 import { ApiService } from './services/api.js';
 import { AuthService } from './services/auth.js';
 import { RecipeCard } from './components/RecipeCard.js';
 import { Modal } from './components/Modal.js';
-// ... 50+ autres imports
+// ... 50+ other imports
 
-// Après - Code splitting intelligent
-// Imports critiques seulement
+// After - Smart code splitting
+// Critical imports only
 import { ApiService } from './services/api.js';
 
-// Lazy loading des composants non critiques
+// Lazy load non-critical components
 const loadRecipeComponents = async () => {
     const [
         { RecipeCard },
@@ -101,7 +101,7 @@ const loadRecipeComponents = async () => {
     return { RecipeCard, Modal, InfiniteScroll };
 };
 
-// Lazy loading des pages
+// Lazy load pages
 const loadPage = async (pageName) => {
     switch(pageName) {
         case 'recipe-detail':
@@ -116,7 +116,7 @@ const loadPage = async (pageName) => {
 };
 ```
 
-#### Service Worker pour le Cache
+#### Service Worker for Caching
 ```javascript
 // sw.js - Service Worker
 const CACHE_NAME = 'recipe-app-v1';
@@ -149,7 +149,7 @@ self.addEventListener('install', (event) => {
 self.addEventListener('activate', (event) => {
     event.waitUntil(
         Promise.all([
-            // Nettoyer les anciens caches
+            // Clean old caches
             caches.keys().then(cacheNames => {
                 return Promise.all(
                     cacheNames.map(cacheName => {
@@ -164,24 +164,24 @@ self.addEventListener('activate', (event) => {
     );
 });
 
-// Interception des requêtes
+// Intercept requests
 self.addEventListener('fetch', (event) => {
     const { request } = event;
     const url = new URL(request.url);
 
-    // Stratégie Cache First pour les assets statiques
+    // Cache First strategy for static assets
     if (STATIC_ASSETS.some(asset => request.url.includes(asset))) {
         event.respondWith(cacheFirst(request, STATIC_CACHE));
         return;
     }
 
-    // Stratégie Network First pour les API
+    // Network First strategy for APIs
     if (url.pathname.startsWith('/api/')) {
         event.respondWith(networkFirst(request, API_CACHE));
         return;
     }
 
-    // Stratégie Stale While Revalidate pour les pages
+    // Stale While Revalidate strategy for pages
     event.respondWith(staleWhileRevalidate(request));
 });
 
@@ -197,7 +197,7 @@ async function cacheFirst(request, cacheName) {
         }
         return response;
     } catch (error) {
-        // Fallback pour les images
+        // Fallback for images
         if (request.destination === 'image') {
             return caches.match('/assets/images/placeholder.jpg');
         }
@@ -235,9 +235,9 @@ async function staleWhileRevalidate(request) {
 }
 ```
 
-#### Optimisation des Images
+#### Image Optimization
 ```javascript
-// js/utils/image.js - Utilitaires d'optimisation d'images
+// js/utils/image.js - Image optimization utilities
 class ImageOptimizer {
     constructor() {
         this.observer = null;
@@ -245,7 +245,7 @@ class ImageOptimizer {
     }
 
     init() {
-        // Intersection Observer pour lazy loading
+        // Intersection Observer for lazy loading
         this.observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -269,7 +269,7 @@ class ImageOptimizer {
         if (!src) return;
 
         try {
-            // Créer une image pour précharger
+            // Create image for preloading
             const image = new Image();
 
             image.onload = () => {
@@ -279,7 +279,7 @@ class ImageOptimizer {
             };
 
             image.onerror = () => {
-                // Fallback vers une image placeholder
+                // Fallback to placeholder image
                 img.src = '/assets/images/placeholder.jpg';
                 img.classList.remove('loading');
                 img.classList.add('error');
@@ -289,31 +289,31 @@ class ImageOptimizer {
             image.src = src;
 
         } catch (error) {
-            console.error('Erreur chargement image:', error);
+            console.error('Image loading error:', error);
             img.src = '/assets/images/placeholder.jpg';
         }
     }
 
-    // Génération de srcset pour images responsives
+    // Generate srcset for responsive images
     generateSrcSet(imagePath, widths = [320, 640, 1024, 1920]) {
         return widths.map(width => {
-            const height = Math.round(width * 0.75); // Ratio 4:3
+            const height = Math.round(width * 0.75); // 4:3 ratio
             return `${imagePath}?w=${width}&h=${height}&fit=crop&auto=format&q=80 ${width}w`;
         }).join(', ');
     }
 
-    // Génération de placeholder flou
+    // Generate blurred placeholder
     async generatePlaceholder(imagePath) {
-        // Utiliser une API comme BlurHash ou un service externe
-        // Pour cet exemple, retourner une couleur moyenne
+        // Use an API like BlurHash or external service
+        // For this example, return a gray color
         return 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9Ijc1IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNFNUU3RUIiLz48L3N2Zz4=';
     }
 }
 
-// Utilisation
+// Usage
 const imageOptimizer = new ImageOptimizer();
 
-// Dans les composants
+// In components
 class RecipeCard {
     render() {
         const img = document.createElement('img');
@@ -328,12 +328,12 @@ class RecipeCard {
 }
 ```
 
-### Étape 3 : Refactorisation Architecturale
-Appliquez des design patterns :
+### Step 3: Architectural Refactoring
+Apply design patterns:
 
-#### Pattern Module
+#### Module Pattern
 ```javascript
-// js/modules/RecipeModule.js - Module dédié aux recettes
+// js/modules/RecipeModule.js - Dedicated recipe module
 import { ApiService } from '../services/ApiService.js';
 import { EventEmitter } from '../utils/EventEmitter.js';
 
@@ -358,7 +358,7 @@ class RecipeModule extends EventEmitter {
                 limit
             });
 
-            // Transformer en Map pour un accès rapide
+            // Transform to Map for fast access
             response.recipes.forEach(recipe => {
                 this.recipes.set(recipe.id, recipe);
             });
@@ -396,7 +396,7 @@ class RecipeModule extends EventEmitter {
     }
 
     getFilteredRecipes() {
-        // Logique de filtrage côté client pour les données déjà chargées
+        // Client-side filtering for already loaded data
         return Array.from(this.recipes.values()).filter(recipe => {
             return this.matchesFilters(recipe, this.currentFilters);
         });
@@ -419,9 +419,9 @@ class RecipeModule extends EventEmitter {
 export const recipeModule = new RecipeModule();
 ```
 
-#### Pattern Repository
+#### Repository Pattern
 ```javascript
-// js/repositories/RecipeRepository.js - Pattern Repository
+// js/repositories/RecipeRepository.js - Repository pattern
 import { ApiService } from '../services/ApiService.js';
 
 class RecipeRepository {
@@ -431,7 +431,7 @@ class RecipeRepository {
     }
 
     async findById(id, useCache = true) {
-        // Vérifier le cache
+        // Check cache
         if (useCache && this.isCached(id)) {
             return this.getFromCache(id);
         }
@@ -463,13 +463,13 @@ class RecipeRepository {
 
     async create(recipeData) {
         const recipe = await ApiService.createRecipe(recipeData);
-        this.invalidateCache(); // Invalider le cache après création
+        this.invalidateCache(); // Invalidate cache after creation
         return recipe;
     }
 
     async update(id, updates) {
         const recipe = await ApiService.updateRecipe(id, updates);
-        this.setCache(id, recipe); // Mettre à jour le cache
+        this.setCache(id, recipe); // Update cache
         return recipe;
     }
 
@@ -478,7 +478,7 @@ class RecipeRepository {
         this.removeFromCache(id);
     }
 
-    // Méthodes de cache
+    // Cache methods
     isCached(key) {
         const cached = this.cache.get(key);
         if (!cached) return false;
@@ -515,7 +515,7 @@ class RecipeRepository {
         return JSON.stringify({ filters, options });
     }
 
-    // Méthodes utilitaires
+    // Utility methods
     async search(query) {
         return await ApiService.searchRecipes(query);
     }
@@ -540,10 +540,10 @@ class RecipeRepository {
 export const recipeRepository = new RecipeRepository();
 ```
 
-### Étape 4 : Tests Automatisés
-Implémentez une suite de tests complète :
+### Step 4: Automated Tests
+Implement a complete test suite:
 
-#### Tests Unitaires
+#### Unit Tests
 ```javascript
 // tests/unit/utils/validation.test.js
 import { validateEmail, validatePassword, validateRecipe } from '../../../src/utils/validation.js';
@@ -581,10 +581,10 @@ describe('Validation Utils', () => {
         });
 
         test('should enforce minimum requirements', () => {
-            expect(validatePassword('Short1!')).toBe(false); // Trop court
-            expect(validatePassword('nouppercase1!')).toBe(false); // Pas de majuscule
-            expect(validatePassword('NOLOWERCASE1!')).toBe(false); // Pas de minuscule
-            expect(validatePassword('NoNumber!')).toBe(false); // Pas de chiffre
+            expect(validatePassword('Short1!')).toBe(false); // Too short
+            expect(validatePassword('nouppercase1!')).toBe(false); // No uppercase
+            expect(validatePassword('NOLOWERCASE1!')).toBe(false); // No lowercase
+            expect(validatePassword('NoNumber!')).toBe(false); // No number
         });
     });
 
@@ -592,13 +592,13 @@ describe('Validation Utils', () => {
         const validRecipe = {
             title: 'Delicious Pasta Carbonara',
             description: 'A classic Italian pasta dish',
-            category: 'Plat principal',
+            category: 'Main dish',
             prepTime: 15,
             cookTime: 20,
             servings: 4,
             ingredients: [
                 { name: 'spaghetti', quantity: '400', unit: 'g' },
-                { name: 'eggs', quantity: '4', unit: 'pièce' }
+                { name: 'eggs', quantity: '4', unit: 'piece' }
             ],
             steps: [
                 { order: 1, instruction: 'Cook pasta', duration: 10 }
@@ -615,43 +615,43 @@ describe('Validation Utils', () => {
             delete invalidRecipe.title;
 
             const errors = validateRecipe(invalidRecipe);
-            expect(errors).toContain('Le titre est requis');
+            expect(errors).toContain('Title is required');
         });
 
         test('should validate prepTime constraints', () => {
             const recipe = { ...validRecipe, prepTime: 0 };
             const errors = validateRecipe(recipe);
-            expect(errors).toContain('Le temps de préparation doit être positif');
+            expect(errors).toContain('Preparation time must be positive');
         });
 
         test('should validate ingredients structure', () => {
             const recipe = {
                 ...validRecipe,
                 ingredients: [
-                    { name: '', quantity: '100', unit: 'g' } // Nom vide
+                    { name: '', quantity: '100', unit: 'g' } // Empty name
                 ]
             };
 
             const errors = validateRecipe(recipe);
-            expect(errors).toContain('Le nom de l\'ingrédient est requis');
+            expect(errors).toContain('Ingredient name is required');
         });
 
         test('should validate steps structure', () => {
             const recipe = {
                 ...validRecipe,
                 steps: [
-                    { order: 1, instruction: '', duration: 5 } // Instruction vide
+                    { order: 1, instruction: '', duration: 5 } // Empty instruction
                 ]
             };
 
             const errors = validateRecipe(recipe);
-            expect(errors).toContain('L\'instruction de l\'étape est requise');
+            expect(errors).toContain('Step instruction is required');
         });
     });
 });
 ```
 
-#### Tests d'Intégration
+#### Integration Tests
 ```javascript
 // tests/integration/api/recipes.test.js
 import { apiService } from '../../../src/services/api.js';
@@ -662,18 +662,18 @@ describe('Recipes API Integration', () => {
     let authToken;
 
     beforeAll(async () => {
-        // Se connecter pour obtenir un token
+        // Login to get token
         const loginResponse = await apiService.post('/auth/login', {
             email: 'test@example.com',
             password: 'TestPassword123!'
         });
         authToken = loginResponse.token;
 
-        // Créer une recette de test
+        // Create test recipe
         testRecipe = {
             title: 'Test Recipe',
             description: 'A test recipe for integration tests',
-            category: 'Plat principal',
+            category: 'Main dish',
             prepTime: 10,
             cookTime: 20,
             servings: 2,
@@ -747,7 +747,7 @@ describe('Recipes API Integration', () => {
                 headers: { Authorization: `Bearer ${authToken}` }
             });
 
-            // Vérifier que la recette n'existe plus
+            // Verify recipe no longer exists
             await expect(apiService.get(`/recipes/${testRecipe.id}`))
                 .rejects
                 .toThrow('Recipe not found');
@@ -756,29 +756,29 @@ describe('Recipes API Integration', () => {
 
     describe('Search and Filtering', () => {
         beforeAll(async () => {
-            // Créer plusieurs recettes pour les tests de recherche
+            // Create multiple recipes for search tests
             const recipes = [
                 {
                     title: 'Pasta Carbonara',
                     description: 'Classic Italian pasta',
-                    category: 'Plat principal',
+                    category: 'Main dish',
                     prepTime: 10,
                     cookTime: 15,
                     servings: 4,
                     ingredients: [{ name: 'pasta', quantity: '400', unit: 'g' }],
                     steps: [{ order: 1, instruction: 'Cook pasta' }],
-                    tags: ['italien', 'pasta', 'rapide']
+                    tags: ['italian', 'pasta', 'quick']
                 },
                 {
                     title: 'Caesar Salad',
                     description: 'Fresh and crispy salad',
-                    category: 'Entrée',
+                    category: 'Appetizer',
                     prepTime: 15,
                     cookTime: 0,
                     servings: 2,
-                    ingredients: [{ name: 'lettuce', quantity: '1', unit: 'pièce' }],
+                    ingredients: [{ name: 'lettuce', quantity: '1', unit: 'piece' }],
                     steps: [{ order: 1, instruction: 'Mix ingredients' }],
-                    tags: ['salade', 'rapide', 'sain']
+                    tags: ['salad', 'quick', 'healthy']
                 }
             ];
 
@@ -797,11 +797,11 @@ describe('Recipes API Integration', () => {
         });
 
         test('should filter recipes by category', async () => {
-            const response = await apiService.get('/recipes?category=Plat principal');
+            const response = await apiService.get('/recipes?category=Main dish');
 
             expect(response.recipes.length).toBeGreaterThan(0);
             response.recipes.forEach(recipe => {
-                expect(recipe.category).toBe('Plat principal');
+                expect(recipe.category).toBe('Main dish');
             });
         });
 
@@ -826,17 +826,17 @@ describe('Recipes API Integration', () => {
 });
 ```
 
-#### Tests End-to-End
+#### End-to-End Tests
 ```javascript
 // tests/e2e/user-journey.test.js
 import { test, expect } from '@playwright/test';
 
 test.describe('User Journey - Recipe Sharing', () => {
     test.beforeEach(async ({ page }) => {
-        // Aller sur la page d'accueil
+        // Go to home page
         await page.goto('http://localhost:3001');
 
-        // Se connecter si nécessaire
+        // Login if necessary
         const loginButton = page.locator('[data-testid="login-button"]');
         if (await loginButton.isVisible()) {
             await loginButton.click();
@@ -845,136 +845,136 @@ test.describe('User Journey - Recipe Sharing', () => {
             await page.fill('[data-testid="password-input"]', 'TestPassword123!');
             await page.click('[data-testid="submit-login"]');
 
-            // Attendre la redirection
+            // Wait for redirection
             await page.waitForURL('**/');
         }
     });
 
     test('should complete full recipe creation journey', async ({ page }) => {
-        // Cliquer sur "Créer une recette"
+        // Click "Create Recipe"
         await page.click('[data-testid="create-recipe-button"]');
 
-        // Remplir le formulaire
+        // Fill form
         await page.fill('[data-testid="recipe-title"]', 'Test E2E Recipe');
         await page.fill('[data-testid="recipe-description"]', 'A recipe created during E2E testing');
 
-        // Sélectionner une catégorie
-        await page.selectOption('[data-testid="recipe-category"]', 'Plat principal');
+        // Select category
+        await page.selectOption('[data-testid="recipe-category"]', 'Main dish');
 
-        // Remplir les temps
+        // Fill times
         await page.fill('[data-testid="prep-time"]', '15');
         await page.fill('[data-testid="cook-time"]', '30');
         await page.fill('[data-testid="servings"]', '4');
 
-        // Ajouter un ingrédient
+        // Add ingredient
         await page.click('[data-testid="add-ingredient"]');
-        await page.fill('[data-testid="ingredient-0-name"]', 'Tomates');
+        await page.fill('[data-testid="ingredient-0-name"]', 'Tomatoes');
         await page.fill('[data-testid="ingredient-0-quantity"]', '500');
         await page.selectOption('[data-testid="ingredient-0-unit"]', 'g');
 
-        // Ajouter une étape
+        // Add step
         await page.click('[data-testid="add-step"]');
-        await page.fill('[data-testid="step-0-instruction"]', 'Couper les tomates en dés');
+        await page.fill('[data-testid="step-0-instruction"]', 'Cut tomatoes into cubes');
 
-        // Soumettre la recette
+        // Submit recipe
         await page.click('[data-testid="submit-recipe"]');
 
-        // Vérifier la redirection vers la page de détail
+        // Verify redirection to detail page
         await expect(page).toHaveURL(/\/recipe\/.+/);
 
-        // Vérifier que la recette apparaît dans la liste
+        // Verify recipe appears in list
         await page.goto('/');
         await expect(page.locator('text=Test E2E Recipe')).toBeVisible();
     });
 
     test('should handle recipe search and filtering', async ({ page }) => {
-        // Effectuer une recherche
+        // Perform search
         await page.fill('[data-testid="search-input"]', 'pasta');
         await page.click('[data-testid="search-button"]');
 
-        // Vérifier les résultats
+        // Verify results
         await expect(page.locator('[data-testid="recipe-card"]')).toHaveCount(await page.locator('[data-testid="recipe-card"]').count());
 
-        // Appliquer un filtre
-        await page.selectOption('[data-testid="category-filter"]', 'Plat principal');
+        // Apply filter
+        await page.selectOption('[data-testid="category-filter"]', 'Main dish');
         await page.click('[data-testid="apply-filters"]');
 
-        // Vérifier que seuls les plats principaux sont affichés
+        // Verify only main dishes are displayed
         const recipes = page.locator('[data-testid="recipe-card"]');
         const count = await recipes.count();
 
         for (let i = 0; i < count; i++) {
-            await expect(recipes.nth(i)).toContainText('Plat principal');
+            await expect(recipes.nth(i)).toContainText('Main dish');
         }
     });
 
     test('should handle user authentication', async ({ page }) => {
-        // Se déconnecter
+        // Logout
         await page.click('[data-testid="user-menu"]');
         await page.click('[data-testid="logout-button"]');
 
-        // Vérifier la redirection vers la page de connexion
+        // Verify redirection to login page
         await expect(page).toHaveURL('**/login');
 
-        // Tenter une connexion avec de mauvais identifiants
+        // Try login with wrong credentials
         await page.fill('[data-testid="email-input"]', 'wrong@example.com');
         await page.fill('[data-testid="password-input"]', 'wrongpassword');
         await page.click('[data-testid="submit-login"]');
 
-        // Vérifier le message d'erreur
+        // Verify error message
         await expect(page.locator('[data-testid="error-message"]')).toBeVisible();
-        await expect(page.locator('[data-testid="error-message"]')).toContainText('identifiants invalides');
+        await expect(page.locator('[data-testid="error-message"]')).toContainText('invalid credentials');
 
-        // Se connecter avec de bons identifiants
+        // Login with correct credentials
         await page.fill('[data-testid="email-input"]', 'test@example.com');
         await page.fill('[data-testid="password-input"]', 'TestPassword123!');
         await page.click('[data-testid="submit-login"]');
 
-        // Vérifier la connexion réussie
+        // Verify successful login
         await expect(page).toHaveURL('**/');
         await expect(page.locator('[data-testid="user-menu"]')).toBeVisible();
     });
 
     test('should handle recipe interaction', async ({ page }) => {
-        // Cliquer sur une recette
+        // Click on a recipe
         await page.click('[data-testid="recipe-card"]:first-child');
 
-        // Vérifier la page de détail
+        // Verify detail page
         await expect(page).toHaveURL(/\/recipe\/.+/);
 
-        // Liker la recette
+        // Like the recipe
         const likeButton = page.locator('[data-testid="like-button"]');
         const initialLikes = await likeButton.textContent();
 
         await likeButton.click();
 
-        // Vérifier que le nombre de likes a changé
+        // Verify likes count changed
         await expect(likeButton).not.toHaveText(initialLikes);
 
-        // Noter la recette
+        // Rate the recipe
         await page.click('[data-testid="star-4"]');
 
-        // Vérifier que la note est enregistrée
+        // Verify rating is saved
         await expect(page.locator('[data-testid="rating-confirm"]')).toBeVisible();
     });
 
     test('should handle error states gracefully', async ({ page }) => {
-        // Aller sur une URL invalide
+        // Go to invalid URL
         await page.goto('http://localhost:3001/recipe/invalid-id');
 
-        // Vérifier la page d'erreur
+        // Verify error page
         await expect(page.locator('[data-testid="error-page"]')).toBeVisible();
-        await expect(page.locator('text=Recette non trouvée')).toBeVisible();
+        await expect(page.locator('text=Recipe not found')).toBeVisible();
 
-        // Vérifier le lien de retour
+        // Verify back link
         await page.click('[data-testid="back-home"]');
         await expect(page).toHaveURL('**/');
     });
 });
 ```
 
-### Étape 5 : Configuration CI/CD
-Mettez en place un pipeline de déploiement :
+### Step 5: CI/CD Configuration
+Set up a deployment pipeline:
 
 #### GitHub Actions
 ```yaml
@@ -1075,8 +1075,8 @@ jobs:
     steps:
     - name: Deploy to staging
       run: |
-        echo "Déploiement en staging"
-        # Commandes de déploiement staging
+        echo "Deploying to staging"
+        # Staging deployment commands
 
   deploy-production:
     runs-on: ubuntu-latest
@@ -1086,11 +1086,11 @@ jobs:
     steps:
     - name: Deploy to production
       run: |
-        echo "Déploiement en production"
-        # Commandes de déploiement production
+        echo "Deploying to production"
+        # Production deployment commands
 ```
 
-#### Configuration Lighthouse
+#### Lighthouse Configuration
 ```json
 // .lighthouserc.json
 {
@@ -1113,7 +1113,7 @@ jobs:
 }
 ```
 
-#### Scripts Package.json
+#### Package.json Scripts
 ```json
 {
   "scripts": {
@@ -1138,85 +1138,85 @@ jobs:
 }
 ```
 
-## Instructions de Test
+## Test Instructions
 
-### Validation Optimisation Performance (30%)
-- [ ] Bundle JavaScript réduit de 50%
-- [ ] Images optimisées et lazy loaded
-- [ ] Service worker opérationnel
-- [ ] Cache API efficace
-- [ ] Score Lighthouse > 90
+### Performance Optimization Validation (30%)
+- [ ] JavaScript bundle reduced by 50%
+- [ ] Images optimized and lazy loaded
+- [ ] Service worker operational
+- [ ] Efficient API cache
+- [ ] Lighthouse score > 90
 
-### Validation Architecture (25%)
-- [ ] Code modularisé et organisé
-- [ ] Design patterns correctement appliqués
-- [ ] Séparation claire des responsabilités
-- [ ] Architecture scalable
+### Architecture Validation (25%)
+- [ ] Code modularized and organized
+- [ ] Design patterns correctly applied
+- [ ] Clear separation of responsibilities
+- [ ] Scalable architecture
 
-### Validation Tests (25%)
-- [ ] Tests unitaires complets (>80% coverage)
-- [ ] Tests d'intégration fonctionnels
-- [ ] Tests end-to-end opérationnels
-- [ ] Pipeline CI/CD fonctionnel
+### Tests Validation (25%)
+- [ ] Complete unit tests (>80% coverage)
+- [ ] Functional integration tests
+- [ ] Operational end-to-end tests
+- [ ] Functional CI/CD pipeline
 
-### Validation Qualité (20%)
-- [ ] Code linté et formaté
-- [ ] Documentation complète
-- [ ] Sécurité renforcée
-- [ ] Bonnes pratiques appliquées
+### Quality Validation (20%)
+- [ ] Code linted and formatted
+- [ ] Complete documentation
+- [ ] Enhanced security
+- [ ] Best practices applied
 
-## Défis Supplémentaires
+## Additional Challenges
 
-### Niveau 1 : Monitoring et Analytics
-- Implémenter un système de monitoring des performances
-- Ajouter des analytics utilisateur (Google Analytics)
-- Créer des tableaux de bord de métriques
-- Mettre en place des alertes automatiques
+### Level 1: Monitoring and Analytics
+- Implement a performance monitoring system
+- Add user analytics (Google Analytics)
+- Create metrics dashboards
+- Set up automatic alerts
 
-### Niveau 2 : Microservices
-- Séparer l'application en microservices
-- Implémenter une API Gateway
-- Ajouter une gestion d'événements (event sourcing)
-- Créer un système de cache distribué (Redis)
+### Level 2: Microservices
+- Split application into microservices
+- Implement an API Gateway
+- Add event management (event sourcing)
+- Create a distributed cache system (Redis)
 
-### Niveau 3 : Intelligence Artificielle
-- Intégrer un système de recommandations IA
-- Implémenter la reconnaissance d'images pour les ingrédients
-- Ajouter un assistant virtuel pour les recettes
-- Créer un système de génération automatique de recettes
+### Level 3: Artificial Intelligence
+- Integrate an AI recommendation system
+- Implement image recognition for ingredients
+- Add a virtual assistant for recipes
+- Create an automatic recipe generation system
 
-## Critères d'Évaluation
+## Evaluation Criteria
 
 ### Performance (30%)
-- Temps de chargement optimisé
-- Utilisation efficiente des ressources
-- Cache intelligent implémenté
-- Bundle optimisé
+- Optimized loading time
+- Efficient resource usage
+- Intelligent cache implemented
+- Optimized bundle
 
-### Tests et Qualité (30%)
-- Suite de tests complète et maintenue
-- Code coverage élevé
-- Pipeline CI/CD robuste
-- Qualité du code assurée
+### Tests and Quality (30%)
+- Complete and maintained test suite
+- High code coverage
+- Robust CI/CD pipeline
+- Ensured code quality
 
 ### Architecture (20%)
-- Design patterns appropriés
-- Architecture modulaire
-- Séparation des responsabilités
-- Maintenabilité du code
+- Appropriate design patterns
+- Modular architecture
+- Separation of responsibilities
+- Maintainable code
 
-### DevOps et Déploiement (20%)
-- Automatisation complète du déploiement
-- Environnements séparés (dev/staging/prod)
-- Monitoring et alerting
-- Sécurité renforcée
+### DevOps and Deployment (20%)
+- Complete deployment automation
+- Separate environments (dev/staging/prod)
+- Monitoring and alerting
+- Enhanced security
 
-## Prochaines Étapes
-Félicitations ! Vous avez terminé votre parcours de développement web. Vous êtes maintenant un développeur web full-stack compétent avec des connaissances en bonnes pratiques et optimisation. 
+## Next Steps
+Congratulations! You have completed your web development journey. You are now a competent full-stack web developer with knowledge of best practices and optimization.
 
-**Continuez votre apprentissage :**
-- Explorez des frameworks modernes (React, Vue, Angular)
-- Apprenez le déploiement cloud (AWS, Vercel, Netlify)
-- Spécialisez-vous dans un domaine (frontend, backend, DevOps)
-- Contribuez à des projets open source
-- Créez votre portfolio professionnel
+**Continue your learning:**
+- Explore modern frameworks (React, Vue, Angular)
+- Learn cloud deployment (AWS, Vercel, Netlify)
+- Specialize in a domain (frontend, backend, DevOps)
+- Contribute to open source projects
+- Build your professional portfolio

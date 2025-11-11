@@ -1,221 +1,221 @@
-# Cas Pratique : Création d'une Page de Profil Personnel
+# Practical Project: Create a Personal Profile Page
 
-## Contexte du Projet
-Vous venez d'apprendre les bases du HTML et vous voulez créer votre première page web qui vous présente. Ce projet simple vous permettra de pratiquer tous les éléments HTML de base vus dans ce module.
+## Project Context
+You have just learned the basics of HTML and want to create your first web page that introduces you. This simple project will allow you to practice all the basic HTML elements covered in this module.
 
-## Objectif
-Créer une page de profil personnel simple qui inclut votre nom, une présentation, vos intérêts et des informations de contact.
+## Objective
+Create a simple personal profile page that includes your name, an introduction, your interests, and contact information.
 
-## Étapes de Réalisation
+## Implementation Steps
 
-### Étape 1 : Configuration de l'Environnement
-1. Créez un dossier nommé `mon-profil`
-2. Ouvrez VS Code et créez un fichier `index.html`
-3. Installez l'extension Live Server si ce n'est pas déjà fait
+### Step 1: Environment Setup
+1. Create a folder named `my-profile`
+2. Open VS Code and create a file `index.html`
+3. Install the Live Server extension if not already done
 
-### Étape 2 : Structure HTML de Base
-Créez la structure fondamentale de votre page :
+### Step 2: Basic HTML Structure
+Create the fundamental structure of your page:
 
 ```html
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Profil Personnel</title>
+    <title>My Personal Profile</title>
 </head>
 <body>
-    <!-- Votre contenu viendra ici -->
+    <!-- Your content will go here -->
 </body>
 </html>
 ```
 
-### Étape 3 : Ajout du Contenu Principal
-Ajoutez les sections suivantes avec les balises HTML appropriées :
+### Step 3: Adding Main Content
+Add the following sections with appropriate HTML tags:
 
-#### En-tête avec votre nom
+#### Header with your name
 ```html
 <header>
-    <h1>Votre Nom Complet</h1>
-    <p>Développeur Web en Apprentissage</p>
+    <h1>Your Full Name</h1>
+    <p>Web Developer in Training</p>
 </header>
 ```
 
-#### Section À Propos
+#### About Section
 ```html
 <section>
-    <h2>À Propos de Moi</h2>
-    <p>Écrivez 2-3 phrases sur vous, vos motivations et vos objectifs en développement web.</p>
+    <h2>About Me</h2>
+    <p>Write 2-3 sentences about yourself, your motivations, and your goals in web development.</p>
 </section>
 ```
 
-#### Section Mes Intérêts
+#### My Interests Section
 ```html
 <section>
-    <h2>Mes Intérêts</h2>
+    <h2>My Interests</h2>
     <ul>
-        <li>Développement Web</li>
-        <li>Technologies</li>
+        <li>Web Development</li>
+        <li>Technology</li>
         <li>Design</li>
-        <li>Apprentissage continu</li>
+        <li>Continuous Learning</li>
     </ul>
 </section>
 ```
 
-#### Section Objectifs
+#### Goals Section
 ```html
 <section>
-    <h2>Mes Objectifs</h2>
+    <h2>My Goals</h2>
     <ol>
-        <li>Maîtriser HTML, CSS et JavaScript</li>
-        <li>Apprendre les frameworks modernes</li>
-        <li>Construire des applications web complètes</li>
-        <li>Contribuer à des projets open source</li>
+        <li>Master HTML, CSS, and JavaScript</li>
+        <li>Learn modern frameworks</li>
+        <li>Build complete web applications</li>
+        <li>Contribute to open source projects</li>
     </ol>
 </section>
 ```
 
-### Étape 4 : Enrichissement du Contenu
-Ajoutez du texte formaté :
+### Step 4: Content Enrichment
+Add formatted text:
 
 ```html
-<p>J'ai commencé mon voyage dans le développement web parce que je suis passionné par <strong>la création d'expériences numériques</strong> qui rendent la vie des gens plus facile.</p>
+<p>I started my journey in web development because I am passionate about <strong>creating digital experiences</strong> that make people's lives easier.</p>
 
-<p>J'aime particulièrement <em>l'aspect créatif</em> du développement web, où je peux combiner logique et design pour créer quelque chose d'utile.</p>
+<p>I particularly like <em>the creative aspect</em> of web development, where I can combine logic and design to create something useful.</p>
 ```
 
-### Étape 5 : Ajout d'Informations de Contact
+### Step 5: Adding Contact Information
 ```html
 <section>
     <h2>Contact</h2>
-    <p>Vous pouvez me contacter :</p>
+    <p>You can contact me:</p>
     <ul>
-        <li>Email : <a href="mailto:votre.email@example.com">votre.email@example.com</a></li>
-        <li>LinkedIn : <a href="https://linkedin.com/in/votreprofil" target="_blank">Votre Profil LinkedIn</a></li>
-        <li>GitHub : <a href="https://github.com/votreusername" target="_blank">Votre GitHub</a></li>
+        <li>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></li>
+        <li>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">Your LinkedIn Profile</a></li>
+        <li>GitHub: <a href="https://github.com/yourusername" target="_blank">Your GitHub</a></li>
     </ul>
 </section>
 ```
 
-### Étape 6 : Test et Validation
-1. Ouvrez votre fichier `index.html` dans un navigateur
-2. Utilisez Live Server pour une prévisualisation automatique
-3. Vérifiez que tous les liens fonctionnent
-4. Testez la responsivité en redimensionnant la fenêtre
+### Step 6: Testing and Validation
+1. Open your `index.html` file in a browser
+2. Use Live Server for automatic preview
+3. Check that all links work
+4. Test responsiveness by resizing the window
 
-## Code Complet Exemple
+## Complete Example Code
 
 ```html
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Profil Personnel - Jean Dupont</title>
+    <title>My Personal Profile - John Doe</title>
 </head>
 <body>
     <header>
-        <h1>Jean Dupont</h1>
-        <p>Développeur Web en Apprentissage</p>
+        <h1>John Doe</h1>
+        <p>Web Developer in Training</p>
     </header>
 
     <main>
         <section>
-            <h2>À Propos de Moi</h2>
-            <p>Bonjour ! Je m'appelle Jean et je suis passionné par le développement web. J'ai commencé ce voyage pour créer des sites web utiles et modernes.</p>
-            <p>J'aime particulièrement <strong>combiner créativité et logique</strong> pour résoudre des problèmes complexes et améliorer l'expérience utilisateur.</p>
+            <h2>About Me</h2>
+            <p>Hello! My name is John and I am passionate about web development. I started this journey to create useful and modern websites.</p>
+            <p>I particularly like <strong>combining creativity and logic</strong> to solve complex problems and improve user experience.</p>
         </section>
 
         <section>
-            <h2>Mes Intérêts</h2>
+            <h2>My Interests</h2>
             <ul>
-                <li><strong>Développement Web</strong> - HTML, CSS, JavaScript</li>
-                <li><em>Technologies Émergentes</em> - IA, Blockchain, IoT</li>
-                <li>Design UX/UI</li>
-                <li>Apprentissage continu et veille technologique</li>
+                <li><strong>Web Development</strong> - HTML, CSS, JavaScript</li>
+                <li><em>Emerging Technologies</em> - AI, Blockchain, IoT</li>
+                <li>UX/UI Design</li>
+                <li>Continuous learning and technological watch</li>
             </ul>
         </section>
 
         <section>
-            <h2>Mes Objectifs</h2>
+            <h2>My Goals</h2>
             <ol>
-                <li>Maîtriser les technologies web modernes</li>
-                <li>Apprendre React et Node.js</li>
-                <li>Contribuer à des projets open source</li>
-                <li>Développer des applications full-stack</li>
+                <li>Master modern web technologies</li>
+                <li>Learn React and Node.js</li>
+                <li>Contribute to open source projects</li>
+                <li>Develop full-stack applications</li>
             </ol>
         </section>
 
         <section>
             <h2>Contact</h2>
-            <p>N'hésitez pas à me contacter pour discuter de projets ou d'opportunités !</p>
+            <p>Feel free to contact me to discuss projects or opportunities!</p>
             <ul>
-                <li>Email : <a href="mailto:jean.dupont@email.com">jean.dupont@email.com</a></li>
-                <li>LinkedIn : <a href="https://linkedin.com/in/jeandupont" target="_blank">Jean Dupont</a></li>
-                <li>GitHub : <a href="https://github.com/jeandupont" target="_blank">jeandupont</a></li>
+                <li>Email: <a href="mailto:john.doe@email.com">john.doe@email.com</a></li>
+                <li>LinkedIn: <a href="https://linkedin.com/in/johndoe" target="_blank">John Doe</a></li>
+                <li>GitHub: <a href="https://github.com/johndoe" target="_blank">johndoe</a></li>
             </ul>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Jean Dupont. Tous droits réservés.</p>
+        <p>&copy; 2024 John Doe. All rights reserved.</p>
     </footer>
 </body>
 </html>
 ```
 
-## Instructions de Test
+## Testing Instructions
 
-### Validation Fonctionnelle
-- [ ] La page se charge correctement dans le navigateur
-- [ ] Tous les titres utilisent la hiérarchie appropriée (h1, h2)
-- [ ] Les listes sont correctement formatées (ul pour intérêts, ol pour objectifs)
-- [ ] Les liens email et externes fonctionnent
-- [ ] Le texte formaté (gras, italique) s'affiche correctement
+### Functional Validation
+- [ ] The page loads correctly in the browser
+- [ ] All headings use the appropriate hierarchy (h1, h2)
+- [ ] Lists are properly formatted (ul for interests, ol for goals)
+- [ ] Email and external links work
+- [ ] Formatted text (bold, italic) displays correctly
 
-### Validation Sémantique
-- [ ] La structure utilise des éléments sémantiques appropriés
-- [ ] Le DOCTYPE est présent et correct
-- [ ] Les balises meta charset et viewport sont présentes
-- [ ] L'attribut lang="fr" est défini sur la balise html
+### Semantic Validation
+- [ ] The structure uses appropriate semantic elements
+- [ ] The DOCTYPE is present and correct
+- [ ] Meta charset and viewport tags are present
+- [ ] The lang="en" attribute is set on the html tag
 
-## Défis Supplémentaires
+## Additional Challenges
 
-### Niveau 1 : Personnalisation
-- Ajoutez une photo de profil avec la balise `<img>`
-- Incluez une citation favorite avec la balise `<blockquote>`
-- Ajoutez des émojis pertinents dans votre contenu
+### Level 1: Customization
+- Add a profile photo with the `<img>` tag
+- Include a favorite quote with the `<blockquote>` tag
+- Add relevant emojis in your content
 
-### Niveau 2 : Contenu Dynamique
-- Créez une liste de compétences avec un système d'étoiles simple
-- Ajoutez une section "Projets récents" avec des liens
-- Incluez des informations sur vos formations
+### Level 2: Dynamic Content
+- Create a skills list with a simple star rating system
+- Add a "Recent Projects" section with links
+- Include information about your education
 
-### Niveau 3 : Structure Avancée
-- Organisez votre contenu en sections avec des en-têtes descriptifs
-- Ajoutez une table pour afficher vos compétences techniques
-- Créez une navigation interne avec des ancres
+### Level 3: Advanced Structure
+- Organize your content in sections with descriptive headers
+- Add a table to display your technical skills
+- Create internal navigation with anchors
 
-## Critères d'Évaluation
+## Evaluation Criteria
 
-### Fonctionnalité (40%)
-- Page accessible et navigable
-- Tous les liens fonctionnels
-- Contenu correctement affiché
+### Functionality (40%)
+- Page accessible and navigable
+- All links functional
+- Content displayed correctly
 
-### Structure HTML (30%)
-- Utilisation correcte des balises sémantiques
-- Hiérarchie de titres appropriée
-- Syntaxe HTML valide
+### HTML Structure (30%)
+- Correct use of semantic tags
+- Appropriate heading hierarchy
+- Valid HTML syntax
 
-### Contenu (20%)
-- Informations personnelles pertinentes
-- Texte bien formaté et lisible
-- Liens utiles et fonctionnels
+### Content (20%)
+- Relevant personal information
+- Well-formatted and readable text
+- Useful and functional links
 
-### Présentation (10%)
-- Code bien organisé et commenté
-- Respect des bonnes pratiques HTML
+### Presentation (10%)
+- Well-organized and commented code
+- Respect for HTML best practices
 
-## Prochaines Étapes
-Une fois ce projet terminé, vous aurez créé votre première page web fonctionnelle ! Au prochain module, nous apprendrons la structure HTML sémantique et l'ajout d'images et de liens pour enrichir davantage vos pages.
+## Next Steps
+Once this project is completed, you will have created your first functional web page! In the next module, we will learn about semantic HTML structure and adding images and links to further enrich your pages.

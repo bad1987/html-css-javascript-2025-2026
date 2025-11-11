@@ -1,333 +1,333 @@
-# Exercices Maison - Module 3 : Notions Fondamentales du CSS
+# Homework Exercises
 
-## Aperçu
-Ces exercices vous permettent de maîtriser les bases du CSS : sélecteurs, propriétés, couleurs, polices, et espacement. Vous apprendrez à créer des designs visuellement attrayants et cohérents.
+## Overview
+These exercises allow you to master the basics of CSS: selectors, properties, colors, fonts, and spacing. You will learn to create visually appealing and coherent designs.
 
-## Niveau Débutant
+## Beginner Level
 
-### Exercice 3.1 : Premiers Pas en CSS
-**Objectif** : Lier une feuille de style CSS à une page HTML et appliquer des styles basiques.
+### Exercise 3.1: First Steps in CSS
+**Objective**: Link a CSS stylesheet to an HTML page and apply basic styles.
 
-**Instructions** :
-1. Créez une page HTML simple avec du contenu (titres, paragraphes, liste)
-2. Créez un fichier `style.css` séparé
-3. Liez le fichier CSS à votre page HTML avec `<link rel="stylesheet" href="style.css">`
-4. Appliquez les styles suivants :
-   - Couleur de fond pour la page (`body`)
-   - Couleur et taille de police pour les titres
-   - Espacement entre les paragraphes
-   - Style pour la liste (puces colorées)
+**Instructions**:
+1. Create a simple HTML page with content (titles, paragraphs, list)
+2. Create a separate `style.css` file
+3. Link the CSS file to your HTML page with `<link rel="stylesheet" href="style.css">`
+4. Apply the following styles:
+   - Background color for the page (`body`)
+   - Color and font size for titles
+   - Spacing between paragraphs
+   - Style for the list (colored bullets)
 
-**Critères de validation** :
-- [ ] Fichier CSS externe correctement lié
-- [ ] Au moins 5 propriétés CSS différentes utilisées
-- [ ] Styles visibles dans le navigateur
-- [ ] Code organisé et commenté
+**Validation Criteria**:
+- [ ] External CSS file correctly linked
+- [ ] At least 5 different CSS properties used
+- [ ] Styles visible in the browser
+- [ ] Code organized and commented
 
-**Indices** :
-- Utilisez `background-color` pour la couleur de fond
-- `font-size` et `color` pour les textes
-- `margin` ou `padding` pour l'espacement
+**Hints**:
+- Use `background-color` for background color
+- `font-size` and `color` for texts
+- `margin` or `padding` for spacing
 
-### Exercice 3.2 : Sélecteurs CSS
-**Objectif** : Maîtriser les différents types de sélecteurs CSS.
+### Exercise 3.2: CSS Selectors
+**Objective**: Master the different types of CSS selectors.
 
-**Instructions** :
-1. Créez une page HTML avec différents éléments :
-   - Plusieurs paragraphes avec des classes différentes
-   - Des éléments avec des IDs spécifiques
-   - Une liste imbriquée
-   - Des liens dans différents contextes
-2. Créez des règles CSS utilisant :
-   - Sélecteurs de balise (`p`, `h1`)
-   - Sélecteurs de classe (`.important`, `.secondaire`)
-   - Sélecteurs d'ID (`#principal`, `#footer`)
-   - Sélecteurs descendants (`nav a`)
-   - Sélecteurs de pseudo-classes (`:hover`, `:first-child`)
+**Instructions**:
+1. Create an HTML page with different elements:
+   - Multiple paragraphs with different classes
+   - Elements with specific IDs
+   - A nested list
+   - Links in different contexts
+2. Create CSS rules using:
+   - Tag selectors (`p`, `h1`)
+   - Class selectors (`.important`, `.secondary`)
+   - ID selectors (`#main`, `#footer`)
+   - Descendant selectors (`nav a`)
+   - Pseudo-class selectors (`:hover`, `:first-child`)
 
-**Critères de validation** :
-- [ ] Tous les types de sélecteurs utilisés au moins une fois
-- [ ] Styles spécifiques appliqués selon les sélecteurs
-- [ ] Effet `:hover` visible sur les liens
-- [ ] Hiérarchie de spécificité respectée
+**Validation Criteria**:
+- [ ] All types of selectors used at least once
+- [ ] Specific styles applied according to selectors
+- [ ] `:hover` effect visible on links
+- [ ] Specificity hierarchy respected
 
-**Indices** :
-- Les IDs ont la plus haute spécificité (`#id > .class > element`)
-- `:hover` fonctionne sur tous les éléments, pas seulement les liens
-- Testez la cascade en ajoutant plusieurs règles pour le même élément
+**Hints**:
+- IDs have the highest specificity (`#id > .class > element`)
+- `:hover` works on all elements, not just links
+- Test the cascade by adding multiple rules for the same element
 
-## Niveau Intermédiaire
+## Intermediate Level
 
-### Exercice 3.3 : Design de Carte de Visite
-**Objectif** : Créer une carte de visite élégante avec CSS.
+### Exercise 3.3: Business Card Design
+**Objective**: Create an elegant business card with CSS.
 
-**Instructions** :
-1. Créez une page `carte-visite.html` avec une seule carte de visite
-2. Incluez les informations classiques :
-   - Nom et prénom
-   - Poste/Profession
-   - Coordonnées (téléphone, email)
-   - Adresse
-   - Logo ou photo (optionnel)
-3. Appliquez un design professionnel :
-   - Fond en dégradé ou couleur unie
-   - Ombres portées (`box-shadow`)
-   - Bordures arrondies
-   - Typographie hiérarchisée
-   - Espacement harmonieux
-4. Rendez-la responsive (centrée et adaptée)
+**Instructions**:
+1. Create a page `carte-visite.html` with a single business card
+2. Include classic information:
+   - First and last name
+   - Position/Profession
+   - Contact details (phone, email)
+   - Address
+   - Logo or photo (optional)
+3. Apply a professional design:
+   - Gradient or solid background
+   - Drop shadows (`box-shadow`)
+   - Rounded borders
+   - Hierarchical typography
+   - Harmonious spacing
+4. Make it responsive (centered and adapted)
 
-**Critères de validation** :
-- [ ] Design professionnel et lisible
-- [ ] Utilisation d'au moins 8 propriétés CSS différentes
-- [ ] Ombres et effets visuels appropriés
-- [ ] Typographie claire et hiérarchisée
-- [ ] Centrage responsive sur la page
+**Validation Criteria**:
+- [ ] Professional and readable design
+- [ ] Use of at least 8 different CSS properties
+- [ ] Appropriate shadows and visual effects
+- [ ] Clear and hierarchical typography
+- [ ] Responsive centering on the page
 
-**Indices** :
-- Utilisez `border-radius` pour les coins arrondis
-- `box-shadow: 0 4px 8px rgba(0,0,0,0.1)` pour une ombre douce
-- `max-width` et `margin: 0 auto` pour le centrage
+**Hints**:
+- Use `border-radius` for rounded corners
+- `box-shadow: 0 4px 8px rgba(0,0,0,0.1)` for a soft shadow
+- `max-width` and `margin: 0 auto` for centering
 
-### Exercice 3.4 : Palette de Couleurs Cohérente
-**Objectif** : Créer et appliquer une palette de couleurs cohérente sur une page.
+### Exercise 3.4: Coherent Color Palette
+**Objective**: Create and apply a coherent color palette on a page.
 
-**Instructions** :
-1. Choisissez ou créez une palette de 5 couleurs harmonieuses
-2. Créez une page `palette.html` démontrant l'utilisation de la palette
-3. Définissez des variables CSS pour votre palette :
+**Instructions**:
+1. Choose or create a palette of 5 harmonious colors
+2. Create a page `palette.html` demonstrating the palette usage
+3. Define CSS variables for your palette:
    ```css
    :root {
-     --couleur-principale: #007bff;
-     --couleur-secondaire: #6c757d;
-     --couleur-accent: #28a745;
-     --couleur-fond: #f8f9fa;
-     --couleur-texte: #212529;
+     --primary-color: #007bff;
+     --secondary-color: #6c757d;
+     --accent-color: #28a745;
+     --background-color: #f8f9fa;
+     --text-color: #212529;
    }
    ```
-4. Appliquez la palette sur différents éléments :
-   - Fond de page et sections
-   - Couleurs de texte et liens
-   - Bordures et accents
-   - Boutons et éléments interactifs
+4. Apply the palette on different elements:
+   - Page and section backgrounds
+   - Text and link colors
+   - Borders and accents
+   - Buttons and interactive elements
 
-**Critères de validation** :
-- [ ] Variables CSS définies et utilisées
-- [ ] Palette cohérente et harmonieuse
-- [ ] Application sur au moins 10 éléments différents
-- [ ] Contrastes suffisants pour la lisibilité
+**Validation Criteria**:
+- [ ] CSS variables defined and used
+- [ ] Coherent and harmonious palette
+- [ ] Application on at least 10 different elements
+- [ ] Sufficient contrasts for readability
 
-**Indices** :
-- Les variables CSS utilisent `--nom-variable` et `var(--nom-variable)`
-- Testez les contrastes avec des outils en ligne
-- Pensez à des variations claires/foncées de vos couleurs
+**Hints**:
+- CSS variables use `--variable-name` and `var(--variable-name)`
+- Test contrasts with online tools
+- Think of light/dark variations of your colors
 
-## Niveau Avancé
+## Advanced Level
 
-### Exercice 3.5 : Portfolio Stylé
-**Objectif** : Transformer votre portfolio HTML en design moderne avec CSS avancé.
+### Exercise 3.5: Styled Portfolio
+**Objective**: Transform your HTML portfolio into a modern design with advanced CSS.
 
-**Instructions** :
-1. Reprenez votre portfolio du Module 2
-2. Appliquez un design complet avec :
-   - Header avec navigation fixe
-   - Sections bien espacées avec arrière-plans
-   - Cartes pour présenter les projets/compétences
-   - Boutons stylés avec effets hover
-   - Typographie moderne (Google Fonts recommandé)
-   - Icônes ou images décoratives
-3. Utilisez des techniques CSS avancées :
-   - Flexbox pour les layouts
-   - Grid pour les galeries
-   - Transitions et animations
-   - Pseudo-éléments pour les décorations
+**Instructions**:
+1. Take your portfolio from Module 2
+2. Apply a complete design with:
+   - Header with fixed navigation
+   - Well-spaced sections with backgrounds
+   - Cards to present projects/skills
+   - Styled buttons with hover effects
+   - Modern typography (Google Fonts recommended)
+   - Decorative icons or images
+3. Use advanced CSS techniques:
+   - Flexbox for layouts
+   - Grid for galleries
+   - Transitions and animations
+   - Pseudo-elements for decorations
 
-**Critères de validation** :
-- [ ] Design moderne et professionnel
-- [ ] Utilisation de Flexbox ou Grid
-- [ ] Animations et transitions fluides
-- [ ] Typographie soignée
-- [ ] Responsive design de base
+**Validation Criteria**:
+- [ ] Modern and professional design
+- [ ] Use of Flexbox or Grid
+- [ ] Smooth animations and transitions
+- [ ] Careful typography
+- [ ] Basic responsive design
 
-**Indices** :
-- Importez des polices Google : `@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');`
-- Utilisez `transition: all 0.3s ease` pour les effets
-- `display: flex` pour aligner les éléments horizontalement
+**Hints**:
+- Import Google fonts: `@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');`
+- Use `transition: all 0.3s ease` for effects
+- `display: flex` to align elements horizontally
 
-### Exercice 3.6 : Système de Design
-**Objectif** : Créer un système de design réutilisable avec CSS.
+### Exercise 3.6: Design System
+**Objective**: Create a reusable design system with CSS.
 
-**Instructions** :
-1. Créez un fichier `design-system.css` avec :
-   - Variables pour couleurs, espacement, typographie
-   - Classes utilitaires (`text-center`, `mb-3`, `btn-primary`)
-   - Composants de base (boutons, cartes, formulaires)
-   - Layout helpers (conteneurs, grilles)
-2. Créez une page de démonstration `demo-systeme.html`
-3. Montrez tous les composants et utilitaires :
-   - Différentes tailles de boutons
-   - Couleurs de texte et arrière-plans
-   - Espacement cohérent
-   - Composants composés (cartes avec boutons)
+**Instructions**:
+1. Create a file `design-system.css` with:
+   - Variables for colors, spacing, typography
+   - Utility classes (`text-center`, `mb-3`, `btn-primary`)
+   - Basic components (buttons, cards, forms)
+   - Layout helpers (containers, grids)
+2. Create a demonstration page `demo-systeme.html`
+3. Show all components and utilities:
+   - Different button sizes
+   - Text and background colors
+   - Consistent spacing
+   - Composed components (cards with buttons)
 
-**Critères de validation** :
-- [ ] Variables CSS complètes et organisées
-- [ ] Classes utilitaires réutilisables
-- [ ] Composants cohérents
-- [ ] Documentation des classes utilisées
-- [ ] Démonstration complète des possibilités
+**Validation Criteria**:
+- [ ] Complete and organized CSS variables
+- [ ] Reusable utility classes
+- [ ] Consistent components
+- [ ] Documentation of used classes
+- [ ] Complete demonstration of possibilities
 
-**Indices** :
-- Préfixez les utilitaires (`u-`, `text-`, `bg-`, `p-`, `m-`)
-- Utilisez une échelle d'espacement (4px, 8px, 16px, 24px, 32px...)
-- Documentez avec des commentaires CSS
+**Hints**:
+- Prefix utilities (`u-`, `text-`, `bg-`, `p-`, `m-`)
+- Use a spacing scale (4px, 8px, 16px, 24px, 32px...)
+- Document with CSS comments
 
-## Défi Bonus
+## Bonus Challenge
 
-### Exercice 3.7 : Thème Sombre/Clair
-**Objectif** : Implémenter un système de thème sombre/clair.
+### Exercise 3.7: Dark/Light Theme
+**Objective**: Implement a dark/light theme system.
 
-**Instructions** :
-1. Créez une page avec basculement de thème
-2. Définissez deux jeux de variables CSS :
+**Instructions**:
+1. Create a page with theme switching
+2. Define two sets of CSS variables:
    ```css
-   /* Thème clair */
+   /* Light theme */
    :root {
      --bg-color: #ffffff;
      --text-color: #333333;
      --accent-color: #007bff;
    }
    
-   /* Thème sombre */
+   /* Dark theme */
    [data-theme="dark"] {
      --bg-color: #1a1a1a;
      --text-color: #ffffff;
      --accent-color: #4dabf7;
    }
    ```
-3. Ajoutez un bouton pour basculer entre les thèmes
-4. Utilisez JavaScript pour changer l'attribut `data-theme`
-5. Sauvegardez la préférence utilisateur (localStorage)
+3. Add a button to toggle between themes
+4. Use JavaScript to change the `data-theme` attribute
+5. Save user preference (localStorage)
 
-**Critères de validation** :
-- [ ] Basculement fonctionnel entre thèmes
-- [ ] Variables CSS utilisées partout
-- [ ] Préférence sauvegardée
-- [ ] Transitions fluides entre thèmes
-- [ ] Accessibilité (préférence système respectée)
+**Validation Criteria**:
+- [ ] Functional toggling between themes
+- [ ] CSS variables used everywhere
+- [ ] Preference saved
+- [ ] Smooth transitions between themes
+- [ ] Accessibility (system preference respected)
 
-**Indices** :
+**Hints**:
 - `document.documentElement.setAttribute('data-theme', 'dark')`
 - `localStorage.setItem('theme', 'dark')`
-- `@media (prefers-color-scheme: dark)` pour la préférence système
+- `@media (prefers-color-scheme: dark)` for system preference
 
-### Exercice 3.8 : Animation et Micro-interactions
-**Objectif** : Ajouter des animations et micro-interactions à une interface.
+### Exercise 3.8: Animation and Micro-interactions
+**Objective**: Add animations and micro-interactions to an interface.
 
-**Instructions** :
-1. Créez une page interactive avec plusieurs éléments
-2. Implémentez différents types d'animations :
-   - Transitions au survol (`:hover`)
-   - Animations d'entrée pour les éléments
-   - Transformations (rotation, échelle, translation)
-   - Animations de chargement
-3. Utilisez les propriétés CSS appropriées :
+**Instructions**:
+1. Create an interactive page with multiple elements
+2. Implement different types of animations:
+   - Hover transitions (`:hover`)
+   - Entry animations for elements
+   - Transformations (rotation, scale, translation)
+   - Loading animations
+3. Use appropriate CSS properties:
    - `transition`
    - `transform`
-   - `animation` avec `@keyframes`
-   - `opacity` et `visibility`
-4. Optimisez les performances (utilisez `transform` et `opacity`)
+   - `animation` with `@keyframes`
+   - `opacity` and `visibility`
+4. Optimize performance (use `transform` and `opacity`)
 
-**Critères de validation** :
-- [ ] Animations fluides et non saccadées
-- [ ] Utilisation appropriée des transformations
-- [ ] Performances optimisées (pas de `layout` triggers)
-- [ ] Interactions intuitives et agréables
+**Validation Criteria**:
+- [ ] Smooth and non-jerky animations
+- [ ] Appropriate use of transformations
+- [ ] Optimized performance (no `layout` triggers)
+- [ ] Intuitive and pleasant interactions
 
-**Indices** :
-- Évitez d'animer `width`, `height`, `margin`, `padding`
-- Préférez `transform: translate()`, `scale()`, `rotate()`
-- Utilisez `will-change` pour les animations complexes
+**Hints**:
+- Avoid animating `width`, `height`, `margin`, `padding`
+- Prefer `transform: translate()`, `scale()`, `rotate()`
+- Use `will-change` for complex animations
 
-## Intégration Inter-modules
+## Inter-module Integration
 
-### Exercice 3.9 : Préparation Module 4
-**Objectif** : Préparer la mise en page CSS en structurant le HTML pour Flexbox/Grid.
+### Exercise 3.9: Module 4 Preparation
+**Objective**: Prepare CSS layout by structuring HTML for Flexbox/Grid.
 
-**Instructions** :
-1. Reprenez votre portfolio du Module 3
-2. Refactorisez le HTML pour faciliter les layouts :
-   - Ajoutez des conteneurs (`<div class="container">`)
-   - Créez des sections de grille (`<div class="grid">`)
-   - Préparez des zones Flexbox (`<div class="flex-row">`)
-   - Ajoutez des classes utilitaires de layout
-3. Préparez des breakpoints pour le responsive :
-   - Classes pour mobile (`mobile-only`, `desktop-hidden`)
-   - Conteneurs responsives (`container-sm`, `container-lg`)
-   - Utilitaires de visibilité (`hidden-sm`, `visible-lg`)
-4. Documentez la structure prévue dans des commentaires
+**Instructions**:
+1. Take your portfolio from Module 3
+2. Refactor HTML to facilitate layouts:
+   - Add containers (`<div class="container">`)
+   - Create grid sections (`<div class="grid">`)
+   - Prepare Flexbox areas (`<div class="flex-row">`)
+   - Add layout utility classes
+3. Prepare breakpoints for responsive:
+   - Mobile classes (`mobile-only`, `desktop-hidden`)
+   - Responsive containers (`container-sm`, `container-lg`)
+   - Visibility utilities (`hidden-sm`, `visible-lg`)
+4. Document the planned structure in comments
 
-**Critères de validation** :
-- [ ] Structure HTML prête pour Flexbox/Grid
-- [ ] Classes utilitaires de layout définies
-- [ ] Breakpoints préparés
-- [ ] Commentaires explicatifs dans le code
-- [ ] Compatibilité avec le Module 4 anticipée
+**Validation Criteria**:
+- [ ] HTML structure ready for Flexbox/Grid
+- [ ] Layout utility classes defined
+- [ ] Breakpoints prepared
+- [ ] Explanatory comments in code
+- [ ] Compatibility with Module 4 anticipated
 
-**Indices** :
-- Pensez aux noms de classes qui seront utilisés en CSS
-- Préparez des sections pour `display: grid` et `display: flex`
-- Anticipez les media queries du responsive
+**Hints**:
+- Think of class names that will be used in CSS
+- Prepare sections for `display: grid` and `display: flex`
+- Anticipate media queries for responsive
 
-### Exercice 3.10 : Audit de Performance CSS
-**Objectif** : Optimiser un fichier CSS existant pour de meilleures performances.
+### Exercise 3.10: CSS Performance Audit
+**Objective**: Optimize an existing CSS file for better performance.
 
-**Instructions** :
-1. Prenez un fichier CSS existant (ou créez-en un volumineux)
-2. Effectuez un audit de performance :
-   - Identifiez les redondances
-   - Vérifiez la spécificité excessive
-   - Optimisez les sélecteurs
-   - Réduisez les répétitions avec des variables
-3. Appliquez les optimisations :
-   - Regroupez les règles similaires
-   - Utilisez l'héritage au maximum
-   - Minimisez la spécificité
-   - Supprimez les règles inutiles
-4. Comparez les performances avant/après
+**Instructions**:
+1. Take an existing CSS file (or create a voluminous one)
+2. Perform a performance audit:
+   - Identify redundancies
+   - Check excessive specificity
+   - Optimize selectors
+   - Reduce repetitions with variables
+3. Apply optimizations:
+   - Group similar rules
+   - Maximize inheritance
+   - Minimize specificity
+   - Remove unused rules
+4. Compare before/after performance
 
-**Critères de validation** :
-- [ ] Fichier CSS optimisé (taille réduite)
-- [ ] Spécificité réduite où possible
-- [ ] Variables CSS utilisées pour éviter répétitions
-- [ ] Sélecteurs optimisés (évitez les sélecteurs universels)
-- [ ] Rapport de performance fourni
+**Validation Criteria**:
+- [ ] Optimized CSS file (reduced size)
+- [ ] Reduced specificity where possible
+- [ ] CSS variables used to avoid repetitions
+- [ ] Optimized selectors (avoid universal selectors)
+- [ ] Performance report provided
 
-**Indices** :
-- Utilisez l'outil "Coverage" de Chrome DevTools
-- Évitez `* { margin: 0; padding: 0; }`
-- Préférez les classes aux sélecteurs complexes
-- Documentez vos optimisations
+**Hints**:
+- Use Chrome DevTools "Coverage" tool
+- Avoid `* { margin: 0; padding: 0; }`
+- Prefer classes to complex selectors
+- Document your optimizations
 
-## Critères de Validation Globaux
+## Global Validation Criteria
 
-Pour réussir ces exercices, assurez-vous que :
+To succeed in these exercises, ensure that:
 
-- **Cohérence** : Palette de couleurs et typographie cohérentes
-- **Performance** : CSS optimisé et efficace
-- **Maintenabilité** : Code organisé avec variables et commentaires
-- **Accessibilité** : Contrastes suffisants et focus visible
-- **Responsive** : Design adaptable aux différentes tailles d'écran
-- **Modernité** : Utilisation des dernières fonctionnalités CSS
+- **Consistency**: Coherent color palette and typography
+- **Performance**: Optimized and efficient CSS
+- **Maintainability**: Code organized with variables and comments
+- **Accessibility**: Sufficient contrasts and visible focus
+- **Responsive**: Design adaptable to different screen sizes
+- **Modernity**: Use of latest CSS features
 
-## Ressources d'Aide
+## Help Resources
 
 - [CSS Tricks - Complete Guide](https://css-tricks.com/guides/)
-- [MDN CSS Reference](https://developer.mozilla.org/fr/docs/Web/CSS)
+- [MDN CSS Reference](https://developer.mozilla.org/en-US/docs/Web/CSS)
 - [CSS Grid Garden](https://cssgridgarden.com/)
 - [Flexbox Froggy](https://flexboxfroggy.com/)
 - [Coolors - Color Palette Generator](https://coolors.co/)
 
-## Prochaines Étapes
+## Next Steps
 
-Ces exercices vous préparent parfaitement pour le Module 4 où vous apprendrez la mise en page avec Flexbox et CSS Grid. Vous aurez maintenant des bases solides pour créer des interfaces complexes et modernes !
+These exercises perfectly prepare you for Module 4 where you will learn layout with Flexbox and CSS Grid. You will now have solid foundations to create complex and modern interfaces!

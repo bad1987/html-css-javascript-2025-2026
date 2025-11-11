@@ -1,54 +1,54 @@
-# Cas Pratique : Application de Gestion de Projets Collaboratifs
+# Practical Project: Collaborative Project Management Application
 
-## Contexte du Projet
-Vous maîtrisez maintenant JavaScript avancé et vous voulez créer une application moderne utilisant les APIs du navigateur et la programmation asynchrone. Ce projet vous permettra de pratiquer la gestion d'état complexe, les appels API, la persistance des données, et l'interactivité avancée.
+## Project Context
+You now master advanced JavaScript and want to create a modern application using browser APIs and asynchronous programming. This project will allow you to practice complex state management, API calls, data persistence, and advanced interactivity.
 
-## Objectif
-Créer une application complète de gestion de projets collaboratifs avec authentification, gestion d'équipe, tableaux Kanban, et intégration temps réel simulée.
+## Goal
+Create a complete collaborative project management application with authentication, team management, Kanban boards, and simulated real-time integration.
 
-## Structure du Projet
+## Project Structure
 ```
-gestion-projets/
-├── index.html              # Page d'accueil et tableau de bord
-├── login.html              # Page de connexion
-├── project.html            # Page de détail de projet
+project-management/
+├── index.html              # Home page and dashboard
+├── login.html              # Login page
+├── project.html            # Project detail page
 ├── css/
-│   ├── style.css           # Styles principaux
-│   ├── kanban.css          # Styles du Kanban
-│   └── responsive.css      # Styles responsives
+│   ├── style.css           # Main styles
+│   ├── kanban.css          # Kanban styles
+│   └── responsive.css      # Responsive styles
 ├── js/
 │   ├── models/
-│   │   ├── User.js         # Classe Utilisateur
-│   │   ├── Project.js      # Classe Projet
-│   │   ├── Task.js         # Classe Tâche
-│   │   └── Team.js         # Classe Équipe
+│   │   ├── User.js         # User class
+│   │   ├── Project.js      # Project class
+│   │   ├── Task.js         # Task class
+│   │   └── Team.js         # Team class
 │   ├── services/
-│   │   ├── api.js          # Service API
-│   │   ├── auth.js         # Service d'authentification
-│   │   ├── storage.js      # Service de stockage
-│   │   └── realtime.js     # Service temps réel simulé
+│   │   ├── api.js          # API service
+│   │   ├── auth.js         # Authentication service
+│   │   ├── storage.js      # Storage service
+│   │   └── realtime.js     # Simulated real-time service
 │   ├── components/
-│   │   ├── KanbanBoard.js  # Composant Kanban
-│   │   ├── TaskCard.js     # Composant Carte Tâche
-│   │   ├── UserList.js     # Composant Liste Utilisateurs
-│   │   └── Notification.js # Composant Notifications
+│   │   ├── KanbanBoard.js  # Kanban component
+│   │   ├── TaskCard.js     # Task Card component
+│   │   ├── UserList.js     # User List component
+│   │   └── Notification.js # Notification component
 │   ├── utils/
-│   │   ├── validation.js   # Utilitaires de validation
-│   │   ├── format.js       # Utilitaires de formatage
-│   │   └── helpers.js      # Fonctions utilitaires
-│   └── app.js              # Application principale
+│   │   ├── validation.js   # Validation utilities
+│   │   ├── format.js       # Formatting utilities
+│   │   └── helpers.js      # Helper functions
+│   └── app.js              # Main application
 └── README.md
 ```
 
-## Étapes de Réalisation
+## Implementation Steps
 
-### Étape 1 : Configuration du Projet
-1. Créez le dossier `gestion-projets`
-2. Organisez les fichiers selon l'arborescence ci-dessus
-3. Configurez un serveur local ou utilisez Live Server
+### Step 1: Project Setup
+1. Create the `project-management` folder
+2. Organize files according to the structure above
+3. Configure a local server or use Live Server
 
-### Étape 2 : Modèles de Données
-Créez les classes de données :
+### Step 2: Data Models
+Create the data classes:
 
 ```javascript
 // js/models/User.js
@@ -102,10 +102,10 @@ class Project {
         this.updatedAt = new Date();
         this.members = [{ userId: ownerId, role: 'owner' }];
         this.columns = [
-            { id: 'todo', name: 'À faire', order: 0 },
-            { id: 'in-progress', name: 'En cours', order: 1 },
-            { id: 'review', name: 'En révision', order: 2 },
-            { id: 'done', name: 'Terminé', order: 3 }
+            { id: 'todo', name: 'To Do', order: 0 },
+            { id: 'in-progress', name: 'In Progress', order: 1 },
+            { id: 'review', name: 'In Review', order: 2 },
+            { id: 'done', name: 'Done', order: 3 }
         ];
         this.settings = {
             allowGuests: false,
@@ -137,12 +137,12 @@ class Project {
     }
 
     getTaskCount() {
-        // Cette méthode sera implémentée avec les tâches
+        // This method will be implemented with tasks
         return 0;
     }
 
     getCompletionPercentage() {
-        // Calcul du pourcentage d'achèvement
+        // Calculate completion percentage
         return 0;
     }
 
@@ -181,8 +181,8 @@ class Task {
         this.comments = [];
         this.attachments = [];
         this.timeTracking = {
-            estimated: 0, // en heures
-            spent: 0      // en heures
+            estimated: 0, // in hours
+            spent: 0      // in hours
         };
     }
 
@@ -320,8 +320,8 @@ class Team {
 }
 ```
 
-### Étape 3 : Services API et Stockage
-Implémentez les services de données :
+### Step 3: API and Storage Services
+Implement the data services:
 
 ```javascript
 // js/services/api.js
@@ -354,11 +354,11 @@ class ApiService {
             config.headers.Authorization = `Bearer ${this.token}`;
         }
 
-        // Simulation de délai réseau
+        // Network delay simulation
         await this.delay(300 + Math.random() * 700);
 
         try {
-            // Simulation d'API - en production, ce serait un vrai appel fetch
+            // API simulation - in production, this would be a real fetch call
             const response = await this.mockFetch(url, config);
             return response;
         } catch (error) {
@@ -368,12 +368,12 @@ class ApiService {
     }
 
     async mockFetch(url, config) {
-        // Simulation d'API REST
+        // REST API simulation
         const method = config.method || 'GET';
         const path = url.replace(this.baseURL, '');
         const segments = path.split('/').filter(s => s);
 
-        // Simulation de réponses selon l'endpoint
+        // Response simulation based on endpoint
         switch (method) {
             case 'GET':
                 return this.handleGet(path, segments);
@@ -399,7 +399,7 @@ class ApiService {
             const projectId = segments[1];
             return storageService.loadProjectTasks(projectId);
         }
-        // Autres endpoints...
+        // Other endpoints...
         return [];
     }
 
@@ -412,7 +412,7 @@ class ApiService {
             const taskData = JSON.parse(body);
             return storageService.saveTask(taskData);
         }
-        // Autres endpoints...
+        // Other endpoints...
         return { success: true };
     }
 
@@ -437,7 +437,7 @@ class ApiService {
         return new Promise(resolve => setTimeout(resolve, ms));
     }
 
-    // Méthodes spécifiques
+    // Specific methods
     async getProjects() {
         return this.request('/projects');
     }
@@ -474,7 +474,7 @@ class ApiService {
     }
 }
 
-// Instance globale
+// Global instance
 const apiService = new ApiService();
 ```
 
@@ -488,7 +488,7 @@ class StorageService {
         this.TEAMS_KEY = 'pm_teams';
     }
 
-    // Projets
+    // Projects
     saveProject(project) {
         const projects = this.loadProjects();
         const existingIndex = projects.findIndex(p => p.id === project.id);
@@ -518,7 +518,7 @@ class StorageService {
         localStorage.setItem(this.PROJECTS_KEY, JSON.stringify(projects));
     }
 
-    // Tâches
+    // Tasks
     saveTask(task) {
         const tasks = this.loadTasks();
         const existingIndex = tasks.findIndex(t => t.id === task.id);
@@ -560,7 +560,7 @@ class StorageService {
         localStorage.setItem(this.TASKS_KEY, JSON.stringify(tasks));
     }
 
-    // Utilisateurs
+    // Users
     saveUser(user) {
         const users = this.loadUsers();
         const existingIndex = users.findIndex(u => u.id === user.id);
@@ -585,7 +585,7 @@ class StorageService {
         return users.find(u => u.id === id);
     }
 
-    // Équipes
+    // Teams
     saveTeam(team) {
         const teams = this.loadTeams();
         const existingIndex = teams.findIndex(t => t.id === team.id);
@@ -605,7 +605,7 @@ class StorageService {
         return data ? JSON.parse(data) : [];
     }
 
-    // Utilitaires
+    // Utilities
     clearAll() {
         localStorage.removeItem(this.PROJECTS_KEY);
         localStorage.removeItem(this.TASKS_KEY);
@@ -639,7 +639,7 @@ class StorageService {
     }
 }
 
-// Instance globale
+// Global instance
 const storageService = new StorageService();
 ```
 
@@ -698,7 +698,7 @@ class KanbanBoard {
     renderTask(task) {
         const priorityClass = `priority-${task.priority}`;
         const overdueClass = task.isOverdue() ? 'overdue' : '';
-        const dueDate = task.dueDate ? new Date(task.dueDate).toLocaleDateString('fr-FR') : '';
+        const dueDate = task.dueDate ? new Date(task.dueDate).toLocaleDateString('en-US') : '';
 
         return `
             <div class="task-card ${priorityClass} ${overdueClass}"
@@ -709,10 +709,10 @@ class KanbanBoard {
                     <div class="task-priority">${this.getPriorityLabel(task.priority)}</div>
                 </div>
                 <div class="task-meta">
-                    ${task.assigneeId ? `<div class="task-assignee">👤 Assigné</div>` : ''}
+                    ${task.assigneeId ? `<div class="task-assignee">👤 Assigned</div>` : ''}
                     ${dueDate ? `<div class="task-due-date">📅 ${dueDate}</div>` : ''}
                 </div>
-                <div class="task-description">${task.description || 'Aucune description'}</div>
+                <div class="task-description">${task.description || 'No description'}</div>
                 <div class="task-actions">
                     <button class="task-edit-btn" data-task-id="${task.id}">✏️</button>
                     <button class="task-delete-btn" data-task-id="${task.id}">🗑️</button>
@@ -727,10 +727,10 @@ class KanbanBoard {
 
     getPriorityLabel(priority) {
         const labels = {
-            low: '🟢 Faible',
-            medium: '🟡 Moyenne',
-            high: '🟠 Élevée',
-            urgent: '🔴 Urgente'
+            low: '🟢 Low',
+            medium: '🟡 Medium',
+            high: '🟠 High',
+            urgent: '🔴 Urgent'
         };
         return labels[priority] || labels.medium;
     }
@@ -739,7 +739,7 @@ class KanbanBoard {
         // Drag and drop
         this.setupDragAndDrop();
 
-        // Actions des tâches
+        // Task actions
         this.container.addEventListener('click', (e) => {
             const taskId = e.target.dataset.taskId;
             if (!taskId) return;
@@ -813,50 +813,50 @@ class KanbanBoard {
             await apiService.updateTask(taskId, { columnId });
             await this.loadData();
             this.render();
-            this.showNotification('Tâche déplacée avec succès', 'success');
+            this.showNotification('Task moved successfully', 'success');
         } catch (error) {
-            console.error('Erreur déplacement tâche:', error);
-            this.showNotification('Erreur lors du déplacement', 'error');
+            console.error('Task move error:', error);
+            this.showNotification('Error moving task', 'error');
         }
     }
 
     async editTask(taskId) {
-        // Implémentation de l'édition de tâche
+        // Task editing implementation
         const task = this.tasks.find(t => t.id === taskId);
         if (task) {
-            // Ouvrir un modal d'édition
+            // Open an editing modal
             this.showTaskModal(task);
         }
     }
 
     async deleteTask(taskId) {
-        if (confirm('Êtes-vous sûr de vouloir supprimer cette tâche ?')) {
+        if (confirm('Are you sure you want to delete this task?')) {
             try {
                 await apiService.deleteTask(taskId);
                 await this.loadData();
                 this.render();
-                this.showNotification('Tâche supprimée', 'success');
+                this.showNotification('Task deleted', 'success');
             } catch (error) {
-                console.error('Erreur suppression tâche:', error);
-                this.showNotification('Erreur lors de la suppression', 'error');
+                console.error('Task deletion error:', error);
+                this.showNotification('Error during deletion', 'error');
             }
         }
     }
 
     showTaskModal(task) {
-        // Implémentation du modal de tâche
+        // Task modal implementation
         // ...
     }
 
     showNotification(message, type = 'info') {
-        // Afficher une notification
+        // Display notification
         console.log(`${type.toUpperCase()}: ${message}`);
     }
 }
 ```
 
-### Étape 5 : Application Principale
-Créez l'application principale :
+### Step 5: Main Application
+Create the main application:
 
 ```javascript
 // js/app.js
@@ -875,14 +875,14 @@ class ProjectManagementApp {
     }
 
     async checkAuth() {
-        // Simulation d'authentification
+        // Authentication simulation
         const token = localStorage.getItem('auth-token');
         if (token) {
-            // En production, valider le token avec l'API
+            // In production, validate the token with the API
             this.currentUser = {
                 id: 'user1',
-                name: 'Jean Dupont',
-                email: 'jean@example.com',
+                name: 'John Doe',
+                email: 'john@example.com',
                 avatar: null
             };
             this.updateAuthUI();
@@ -899,7 +899,7 @@ class ProjectManagementApp {
             });
         });
 
-        // Création de projet
+        // Project creation
         const createProjectBtn = document.getElementById('create-project-btn');
         if (createProjectBtn) {
             createProjectBtn.addEventListener('click', () => {
@@ -907,7 +907,7 @@ class ProjectManagementApp {
             });
         }
 
-        // Création de tâche
+        // Task creation
         const createTaskBtn = document.getElementById('create-task-btn');
         if (createTaskBtn) {
             createTaskBtn.addEventListener('click', () => {
@@ -921,7 +921,7 @@ class ProjectManagementApp {
             const projects = await apiService.getProjects();
             this.renderProjectsList(projects);
         } catch (error) {
-            console.error('Erreur chargement dashboard:', error);
+            console.error('Dashboard loading error:', error);
         }
     }
 
@@ -932,9 +932,9 @@ class ProjectManagementApp {
         if (projects.length === 0) {
             container.innerHTML = `
                 <div class="empty-state">
-                    <h3>Aucun projet</h3>
-                    <p>Créez votre premier projet pour commencer !</p>
-                    <button id="create-first-project" class="btn btn-primary">Créer un Projet</button>
+                    <h3>No projects</h3>
+                    <p>Create your first project to get started!</p>
+                    <button id="create-first-project" class="btn btn-primary">Create a Project</button>
                 </div>
             `;
 
@@ -952,22 +952,22 @@ class ProjectManagementApp {
                 </div>
                 <p class="project-description">${project.description}</p>
                 <div class="project-meta">
-                    <span class="project-members">👥 ${project.members.length} membres</span>
-                    <span class="project-tasks">📋 ${project.taskCount || 0} tâches</span>
-                    <span class="project-progress">${project.completionPercentage || 0}% terminé</span>
+                    <span class="project-members">👥 ${project.members.length} members</span>
+                    <span class="project-tasks">📋 ${project.taskCount || 0} tasks</span>
+                    <span class="project-progress">${project.completionPercentage || 0}% completed</span>
                 </div>
                 <div class="project-actions">
                     <button class="btn btn-secondary open-project" data-project-id="${project.id}">
-                        Ouvrir
+                        Open
                     </button>
                     <button class="btn btn-outline edit-project" data-project-id="${project.id}">
-                        Modifier
+                        Edit
                     </button>
                 </div>
             </div>
         `).join('');
 
-        // Gestionnaires d'événements
+        // Event handlers
         container.addEventListener('click', (e) => {
             const projectId = e.target.dataset.projectId;
             if (!projectId) return;
@@ -986,26 +986,26 @@ class ProjectManagementApp {
             this.currentProject = project;
             this.showProjectView(project);
         } catch (error) {
-            console.error('Erreur ouverture projet:', error);
+            console.error('Project opening error:', error);
         }
     }
 
     showProjectView(project) {
-        // Changer la vue pour afficher le projet
+        // Change view to display the project
         document.querySelectorAll('.view').forEach(view => view.classList.add('hidden'));
         document.getElementById('project-view').classList.remove('hidden');
 
-        // Mettre à jour le header
+        // Update header
         document.getElementById('project-title').textContent = project.name;
         document.getElementById('project-description').textContent = project.description;
 
-        // Initialiser le Kanban
+        // Initialize Kanban
         const kanbanContainer = document.getElementById('kanban-container');
         this.kanbanBoard = new KanbanBoard(project.id, kanbanContainer);
     }
 
     showCreateProjectModal() {
-        // Implémentation du modal de création de projet
+        // Project creation modal implementation
         const modal = document.getElementById('project-modal');
         if (modal) {
             modal.classList.remove('hidden');
@@ -1013,7 +1013,7 @@ class ProjectManagementApp {
     }
 
     showCreateTaskModal() {
-        // Implémentation du modal de création de tâche
+        // Task creation modal implementation
         const modal = document.getElementById('task-modal');
         if (modal) {
             modal.classList.remove('hidden');
@@ -1038,11 +1038,11 @@ class ProjectManagementApp {
     }
 
     navigateTo(section) {
-        // Gestion de la navigation
+        // Navigation management
         document.querySelectorAll('.view').forEach(view => view.classList.add('hidden'));
         document.getElementById(`${section}-view`)?.classList.remove('hidden');
 
-        // Mettre à jour la navigation active
+        // Update active navigation
         document.querySelectorAll('.nav-link').forEach(link => {
             link.classList.remove('active');
         });
@@ -1055,83 +1055,83 @@ document.addEventListener('DOMContentLoaded', () => {
     new ProjectManagementApp();
 });
 
-// Export pour les modules
+// Export for modules
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = { ProjectManagementApp };
 }
 ```
 
-## Instructions de Test
+## Testing Instructions
 
-### Validation Programmation Asynchrone (40%)
-- [ ] Promesses et async/await utilisés correctement dans les appels API
-- [ ] Gestion d'erreurs avec try/catch dans toutes les fonctions async
-- [ ] Simulation de délais réseau dans les services API
-- [ ] Stockage local avec localStorage fonctionne correctement
+### Asynchronous Programming Validation (40%)
+- [ ] Promises and async/await used correctly in API calls
+- [ ] Error handling with try/catch in all async functions
+- [ ] Network delay simulation in API services
+- [ ] Local storage with localStorage works correctly
 
-### Validation APIs du Navigateur (30%)
-- [ ] Drag & drop implémenté pour le Kanban
-- [ ] Événements DOM gérés correctement (délégation d'événements)
-- [ ] localStorage utilisé pour la persistance des données
-- [ ] Interface responsive avec media queries
+### Browser APIs Validation (30%)
+- [ ] Drag & drop implemented for Kanban
+- [ ] DOM events handled correctly (event delegation)
+- [ ] localStorage used for data persistence
+- [ ] Responsive interface with media queries
 
-### Validation Architecture (20%)
-- [ ] Classes et objets bien structurés avec encapsulation
-- [ ] Services séparés pour API, stockage, authentification
-- [ ] Composants d'interface modulaires et réutilisables
-- [ ] Gestion d'état centralisée
+### Architecture Validation (20%)
+- [ ] Well-structured classes and objects with encapsulation
+- [ ] Separate services for API, storage, authentication
+- [ ] Modular and reusable interface components
+- [ ] Centralized state management
 
-### Validation Utilisateur (10%)
-- [ ] Interface intuitive avec feedback visuel
-- [ ] Gestion des erreurs avec messages informatifs
-- [ ] Performance acceptable même avec beaucoup de données
-- [ ] Accessibilité respectée (navigation au clavier)
+### User Validation (10%)
+- [ ] Intuitive interface with visual feedback
+- [ ] Error handling with informative messages
+- [ ] Acceptable performance even with large amounts of data
+- [ ] Accessibility followed (keyboard navigation)
 
-## Défis Supplémentaires
+## Additional Challenges
 
-### Niveau 1 : Fonctionnalités Collaboratives
-- Ajouter un système de commentaires en temps réel
-- Implémenter des notifications push pour les changements
-- Créer un système de mentions @utilisateur
-- Ajouter un historique des modifications
+### Level 1: Collaborative Features
+- Add a real-time comment system
+- Implement push notifications for changes
+- Create a @user mention system
+- Add a modification history
 
-### Niveau 2 : Fonctionnalités Avancées
-- Implémenter WebSockets pour le temps réel
-- Ajouter une fonctionnalité de recherche globale
-- Créer des tableaux de bord personnalisables
-- Intégrer un système de fichiers joints
+### Level 2: Advanced Features
+- Implement WebSockets for real-time
+- Add a global search functionality
+- Create customizable dashboards
+- Integrate a file attachment system
 
-### Niveau 3 : Optimisations et Performance
-- Implémenter la virtualisation pour les grandes listes
-- Ajouter un cache intelligent des données
-- Optimiser les re-rendus avec un système de diffing
-- Créer un service worker pour le mode hors ligne
+### Level 3: Optimizations and Performance
+- Implement virtualization for large lists
+- Add intelligent data caching
+- Optimize re-renders with a diffing system
+- Create a service worker for offline mode
 
-## Critères d'Évaluation
+## Evaluation Criteria
 
-### Programmation Asynchrone (35%)
-- Utilisation correcte des promesses et async/await
-- Gestion appropriée des erreurs asynchrones
-- Simulation réaliste des appels API
-- Performance acceptable des opérations async
+### Asynchronous Programming (35%)
+- Correct use of promises and async/await
+- Appropriate handling of asynchronous errors
+- Realistic simulation of API calls
+- Acceptable performance of async operations
 
-### APIs du Navigateur (30%)
-- Utilisation appropriée de localStorage/sessionStorage
-- Implémentation correcte de drag & drop
-- Gestion d'événements optimisée
-- Interface responsive et accessible
+### Browser APIs (30%)
+- Appropriate use of localStorage/sessionStorage
+- Correct implementation of drag & drop
+- Optimized event management
+- Responsive and accessible interface
 
-### Architecture et Modularité (20%)
-- Séparation claire des responsabilités
-- Classes et services bien conçus
-- Composants d'interface modulaires
-- Code maintenable et extensible
+### Architecture and Modularity (20%)
+- Clear separation of responsibilities
+- Well-designed classes and services
+- Modular interface components
+- Maintainable and extensible code
 
-### Qualité Utilisateur (15%)
-- Interface intuitive et moderne
-- Feedback approprié pour les actions utilisateur
-- Gestion d'erreurs user-friendly
-- Performance et responsiveness
+### User Quality (15%)
+- Intuitive and modern interface
+- Appropriate feedback for user actions
+- User-friendly error handling
+- Performance and responsiveness
 
-## Prochaines Étapes
-Félicitations pour votre application de gestion de projets ! Vous maîtrisez maintenant les APIs du navigateur et la programmation asynchrone. Au prochain module, nous construirons des applications full-stack complètes avec backend.
+## Next Steps
+Congratulations on your project management application! You now master browser APIs and asynchronous programming. In the next module, we will build complete full-stack applications with backend.

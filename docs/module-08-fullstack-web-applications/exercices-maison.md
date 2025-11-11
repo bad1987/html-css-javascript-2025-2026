@@ -1,373 +1,373 @@
-# Exercices Maison - Module 8 : Applications Web Full-Stack
+# Homework Exercises
 
-## Aperçu
-Ces exercices vous permettent de construire des applications web complètes en intégrant frontend et backend. Vous apprendrez à gérer des données, implémenter l'authentification, créer des APIs REST, et déployer des applications full-stack.
+## Overview
+These exercises allow you to build complete web applications by integrating frontend and backend. You will learn to manage data, implement authentication, create REST APIs, and deploy full-stack applications.
 
-## Niveau Débutant
+## Beginner Level
 
-### Exercice 8.1 : Serveur Express.js de Base
-**Objectif** : Créer et configurer un serveur Express.js simple.
+### Exercise 8.1: Basic Express.js Server
+**Objective**: Create and configure a simple Express.js server.
 
-**Instructions** :
-1. Créez un nouveau dossier `mon-serveur`
-2. Initialisez un projet Node.js : `npm init -y`
-3. Installez Express : `npm install express`
-4. Créez `server.js` avec :
-   - Import d'Express
-   - Configuration du serveur (port 3000)
-   - Route GET `/` qui retourne "Hello World"
-   - Route GET `/api/test` qui retourne du JSON
-   - Démarrage du serveur avec `app.listen()`
-5. Testez avec `node server.js` et visitez `http://localhost:3000`
+**Instructions**:
+1. Create a new folder `mon-serveur`
+2. Initialize a Node.js project: `npm init -y`
+3. Install Express: `npm install express`
+4. Create `server.js` with:
+   - Express import
+   - Server configuration (port 3000)
+   - GET route `/` that returns "Hello World"
+   - GET route `/api/test` that returns JSON
+   - Server start with `app.listen()`
+5. Test with `node server.js` and visit `http://localhost:3000`
 
-**Critères de validation** :
-- [ ] Serveur Express fonctionnel
-- [ ] Routes GET créées et testées
-- [ ] Réponses appropriées (texte et JSON)
-- [ ] Serveur démarre sans erreurs
+**Validation Criteria**:
+- [ ] Functional Express server
+- [ ] GET routes created and tested
+- [ ] Appropriate responses (text and JSON)
+- [ ] Server starts without errors
 
-**Indices** :
+**Hints**:
 - `const express = require('express');`
 - `app.get('/', (req, res) => { res.send('Hello'); });`
-- `npm start` dans package.json pour `node server.js`
+- `npm start` in package.json for `node server.js`
 
-### Exercice 8.2 : API REST Simple
-**Objectif** : Créer une API REST basique avec opérations CRUD.
+### Exercise 8.2: Simple REST API
+**Objective**: Create a basic REST API with CRUD operations.
 
-**Instructions** :
-1. Dans votre serveur Express, créez des routes pour gérer des "tâches" :
-   - GET `/api/tasks` : Liste toutes les tâches
-   - GET `/api/tasks/:id` : Récupère une tâche spécifique
-   - POST `/api/tasks` : Crée une nouvelle tâche
-   - PUT `/api/tasks/:id` : Met à jour une tâche
-   - DELETE `/api/tasks/:id` : Supprime une tâche
-2. Stockez les données en mémoire (array)
-3. Gérez les paramètres d'URL et le body des requêtes
-4. Retournez des codes HTTP appropriés (200, 201, 404, 400)
+**Instructions**:
+1. In your Express server, create routes to manage "tasks":
+   - GET `/api/tasks`: List all tasks
+   - GET `/api/tasks/:id`: Retrieve a specific task
+   - POST `/api/tasks`: Create a new task
+   - PUT `/api/tasks/:id`: Update a task
+   - DELETE `/api/tasks/:id`: Delete a task
+2. Store data in memory (array)
+3. Handle URL parameters and request bodies
+4. Return appropriate HTTP codes (200, 201, 404, 400)
 
-**Critères de validation** :
-- [ ] Toutes les routes CRUD implémentées
-- [ ] Gestion correcte des paramètres
-- [ ] Codes HTTP appropriés
-- [ ] Données persistées en mémoire
+**Validation Criteria**:
+- [ ] All CRUD routes implemented
+- [ ] Correct parameter handling
+- [ ] Appropriate HTTP codes
+- [ ] Data persisted in memory
 
-**Indices** :
-- `req.params.id` pour les paramètres d'URL
-- `req.body` pour le corps de la requête (nécessite body-parser)
+**Hints**:
+- `req.params.id` for URL parameters
+- `req.body` for request body (requires body-parser)
 - `res.status(404).json({ error: 'Not found' })`
 
-### Exercice 8.3 : Frontend Connecté à l'API
-**Objectif** : Créer un frontend qui communique avec votre API backend.
+### Exercise 8.3: Frontend Connected to API
+**Objective**: Create a frontend that communicates with your backend API.
 
-**Instructions** :
-1. Créez un dossier `public` dans votre projet
-2. Créez `public/index.html` avec une interface simple :
-   - Liste des tâches
-   - Formulaire pour ajouter une tâche
-   - Boutons pour modifier/supprimer
-3. Dans `public/script.js`, implémentez :
-   - Fonction `loadTasks()` qui fetch GET `/api/tasks`
-   - Fonction `createTask()` qui POST une nouvelle tâche
-   - Gestion des événements pour les boutons
-4. Configurez Express pour servir les fichiers statiques
+**Instructions**:
+1. Create a `public` folder in your project
+2. Create `public/index.html` with a simple interface:
+   - Task list
+   - Form to add a task
+   - Buttons to edit/delete
+3. In `public/script.js`, implement:
+   - `loadTasks()` function that fetches GET `/api/tasks`
+   - `createTask()` function that POSTs a new task
+   - Event handling for buttons
+4. Configure Express to serve static files
 
-**Critères de validation** :
-- [ ] Interface utilisateur fonctionnelle
-- [ ] Communication frontend/backend réussie
-- [ ] CRUD complet depuis le frontend
-- [ ] Gestion d'erreurs de base
+**Validation Criteria**:
+- [ ] Functional user interface
+- [ ] Successful frontend/backend communication
+- [ ] Complete CRUD from frontend
+- [ ] Basic error handling
 
-**Indices** :
-- `app.use(express.static('public'));` pour servir les fichiers
-- `fetch('/api/tasks')` depuis le frontend
-- Mettez à jour l'UI après chaque opération
+**Hints**:
+- `app.use(express.static('public'));` to serve files
+- `fetch('/api/tasks')` from frontend
+- Update UI after each operation
 
-## Niveau Intermédiaire
+## Intermediate Level
 
-### Exercice 8.4 : Authentification JWT
-**Objectif** : Implémenter un système d'authentification avec JWT.
+### Exercise 8.4: JWT Authentication
+**Objective**: Implement an authentication system with JWT.
 
-**Instructions** :
-1. Installez les dépendances : `npm install jsonwebtoken bcryptjs`
-2. Créez des routes d'authentification :
-   - POST `/api/auth/register` : Inscription utilisateur
-   - POST `/api/auth/login` : Connexion utilisateur
-3. Stockez les utilisateurs en mémoire avec mot de passe hashé
-4. Implémentez un middleware d'authentification :
-   - Vérifie le token JWT dans l'header Authorization
-   - Protège les routes nécessitant une authentification
-5. Modifiez les routes de tâches pour nécessiter l'authentification
+**Instructions**:
+1. Install dependencies: `npm install jsonwebtoken bcryptjs`
+2. Create authentication routes:
+   - POST `/api/auth/register`: User registration
+   - POST `/api/auth/login`: User login
+3. Store users in memory with hashed passwords
+4. Implement authentication middleware:
+   - Verify JWT token in Authorization header
+   - Protect routes requiring authentication
+5. Modify task routes to require authentication
 
-**Critères de validation** :
-- [ ] Inscription et connexion fonctionnelles
-- [ ] Mots de passe hashés sécurisés
-- [ ] Middleware d'authentification opérationnel
-- [ ] Routes protégées accessibles seulement avec token
+**Validation Criteria**:
+- [ ] Functional registration and login
+- [ ] Secure hashed passwords
+- [ ] Operational authentication middleware
+- [ ] Protected routes accessible only with token
 
-**Indices** :
-- `jwt.sign(payload, secret)` pour créer le token
-- `jwt.verify(token, secret)` pour vérifier
-- Header : `Authorization: Bearer <token>`
+**Hints**:
+- `jwt.sign(payload, secret)` to create token
+- `jwt.verify(token, secret)` to verify
+- Header: `Authorization: Bearer <token>`
 
-### Exercice 8.5 : Persistance des Données
-**Objectif** : Remplacer le stockage en mémoire par des fichiers JSON.
+### Exercise 8.5: Data Persistence
+**Objective**: Replace in-memory storage with JSON files.
 
-**Instructions** :
-1. Créez des fonctions utilitaires pour lire/écrire des fichiers JSON
-2. Stockez les utilisateurs dans `data/users.json`
-3. Stockez les tâches dans `data/tasks.json`
-4. Implémentez :
-   - Chargement des données au démarrage du serveur
-   - Sauvegarde automatique à chaque modification
-   - Gestion des erreurs de fichier
-5. Gérez la concurrence basique (un utilisateur à la fois)
+**Instructions**:
+1. Create utility functions to read/write JSON files
+2. Store users in `data/users.json`
+3. Store tasks in `data/tasks.json`
+4. Implement:
+   - Data loading on server start
+   - Automatic saving on each modification
+   - File error handling
+5. Handle basic concurrency (one user at a time)
 
-**Critères de validation** :
-- [ ] Données persistées dans des fichiers JSON
-- [ ] Chargement automatique au démarrage
-- [ ] Sauvegarde à chaque modification
-- [ ] Gestion d'erreurs de fichiers
-- [ ] Données préservées entre redémarrages
+**Validation Criteria**:
+- [ ] Data persisted in JSON files
+- [ ] Automatic loading on startup
+- [ ] Saving on each modification
+- [ ] File error handling
+- [ ] Data preserved between restarts
 
-**Indices** :
+**Hints**:
 - `const fs = require('fs').promises;`
 - `fs.readFile('data/users.json', 'utf8')`
 - `fs.writeFile('data/users.json', JSON.stringify(data, null, 2))`
 
-### Exercice 8.6 : Interface Utilisateur Moderne
-**Objectif** : Créer une interface utilisateur moderne et responsive.
+### Exercise 8.6: Modern User Interface
+**Objective**: Create a modern and responsive user interface.
 
-**Instructions** :
-1. Créez une interface complète avec :
-   - Page de connexion/inscription
-   - Dashboard des tâches après connexion
-   - Formulaire d'ajout/modification de tâches
-   - Navigation responsive (mobile/desktop)
-2. Implémentez :
-   - Gestion des tokens JWT côté frontend
-   - États de chargement (loading spinners)
-   - Messages d'erreur utilisateur-friendly
-   - Transitions et animations fluides
-3. Rendez tout responsive avec CSS Grid et Flexbox
+**Instructions**:
+1. Create a complete interface with:
+   - Login/registration page
+   - Task dashboard after login
+   - Add/edit task form
+   - Responsive navigation (mobile/desktop)
+2. Implement:
+   - JWT token management on frontend
+   - Loading states (loading spinners)
+   - User-friendly error messages
+   - Smooth transitions and animations
+3. Make everything responsive with CSS Grid and Flexbox
 
-**Critères de validation** :
-- [ ] Interface utilisateur complète et moderne
-- [ ] Authentification frontend/backend intégrée
-- [ ] Design responsive fonctionnel
-- [ ] États de chargement et erreurs gérés
-- [ ] UX fluide et intuitive
+**Validation Criteria**:
+- [ ] Complete and modern user interface
+- [ ] Integrated frontend/backend authentication
+- [ ] Functional responsive design
+- [ ] Loading states and errors handled
+- [ ] Smooth and intuitive UX
 
-**Indices** :
-- Stockez le token dans localStorage
-- Ajoutez `Authorization: Bearer ${token}` aux headers
-- Utilisez CSS pour les états : `.loading`, `.error`
+**Hints**:
+- Store token in localStorage
+- Add `Authorization: Bearer ${token}` to headers
+- Use CSS for states: `.loading`, `.error`
 
-## Niveau Avancé
+## Advanced Level
 
-### Exercice 8.7 : Application de Blog Full-Stack
-**Objectif** : Construire une application de blog complète avec authentification.
+### Exercise 8.7: Complete Blog Full-Stack Application
+**Objective**: Build a complete blog application with authentication.
 
-**Instructions** :
-1. Créez une application de blog avec :
-   - Modèle Article (titre, contenu, auteur, date, tags)
-   - Modèle Commentaire lié aux articles
-   - Système d'utilisateurs avec rôles (admin, auteur, lecteur)
-   - Interface d'administration pour les auteurs
-2. Implémentez les fonctionnalités :
-   - CRUD complet des articles (admin/auteurs seulement)
-   - Système de commentaires (utilisateurs connectés)
-   - Recherche et filtrage par tags/auteur
-   - Pagination des articles
-3. Sécurisez l'application :
-   - Validation des données côté serveur
-   - Sanitisation du contenu
-   - Protection contre les attaques XSS de base
+**Instructions**:
+1. Create a blog application with:
+   - Article model (title, content, author, date, tags)
+   - Comment model linked to articles
+   - User system with roles (admin, author, reader)
+   - Admin interface for authors
+2. Implement features:
+   - Complete CRUD for articles (admin/authors only)
+   - Comment system (logged-in users)
+   - Search and filtering by tags/author
+   - Article pagination
+3. Secure the application:
+   - Server-side data validation
+   - Content sanitization
+   - Basic protection against XSS attacks
 
-**Critères de validation** :
-- [ ] Application complète et fonctionnelle
-- [ ] Authentification et autorisation implémentées
-- [ ] Interface d'administration séparée
-- [ ] Sécurité de base assurée
-- [ ] Architecture MVC respectée
+**Validation Criteria**:
+- [ ] Complete and functional application
+- [ ] Authentication and authorization implemented
+- - [ ] Separate admin interface
+- [ ] Basic security ensured
+- [ ] MVC architecture respected
 
-**Indices** :
-- Utilisez des middlewares pour l'autorisation
-- Validez les données avec des fonctions utilitaires
-- Implémentez la pagination côté serveur
+**Hints**:
+- Use middlewares for authorization
+- Validate data with utility functions
+- Implement server-side pagination
 
-### Exercice 8.8 : API REST Complète avec Validation
-**Objectif** : Créer une API REST robuste avec validation et gestion d'erreurs.
+### Exercise 8.8: Complete REST API with Validation
+**Objective**: Create a robust REST API with validation and error handling.
 
-**Instructions** :
-1. Créez une API pour gérer des "projets" avec validation complète :
-   - Modèle Projet (nom, description, statut, membres, échéance)
-   - Validation des données d'entrée
-   - Gestion des erreurs détaillées
-   - Pagination et filtrage
-2. Implémentez :
-   - Middleware de validation des données
-   - Gestion d'erreurs centralisée
-   - Logging des requêtes
-   - Rate limiting basique
-3. Documentez l'API avec des exemples d'usage
+**Instructions**:
+1. Create an API to manage "projects" with complete validation:
+   - Project model (name, description, status, members, deadline)
+   - Input data validation
+   - Detailed error handling
+   - Pagination and filtering
+2. Implement:
+   - Data validation middleware
+   - Centralized error handling
+   - Request logging
+   - Basic rate limiting
+3. Document the API with usage examples
 
-**Critères de validation** :
-- [ ] Validation des données côté serveur
-- [ ] Gestion d'erreurs complète et informative
-- [ ] API documentée et testée
-- [ ] Sécurité et performance de base
-- [ ] Code maintenable et organisé
+**Validation Criteria**:
+- [ ] Server-side data validation
+- [ ] Complete and informative error handling
+- [ ] Documented and tested API
+- [ ] Basic security and performance
+- [ ] Maintainable and organized code
 
-**Indices** :
-- Créez des fonctions de validation réutilisables
-- Utilisez des codes d'erreur HTTP appropriés
-- Implémentez un middleware d'erreurs global
+**Hints**:
+- Create reusable validation functions
+- Use appropriate HTTP error codes
+- Implement a global error middleware
 
-## Défi Bonus
+## Bonus Challenge
 
-### Exercice 8.9 : Application de Commerce Électronique
-**Objectif** : Construire une boutique en ligne complète avec panier et paiement simulé.
+### Exercise 8.9: E-commerce Application
+**Objective**: Build a complete online store with cart and simulated payment.
 
-**Instructions** :
-1. Créez une application e-commerce avec :
-   - Modèle Produit (nom, prix, description, stock, catégorie)
-   - Panier utilisateur (session ou base de données)
-   - Système de commandes
-   - Interface d'administration des produits
-2. Implémentez :
-   - Catalogue de produits avec recherche/filtrage
-   - Gestion du panier (ajouter, modifier, supprimer)
-   - Processus de commande simulé
-   - Interface admin pour gérer les produits
-3. Ajoutez des fonctionnalités avancées :
-   - Avis/commentaires sur les produits
-   - Système de notation
-   - Recommandations simples
+**Instructions**:
+1. Create an e-commerce application with:
+   - Product model (name, price, description, stock, category)
+   - User cart (session or database)
+   - Order system
+   - Product admin interface
+2. Implement:
+   - Product catalog with search/filtering
+   - Cart management (add, modify, delete)
+   - Simulated order process
+   - Admin interface to manage products
+3. Add advanced features:
+   - Product reviews/comments
+   - Rating system
+   - Simple recommendations
 
-**Critères de validation** :
-- [ ] Application e-commerce complète
-- [ ] Gestion du panier fonctionnelle
-- [ ] Interface utilisateur intuitive
-- [ ] Administration des produits
-- [ ] Architecture scalable préparée
+**Validation Criteria**:
+- [ ] Complete e-commerce application
+- [ ] Functional cart management
+- [ ] Intuitive user interface
+- [ ] Product administration
+- [ ] Scalable architecture prepared
 
-**Indices** :
-- Utilisez des sessions ou localStorage pour le panier
-- Validez les stocks avant l'ajout au panier
-- Implémentez la pagination pour le catalogue
+**Hints**:
+- Use sessions or localStorage for cart
+- Validate stock before adding to cart
+- Implement pagination for catalog
 
-### Exercice 8.10 : Tests et Déploiement
-**Objectif** : Tester et déployer votre application full-stack.
+### Exercise 8.10: Testing and Deployment
+**Objective**: Test and deploy your full-stack application.
 
-**Instructions** :
-1. Ajoutez des tests à votre application :
-   - Tests unitaires pour les fonctions utilitaires
-   - Tests d'intégration pour les routes API
-   - Tests end-to-end pour les fonctionnalités critiques
-2. Préparez le déploiement :
-   - Variables d'environnement (PORT, JWT_SECRET)
-   - Scripts de build et de démarrage
-   - Configuration pour différents environnements
-3. Déployez sur une plateforme gratuite :
-   - Backend sur Railway ou Render
-   - Frontend sur Vercel ou Netlify
-4. Configurez un domaine et HTTPS
+**Instructions**:
+1. Add tests to your application:
+   - Unit tests for utility functions
+   - Integration tests for API routes
+   - End-to-end tests for critical features
+2. Prepare for deployment:
+   - Environment variables (PORT, JWT_SECRET)
+   - Build and start scripts
+   - Configuration for different environments
+3. Deploy on a free platform:
+   - Backend on Railway or Render
+   - Frontend on Vercel or Netlify
+4. Configure domain and HTTPS
 
-**Critères de validation** :
-- [ ] Tests automatisés implémentés
-- [ ] Application déployée en ligne
-- [ ] Variables d'environnement configurées
-- [ ] HTTPS activé
-- [ ] Application accessible publiquement
+**Validation Criteria**:
+- [ ] Automated tests implemented
+- [ ] Application deployed online
+- [ ] Environment variables configured
+- [ ] HTTPS enabled
+- [ ] Application publicly accessible
 
-**Indices** :
-- Utilisez Jest pour les tests : `npm install --save-dev jest`
-- Créez un fichier `.env` pour les variables sensibles
-- Configurez les CORS pour le déploiement
+**Hints**:
+- Use Jest for tests: `npm install --save-dev jest`
+- Create a `.env` file for sensitive variables
+- Configure CORS for deployment
 
-## Intégration Inter-modules
+## Inter-module Integration
 
-### Exercice 8.11 : Préparation Module 9
-**Objectif** : Refactoriser votre code avec les bonnes pratiques apprises.
+### Exercise 8.11: Module 9 Preparation
+**Objective**: Refactor your code with learned best practices.
 
-**Instructions** :
-1. Refactorisez votre application avec les patterns avancés :
-   - Module pattern pour l'organisation du code
-   - Observer pattern pour les événements
-   - Factory pattern pour créer des objets similaires
-   - Optimisations de performance (memoization, lazy loading)
-2. Implémentez des tests automatisés :
-   - Tests unitaires pour les fonctions pures
-   - Tests d'intégration pour les APIs
-   - Configuration CI/CD de base
-3. Optimisez les performances :
-   - Cache des réponses API
-   - Compression des réponses
-   - Optimisation des requêtes base de données
+**Instructions**:
+1. Refactor your application with advanced patterns:
+   - Module pattern for code organization
+   - Observer pattern for events
+   - Factory pattern to create similar objects
+   - Performance optimizations (memoization, lazy loading)
+2. Implement automated tests:
+   - Unit tests for pure functions
+   - Integration tests for APIs
+   - Basic CI/CD configuration
+3. Optimize performance:
+   - API response caching
+   - Response compression
+   - Database query optimization
 
-**Critères de validation** :
-- [ ] Code refactorisé avec patterns de conception
-- [ ] Tests automatisés implémentés
-- [ ] Performance optimisée mesurable
-- [ ] Code maintenable et documenté
-- [ ] Bonnes pratiques appliquées
+**Validation Criteria**:
+- [ ] Code refactored with design patterns
+- [ ] Automated tests implemented
+- [ ] Measurable performance optimization
+- [ ] Maintainable and documented code
+- [ ] Best practices applied
 
-**Indices** :
-- Utilisez des classes pour l'organisation
-- Implémentez un système de cache simple
-- Configurez ESLint et Prettier
+**Hints**:
+- Use classes for organization
+- Implement a simple cache system
+- Configure ESLint and Prettier
 
-### Exercice 8.12 : Portfolio Développeur Full-Stack
-**Objectif** : Créer un portfolio professionnel montrant vos compétences full-stack.
+### Exercise 8.12: Full-Stack Developer Portfolio
+**Objective**: Create a professional portfolio showcasing your full-stack skills.
 
-**Instructions** :
-1. Construisez un portfolio complet avec :
-   - Section présentation avec photo et description
-   - Galerie de projets avec captures d'écran
-   - Blog technique intégré
-   - Formulaire de contact fonctionnel
-   - Section compétences avec visualisation
-2. Intégrez des technologies modernes :
-   - API pour les données dynamiques
-   - Animations et transitions fluides
-   - Design responsive parfait
-   - Optimisations SEO
-3. Déployez et monitorez :
-   - Déploiement automatisé
-   - Analytics de base
-   - Tests de performance
+**Instructions**:
+1. Build a complete portfolio with:
+   - Presentation section with photo and description
+   - Project gallery with screenshots
+   - Integrated technical blog
+   - Functional contact form
+   - Skills section with visualization
+2. Integrate modern technologies:
+   - API for dynamic data
+   - Smooth animations and transitions
+   - Perfect responsive design
+   - SEO optimizations
+3. Deploy and monitor:
+   - Automated deployment
+   - Basic analytics
+   - Performance tests
 
-**Critères de validation** :
-- [ ] Portfolio professionnel complet
-- [ ] Technologies modernes intégrées
-- [ ] Performance et SEO optimisés
-- [ ] Déploiement réussi
-- [ ] Code source organisé
+**Validation Criteria**:
+- [ ] Complete professional portfolio
+- [ ] Modern technologies integrated
+- [ ] Performance and SEO optimized
+- [ ] Successful deployment
+- [ ] Organized source code
 
-**Indices** :
-- Utilisez une API pour les projets/blog
-- Implémentez des métadonnées Open Graph
-- Testez avec Lighthouse pour les performances
+**Hints**:
+- Use an API for projects/blog
+- Implement Open Graph metadata
+- Test with Lighthouse for performance
 
-## Critères de Validation Globaux
+## Global Validation Criteria
 
-Pour réussir ces exercices, assurez-vous que :
+To succeed in these exercises, ensure that:
 
-- **Architecture** : Séparation claire frontend/backend
-- **Sécurité** : Authentification et validation des données
-- **Performance** : Optimisations appropriées implémentées
-- **Maintenabilité** : Code organisé et documenté
-- **Déploiement** : Application déployée et accessible
-- **Tests** : Fonctionnalités critiques testées
+- **Architecture**: Clear frontend/backend separation
+- **Security**: Authentication and data validation
+- **Performance**: Appropriate optimizations implemented
+- **Maintainability**: Organized and documented code
+- **Deployment**: Application deployed and accessible
+- **Tests**: Critical features tested
 
-## Ressources d'Aide
+## Help Resources
 
-- [Express.js Documentation](https://expressjs.com/fr/)
+- [Express.js Documentation](https://expressjs.com/)
 - [JWT Authentication](https://jwt.io/)
 - [REST API Design](https://restfulapi.net/)
 - [Node.js File System](https://nodejs.org/api/fs.html)
 - [Deployment Guides](https://render.com/docs/deploy-node-express-app)
 
-## Prochaines Étapes
+## Next Steps
 
-Ces exercices vous préparent parfaitement pour le Module 9 où vous appliquerez les bonnes pratiques avancées et optimiserez vos applications. Vous serez maintenant capable de construire et déployer des applications web full-stack professionnelles !
+These exercises perfectly prepare you for Module 9 where you will apply advanced best practices and optimize your applications. You will now be capable of building and deploying professional full-stack web applications!

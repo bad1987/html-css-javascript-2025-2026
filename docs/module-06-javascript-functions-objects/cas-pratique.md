@@ -1,49 +1,49 @@
-# Cas Pratique : Système de Gestion de Bibliothèque
+# Practical Project: Library Management System
 
-## Contexte du Projet
-Vous maîtrisez maintenant les bases de JavaScript et vous voulez créer une application plus complexe utilisant des objets et des fonctions avancées. Ce projet vous permettra de pratiquer la programmation orientée objet, les modules, et la gestion d'état complexe.
+## Project Context
+You now have a firm grasp of JavaScript fundamentals and want to build a more sophisticated application that leverages objects and advanced functions. This project will let you practice object-oriented programming, modular code organization, and complex state management.
 
-## Objectif
-Créer un système complet de gestion de bibliothèque avec gestion des livres, emprunts, utilisateurs, et recherche avancée.
+## Goal
+Build a complete library management system that handles books, loans, users, and advanced search capabilities.
 
-## Structure du Projet
+## Project Structure
 ```
-gestion-bibliotheque/
-├── index.html          # Page principale
-├── admin.html          # Interface d'administration
+library-management/
+├── index.html          # Main page
+├── admin.html          # Admin interface
 ├── css/
-│   ├── style.css       # Styles principaux
-│   └── responsive.css  # Styles responsives
+│   ├── style.css       # Main styles
+│   └── responsive.css  # Responsive styles
 ├── js/
 │   ├── models/
-│   │   ├── Book.js     # Classe Livre
-│   │   ├── User.js     # Classe Utilisateur
-│   │   ├── Loan.js     # Classe Emprunt
-│   │   └── Library.js  # Classe Bibliothèque
+│   │   ├── Book.js     # Book class
+│   │   ├── User.js     # User class
+│   │   ├── Loan.js     # Loan class
+│   │   └── Library.js  # Library class
 │   ├── services/
-│   │   ├── storage.js  # Gestion du stockage
-│   │   ├── search.js   # Moteur de recherche
-│   │   └── validation.js # Validation des données
+│   │   ├── storage.js  # Storage management
+│   │   ├── search.js   # Search engine
+│   │   └── validation.js # Data validation
 │   ├── utils/
-│   │   ├── date.js     # Utilitaires de date
-│   │   └── format.js   # Formatage
+│   │   ├── date.js     # Date utilities
+│   │   └── format.js   # Formatting
 │   ├── ui/
-│   │   ├── BookUI.js   # Interface des livres
-│   │   ├── UserUI.js   # Interface des utilisateurs
-│   │   └── AdminUI.js  # Interface d'administration
-│   └── app.js          # Application principale
+│   │   ├── BookUI.js   # Book interface
+│   │   ├── UserUI.js   # User interface
+│   │   └── AdminUI.js  # Admin interface
+│   └── app.js          # Main application
 └── README.md
 ```
 
-## Étapes de Réalisation
+## Implementation Steps
 
-### Étape 1 : Configuration du Projet
-1. Créez le dossier `gestion-bibliotheque`
-2. Organisez les fichiers selon l'arborescence ci-dessus
-3. Créez une structure HTML de base
+### Step 1: Project Setup
+1. Create the `gestion-bibliotheque` folder
+2. Organize the files following the structure above
+3. Create a basic HTML scaffold
 
-### Étape 2 : Classes et Objets (Modèles)
-Créez les classes fondamentales :
+### Step 2: Data Models (Classes and Objects)
+Create the core classes:
 
 ```javascript
 // js/models/Book.js
@@ -60,7 +60,7 @@ class Book {
         this.loans = [];
     }
 
-    // Méthodes
+    // Methods
     isAvailable() {
         return this.availableCopies > 0;
     }
@@ -86,7 +86,7 @@ class Book {
     }
 
     toString() {
-        return `${this.title} par ${this.author} (${this.year})`;
+        return `${this.title} by ${this.author} (${this.year})`;
     }
 }
 
@@ -110,7 +110,7 @@ class User {
         this.fines = 0;
     }
 
-    // Méthodes
+    // Methods
     canBorrow() {
         const maxLoans = this.membershipType === 'premium' ? 10 : 5;
         return this.getActiveLoans().length < maxLoans && this.fines === 0;
@@ -122,7 +122,7 @@ class User {
 
     borrowBook(book, dueDate) {
         if (!this.canBorrow()) {
-            throw new Error('Utilisateur ne peut pas emprunter de livre');
+            throw new Error('User cannot borrow a book');
         }
 
         const loan = new Loan(Date.now().toString(), this.id, book.id, new Date(), dueDate);
@@ -135,7 +135,7 @@ class User {
         if (loan) {
             loan.returnDate = new Date();
 
-            // Calcul des pénalités si retour en retard
+            // Calculate penalties if returned late
             if (loan.isOverdue()) {
                 this.fines += loan.calculateFine();
             }
@@ -177,7 +177,7 @@ class Loan {
         this.fine = 0;
     }
 
-    // Méthodes
+    // Methods
     isOverdue() {
         if (this.returnDate) {
             return this.returnDate > this.dueDate;
@@ -191,7 +191,7 @@ class Loan {
         const returnDate = this.returnDate || new Date();
         const daysOverdue = Math.ceil((returnDate - this.dueDate) / (1000 * 60 * 60 * 24));
 
-        // 0.50€ par jour de retard
+        // 0.50€ per day late
         return daysOverdue * 0.5;
     }
 
@@ -203,7 +203,7 @@ class Loan {
     }
 
     toString() {
-        return `Emprunt du ${this.loanDate.toLocaleDateString()} - Échéance: ${this.dueDate.toLocaleDateString()}`;
+        return `Loan from ${this.loanDate.toLocaleDateString()} - Due: ${this.dueDate.toLocaleDateString()}`;
     }
 }
 
@@ -221,12 +221,12 @@ class Library {
         this.users = [];
         this.loans = [];
         this.categories = [
-            'Roman', 'Science-fiction', 'Policier', 'Biographie',
-            'Histoire', 'Informatique', 'Science', 'Art', 'Autre'
+            'Fiction', 'Science Fiction', 'Mystery', 'Biography',
+            'History', 'Computer Science', 'Science', 'Art', 'Other'
         ];
     }
 
-    // Gestion des livres
+    // Book management
     addBook(book) {
         this.books.push(book);
         return book;
@@ -235,13 +235,13 @@ class Library {
     removeBook(bookId) {
         const index = this.books.findIndex(book => book.id === bookId);
         if (index !== -1) {
-            // Vérifier qu'il n'y a pas d'emprunts actifs
+            // Check if there are active loans
             const activeLoans = this.loans.filter(loan =>
                 loan.bookId === bookId && !loan.returnDate
             );
 
             if (activeLoans.length > 0) {
-                throw new Error('Impossible de supprimer un livre en cours d\'emprunt');
+                throw new Error('Cannot delete a book currently on loan');
             }
 
             return this.books.splice(index, 1)[0];
@@ -273,7 +273,7 @@ class Library {
         return this.books.filter(book => book.isAvailable());
     }
 
-    // Gestion des utilisateurs
+    // User management
     addUser(user) {
         this.users.push(user);
         return user;
@@ -291,14 +291,14 @@ class Library {
         return this.users.filter(user => user.isActive);
     }
 
-    // Gestion des emprunts
+    // Loan management
     borrowBook(userId, bookId, days = 14) {
         const user = this.findUserById(userId);
         const book = this.findBookById(bookId);
 
-        if (!user) throw new Error('Utilisateur non trouvé');
-        if (!book) throw new Error('Livre non trouvé');
-        if (!book.isAvailable()) throw new Error('Livre non disponible');
+        if (!user) throw new Error('User not found');
+        if (!book) throw new Error('Book not found');
+        if (!book.isAvailable()) throw new Error('Book unavailable');
 
         const dueDate = new Date();
         dueDate.setDate(dueDate.getDate() + days);
@@ -333,7 +333,7 @@ class Library {
         return this.loans.filter(loan => loan.isOverdue());
     }
 
-    // Statistiques
+    // Statistics
     getStatistics() {
         return {
             totalBooks: this.books.length,
@@ -350,7 +350,7 @@ class Library {
         return this.loans.reduce((total, loan) => total + loan.fine, 0);
     }
 
-    // Recherche avancée
+    // Advanced search
     searchBooks(criteria) {
         let results = [...this.books];
 
@@ -390,8 +390,8 @@ if (typeof module !== 'undefined' && module.exports) {
 }
 ```
 
-### Étape 3 : Services Utilitaires
-Créez les services de support :
+### Step 3: Utility Services
+Create the supporting services:
 
 ```javascript
 // js/services/storage.js
@@ -402,7 +402,7 @@ class StorageService {
         this.LOANS_KEY = 'library_loans';
     }
 
-    // Sauvegarde
+    // Save
     saveBooks(books) {
         localStorage.setItem(this.BOOKS_KEY, JSON.stringify(books));
     }
@@ -415,7 +415,7 @@ class StorageService {
         localStorage.setItem(this.LOANS_KEY, JSON.stringify(loans));
     }
 
-    // Chargement
+    // Load
     loadBooks() {
         const data = localStorage.getItem(this.BOOKS_KEY);
         if (!data) return [];
@@ -535,7 +535,7 @@ class SearchService {
         this.library = library;
     }
 
-    // Recherche simple
+    // Simple search
     search(query) {
         const results = {
             books: [],
@@ -548,7 +548,7 @@ class SearchService {
 
         const searchTerm = query.toLowerCase().trim();
 
-        // Recherche dans les livres
+        // Search in books
         results.books = this.library.books.filter(book =>
             book.title.toLowerCase().includes(searchTerm) ||
             book.author.toLowerCase().includes(searchTerm) ||
@@ -556,7 +556,7 @@ class SearchService {
             book.isbn.includes(searchTerm)
         );
 
-        // Recherche dans les utilisateurs
+        // Search in users
         results.users = this.library.users.filter(user =>
             user.name.toLowerCase().includes(searchTerm) ||
             user.email.toLowerCase().includes(searchTerm)
@@ -565,24 +565,24 @@ class SearchService {
         return results;
     }
 
-    // Recherche avancée pour les livres
+    // Advanced book search
     advancedBookSearch(criteria) {
         return this.library.searchBooks(criteria);
     }
 
-    // Recherche d'emprunts par utilisateur
+    // Search loans by user
     findUserLoans(userId) {
         return this.library.loans.filter(loan => loan.userId === userId);
     }
 
-    // Recherche de livres populaires
+    // Search popular books
     getPopularBooks(limit = 10) {
         return this.library.books
             .sort((a, b) => b.getLoanCount() - a.getLoanCount())
             .slice(0, limit);
     }
 
-    // Recherche de livres en retard
+    // Search overdue books
     getOverdueBooks() {
         const overdueLoans = this.library.getOverdueLoans();
         const bookIds = [...new Set(overdueLoans.map(loan => loan.bookId))];
@@ -599,122 +599,122 @@ class SearchService {
 }
 ```
 
-### Étape 4 : Interface Utilisateur
-Créez l'interface principale :
+### Step 4: User Interface
+Create the main interface:
 
 ```html
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>📚 Gestion de Bibliothèque</title>
+    <title>📚 Library Management</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
     <header class="header">
         <div class="container">
-            <h1>📚 Gestion de Bibliothèque</h1>
+            <h1>📚 Library Management</h1>
             <nav class="nav">
-                <a href="#books" class="nav-link active">Livres</a>
-                <a href="#users" class="nav-link">Utilisateurs</a>
-                <a href="#loans" class="nav-link">Emprunts</a>
+                <a href="#books" class="nav-link active">Books</a>
+                <a href="#users" class="nav-link">Users</a>
+                <a href="#loans" class="nav-link">Loans</a>
                 <a href="#admin" class="nav-link">Administration</a>
             </nav>
         </div>
     </header>
 
     <main class="main">
-        <!-- Section Recherche -->
+        <!-- Search Section -->
         <section class="search-section">
             <div class="container">
                 <div class="search-bar">
-                    <input type="text" id="search-input" placeholder="Rechercher des livres, auteurs, utilisateurs...">
+                    <input type="text" id="search-input" placeholder="Search books, authors, users...">
                     <button id="search-btn">🔍</button>
                 </div>
             </div>
         </section>
 
-        <!-- Section Statistiques -->
+        <!-- Statistics Section -->
         <section class="stats-section">
             <div class="container">
                 <div class="stats-grid">
                     <div class="stat-card">
-                        <h3>Livres Totaux</h3>
+                        <h3>Total Books</h3>
                         <div class="stat-number" id="total-books">0</div>
                     </div>
                     <div class="stat-card">
-                        <h3>Livres Disponibles</h3>
+                        <h3>Available Books</h3>
                         <div class="stat-number" id="available-books">0</div>
                     </div>
                     <div class="stat-card">
-                        <h3>Utilisateurs Actifs</h3>
+                        <h3>Active Users</h3>
                         <div class="stat-number" id="active-users">0</div>
                     </div>
                     <div class="stat-card">
-                        <h3>Emprunts Actifs</h3>
+                        <h3>Active Loans</h3>
                         <div class="stat-number" id="active-loans">0</div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Section Livres -->
+        <!-- Books Section -->
         <section id="books" class="books-section">
             <div class="container">
                 <div class="section-header">
-                    <h2>Catalogue des Livres</h2>
-                    <button id="add-book-btn" class="btn btn-primary">Ajouter un Livre</button>
+                    <h2>Book Catalog</h2>
+                    <button id="add-book-btn" class="btn btn-primary">Add Book</button>
                 </div>
 
                 <div class="books-filters">
                     <select id="category-filter">
-                        <option value="">Toutes les catégories</option>
+                        <option value="">All categories</option>
                     </select>
                     <select id="availability-filter">
-                        <option value="">Tous les livres</option>
-                        <option value="available">Disponibles uniquement</option>
-                        <option value="unavailable">Empruntés uniquement</option>
+                        <option value="">All books</option>
+                        <option value="available">Available only</option>
+                        <option value="unavailable">On loan only</option>
                     </select>
                 </div>
 
                 <div id="books-list" class="books-list">
-                    <!-- Les livres seront affichés ici -->
+                    <!-- Books will be displayed here -->
                 </div>
             </div>
         </section>
 
-        <!-- Section Utilisateurs -->
+        <!-- Users Section -->
         <section id="users" class="users-section">
             <div class="container">
                 <div class="section-header">
-                    <h2>Gestion des Utilisateurs</h2>
-                    <button id="add-user-btn" class="btn btn-primary">Ajouter un Utilisateur</button>
+                    <h2>User Management</h2>
+                    <button id="add-user-btn" class="btn btn-primary">Add User</button>
                 </div>
 
                 <div id="users-list" class="users-list">
-                    <!-- Les utilisateurs seront affichés ici -->
+                    <!-- Users will be displayed here -->
                 </div>
             </div>
         </section>
 
-        <!-- Section Emprunts -->
+        <!-- Loans Section -->
         <section id="loans" class="loans-section">
             <div class="container">
                 <div class="section-header">
-                    <h2>Gestion des Emprunts</h2>
-                    <button id="new-loan-btn" class="btn btn-primary">Nouvel Emprunt</button>
+                    <h2>Loan Management</h2>
+                    <button id="new-loan-btn" class="btn btn-primary">New Loan</button>
                 </div>
 
                 <div class="loans-tabs">
-                    <button class="tab-btn active" data-tab="active">Emprunts Actifs</button>
-                    <button class="tab-btn" data-tab="overdue">En Retard</button>
-                    <button class="tab-btn" data-tab="history">Historique</button>
+                    <button class="tab-btn active" data-tab="active">Active Loans</button>
+                    <button class="tab-btn" data-tab="overdue">Overdue</button>
+                    <button class="tab-btn" data-tab="history">History</button>
                 </div>
 
                 <div id="loans-list" class="loans-list">
-                    <!-- Les emprunts seront affichés ici -->
+                    <!-- Loans will be displayed here -->
                 </div>
             </div>
         </section>
@@ -724,16 +724,16 @@ Créez l'interface principale :
     <div id="book-modal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
-                <h3 id="book-modal-title">Ajouter un Livre</h3>
+                <h3 id="book-modal-title">Add Book</h3>
                 <button class="modal-close">&times;</button>
             </div>
             <form id="book-form">
                 <div class="form-group">
-                    <label for="book-title">Titre *</label>
+                    <label for="book-title">Title *</label>
                     <input type="text" id="book-title" required>
                 </div>
                 <div class="form-group">
-                    <label for="book-author">Auteur *</label>
+                    <label for="book-author">Author *</label>
                     <input type="text" id="book-author" required>
                 </div>
                 <div class="form-group">
@@ -741,22 +741,22 @@ Créez l'interface principale :
                     <input type="text" id="book-isbn">
                 </div>
                 <div class="form-group">
-                    <label for="book-category">Catégorie *</label>
+                    <label for="book-category">Category *</label>
                     <select id="book-category" required>
-                        <!-- Options seront ajoutées par JavaScript -->
+                        <!-- Options will be added by JavaScript -->
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="book-year">Année</label>
+                    <label for="book-year">Year</label>
                     <input type="number" id="book-year" min="1000" max="2030">
                 </div>
                 <div class="form-group">
-                    <label for="book-copies">Nombre d'exemplaires</label>
+                    <label for="book-copies">Number of copies</label>
                     <input type="number" id="book-copies" min="1" value="1">
                 </div>
                 <div class="form-actions">
-                    <button type="submit" class="btn btn-primary">Enregistrer</button>
-                    <button type="button" id="cancel-book" class="btn btn-secondary">Annuler</button>
+                    <button type="submit" class="btn btn-primary">Save</button>
+                    <button type="button" id="cancel-book" class="btn btn-secondary">Cancel</button>
                 </div>
             </form>
         </div>
@@ -767,77 +767,77 @@ Créez l'interface principale :
 </html>
 ```
 
-## Instructions de Test
+## Testing Instructions
 
-### Validation Programmation Orientée Objet (40%)
-- [ ] Classes Book, User, Loan et Library sont correctement définies
-- [ ] Méthodes des classes fonctionnent correctement
-- [ ] Héritage et encapsulation sont utilisés appropriés
-- [ ] Gestion d'erreurs avec try/catch est implémentée
+### Object-Oriented Programming Validation (40%)
+- [ ] Classes Book, User, Loan and Library are correctly defined
+- [ ] Class methods function correctly
+- [ ] Inheritance and encapsulation are appropriately used
+- [ ] Error handling with try/catch is implemented
 
-### Validation Fonctions Avancées (30%)
-- [ ] Fermetures (closures) sont utilisées dans les services
-- [ ] Fonctions d'ordre supérieur (map, filter, reduce) sont utilisées
-- [ ] Méthodes de tableaux modernes sont implémentées
-- [ ] Gestion d'événements délégués fonctionne
+### Advanced Functions Validation (30%)
+- [ ] Closures are used in services
+- [ ] Higher-order functions (map, filter, reduce) are used
+- [ ] Modern array methods are implemented
+- [ ] Delegated event management works
 
-### Validation Interface Utilisateur (20%)
-- [ ] Interface est responsive et moderne
-- [ ] Formulaires de saisie valident correctement les données
-- [ ] Messages d'erreur et succès s'affichent
-- [ ] Navigation entre sections fonctionne
+### User Interface Validation (20%)
+- [ ] Interface is responsive and modern
+- [ ] Input forms correctly validate data
+- [ ] Error and success messages display
+- [ ] Navigation between sections works
 
-### Validation Architecture (10%)
-- [ ] Code est organisé en modules logiques
-- [ ] Services sont indépendants et réutilisables
-- [ ] Séparation des responsabilités est respectée
-- [ ] Gestion d'état est cohérente
+### Architecture Validation (10%)
+- [ ] Code is organized into logical modules
+- [ ] Services are independent and reusable
+- [ ] Separation of concerns is respected
+- [ ] State management is consistent
 
-## Défis Supplémentaires
+## Additional Challenges
 
-### Niveau 1 : Fonctionnalités Étoffées
-- Ajoutez un système de réservations de livres
-- Implémentez des notifications d'échéance par email simulé
-- Créez un système de notation et commentaires pour les livres
-- Ajoutez une fonctionnalité d'import/export CSV
+### Level 1: Enhanced Features
+- Add a book reservation system
+- Implement simulated email due date notifications
+- Create a rating and review system for books
+- Add CSV import/export functionality
 
-### Niveau 2 : Interface Avancée
-- Créez une interface d'administration complète
-- Implémentez des graphiques de statistiques avec Chart.js
-- Ajoutez un système de recherche facettée
-- Créez des vues détaillées pour chaque livre/utilisateur
+### Level 2: Advanced Interface
+- Create a complete admin interface
+- Implement statistical charts with Chart.js
+- Add faceted search system
+- Create detailed views for each book/user
 
-### Niveau 3 : Optimisations Techniques
-- Ajoutez une persistance avec IndexedDB
-- Implémentez la synchronisation avec un backend API
-- Créez des tests unitaires pour toutes les classes
-- Ajoutez un service worker pour le mode hors ligne
+### Level 3: Technical Optimizations
+- Add persistence with IndexedDB
+- Implement synchronization with backend API
+- Create unit tests for all classes
+- Add service worker for offline mode
 
-## Critères d'Évaluation
+## Evaluation Criteria
 
-### Programmation Orientée Objet (35%)
-- Utilisation correcte des classes et objets
-- Implémentation appropriée de l'encapsulation
-- Héritage et polymorphisme utilisés correctement
-- Gestion d'erreurs robuste
+### Object-Oriented Programming (35%)
+- Correct use of classes and objects
+- Appropriate implementation of encapsulation
+- Proper use of inheritance and polymorphism
+- Robust error management
 
-### Fonctions et Modules (30%)
-- Fonctions avancées correctement implémentées
-- Organisation modulaire du code
-- Utilisation appropriée des fermetures
-- Services bien structurés
+### Functions and Modules (30%)
+- Advanced functions correctly implemented
+- Modular code organization
+- Appropriate use of closures
+- Well-structured services
 
-### Interface et UX (20%)
-- Design responsive et intuitif
-- Validation des formulaires complète
-- Feedback utilisateur approprié
-- Performance optimisée
+### Interface and UX (20%)
+- Responsive and intuitive design
+- Complete form validation
+- Appropriate user feedback
+- Optimized performance
 
-### Architecture et Qualité (15%)
-- Séparation claire des responsabilités
-- Code maintenable et extensible
-- Documentation appropriée
-- Gestion d'état cohérente
+### Architecture and Quality (15%)
+- Clear separation of responsibilities
+- Maintainable and extensible code
+- Appropriate documentation
+- Consistent state management
 
-## Prochaines Étapes
-Bravo pour votre système de gestion de bibliothèque ! Vous maîtrisez maintenant les concepts avancés de JavaScript avec les objets et fonctions. Au prochain module, nous explorerons les APIs du navigateur et la programmation asynchrone.
+## Next Steps
+Congratulations on your library management system! You now master advanced JavaScript concepts with objects and functions. In the next module, we will explore browser APIs and asynchronous programming.

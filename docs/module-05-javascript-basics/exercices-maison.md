@@ -1,366 +1,366 @@
-# Exercices Maison - Module 5 : Notions de Base JavaScript
+# Homework Exercises
 
-## Aperçu
-Ces exercices vous permettent de maîtriser les fondamentaux de JavaScript : variables, types de données, conditions, boucles, fonctions, et manipulation du DOM. Vous apprendrez à rendre les pages web interactives.
+## Overview
+These exercises allow you to master JavaScript fundamentals: variables, data types, conditions, loops, functions, and DOM manipulation. You will learn to make web pages interactive.
 
-## Niveau Débutant
+## Beginner Level
 
-### Exercice 5.1 : Premiers Pas en JavaScript
-**Objectif** : Configurer JavaScript et exécuter vos premiers scripts.
+### Exercise 5.1: First Steps in JavaScript
+**Objective**: Set up JavaScript and execute your first scripts.
 
-**Instructions** :
-1. Créez une page HTML simple avec du contenu
-2. Créez un fichier `script.js` séparé
-3. Liez le fichier JavaScript : `<script src="script.js"></script>`
-4. Dans `script.js`, ajoutez :
-   - `console.log("Bonjour JavaScript !")`
-   - Un commentaire expliquant ce que fait le code
-   - Une alerte simple : `alert("Bienvenue !")`
-5. Ouvrez la console du navigateur (F12) pour voir les messages
+**Instructions**:
+1. Create a simple HTML page with content
+2. Create a separate `script.js` file
+3. Link the JavaScript file: `<script src="script.js"></script>`
+4. In `script.js`, add:
+   - `console.log("Hello JavaScript!")`
+   - A comment explaining what the code does
+   - A simple alert: `alert("Welcome!")`
+5. Open the browser console (F12) to see the messages
 
-**Critères de validation** :
-- [ ] Fichier JavaScript lié correctement
-- [ ] Messages visibles dans la console
-- [ ] Code commenté et organisé
-- [ ] Aucune erreur dans la console
+**Validation Criteria**:
+- [ ] JavaScript file linked correctly
+- [ ] Messages visible in console
+- [ ] Code commented and organized
+- [ ] No errors in console
 
-**Indices** :
-- Le script doit être placé avant `</body>` ou avec `defer`
-- `console.log()` affiche dans l'onglet Console
-- Les commentaires utilisent `//` ou `/* */`
+**Hints**:
+- Script should be placed before `</body>` or with `defer`
+- `console.log()` displays in Console tab
+- Comments use `//` or `/* */`
 
-### Exercice 5.2 : Variables et Types de Données
-**Objectif** : Déclarer et utiliser différents types de variables JavaScript.
+### Exercise 5.2: Variables and Data Types
+**Objective**: Declare and use different types of JavaScript variables.
 
-**Instructions** :
-1. Créez un fichier `variables.js`
-2. Déclarez des variables de tous types :
-   - String : `let nom = "Alice"`
-   - Number : `let age = 25`
-   - Boolean : `let estEtudiant = true`
-   - Array : `let couleurs = ["rouge", "vert", "bleu"]`
-   - Object : `let personne = {nom: "Alice", age: 25}`
-3. Affichez les variables dans la console
-4. Modifiez les valeurs et réaffichez-les
-5. Testez les types avec `typeof`
+**Instructions**:
+1. Create a file `variables.js`
+2. Declare variables of all types:
+   - String: `let name = "Alice"`
+   - Number: `let age = 25`
+   - Boolean: `let isStudent = true`
+   - Array: `let colors = ["red", "green", "blue"]`
+   - Object: `let person = {name: "Alice", age: 25}`
+3. Display variables in console
+4. Modify values and redisplay them
+5. Test types with `typeof`
 
-**Critères de validation** :
-- [ ] Tous les types de données utilisés
-- [ ] Variables déclarées avec `let` ou `const`
-- [ ] Affichage correct dans la console
-- [ ] Utilisation de `typeof` pour vérifier les types
+**Validation Criteria**:
+- [ ] All data types used
+- [ ] Variables declared with `let` or `const`
+- [ ] Correct display in console
+- [ ] Use of `typeof` to check types
 
-**Indices** :
-- `const` pour les valeurs qui ne changent pas
-- `let` pour les variables modifiables
-- Les objets utilisent `{}` et les tableaux `[]`
+**Hints**:
+- `const` for values that don't change
+- `let` for modifiable variables
+- Objects use `{}` and arrays `[]`
 
-### Exercice 5.3 : Opérateurs et Expressions
-**Objectif** : Utiliser les opérateurs mathématiques, de comparaison, et logiques.
+### Exercise 5.3: Operators and Expressions
+**Objective**: Use mathematical, comparison, and logical operators.
 
-**Instructions** :
-1. Créez un fichier `operateurs.js`
-2. Testez les opérateurs mathématiques :
-   - Addition, soustraction, multiplication, division
-   - Modulo (`%`) et puissance (`**`)
-3. Utilisez les opérateurs de comparaison :
+**Instructions**:
+1. Create a file `operateurs.js`
+2. Test mathematical operators:
+   - Addition, subtraction, multiplication, division
+   - Modulo (`%`) and power (`**`)
+3. Use comparison operators:
    - `===`, `!==`, `>`, `<`, `>=`, `<=`
-4. Expérimentez avec les opérateurs logiques :
-   - `&&` (ET), `||` (OU), `!` (NON)
-5. Créez des expressions complexes combinant tout
+4. Experiment with logical operators:
+   - `&&` (AND), `||` (OR), `!` (NOT)
+5. Create complex expressions combining everything
 
-**Critères de validation** :
-- [ ] Tous les opérateurs mathématiques testés
-- [ ] Comparaisons strictes (`===`) utilisées
-- [ ] Expressions logiques complexes créées
-- [ ] Résultats affichés et expliqués
+**Validation Criteria**:
+- [ ] All mathematical operators tested
+- [ ] Strict comparisons (`===`) used
+- [ ] Complex logical expressions created
+- [ ] Results displayed and explained
 
-**Indices** :
-- `5 + 3 * 2` donne 11 (priorité des opérateurs)
-- `true && false` donne `false`
-- `!true` donne `false`
+**Hints**:
+- `5 + 3 * 2` gives 11 (operator precedence)
+- `true && false` gives `false`
+- `!true` gives `false`
 
-## Niveau Intermédiaire
+## Intermediate Level
 
-### Exercice 5.4 : Conditions et Branches
-**Objectif** : Maîtriser les structures conditionnelles if/else et switch.
+### Exercise 5.4: Conditions and Branches
+**Objective**: Master conditional structures if/else and switch.
 
-**Instructions** :
-1. Créez un fichier `conditions.js`
-2. Utilisez `if/else if/else` pour :
-   - Vérifier l'âge pour des catégories (enfant, adolescent, adulte)
-   - Déterminer la saison selon le mois
-   - Calculer une note (A, B, C, D, F)
-3. Implémentez des conditions avec `switch` :
-   - Jour de la semaine → activité
-   - Code de couleur → nom de la couleur
-   - Type d'utilisateur → permissions
-4. Utilisez l'opérateur ternaire : `condition ? valeur1 : valeur2`
+**Instructions**:
+1. Create a file `conditions.js`
+2. Use `if/else if/else` for:
+   - Checking age for categories (child, teenager, adult)
+   - Determining season based on month
+   - Calculating grade (A, B, C, D, F)
+3. Implement conditions with `switch`:
+   - Day of week → activity
+   - Color code → color name
+   - User type → permissions
+4. Use ternary operator: `condition ? value1 : value2`
 
-**Critères de validation** :
-- [ ] Structures if/else complexes
-- [ ] Switch statements appropriés
-- [ ] Opérateur ternaire utilisé
-- [ ] Logique correcte et cas edge gérés
+**Validation Criteria**:
+- [ ] Complex if/else structures
+- [ ] Appropriate switch statements
+- [ ] Ternary operator used
+- [ ] Correct logic and edge cases handled
 
-**Indices** :
-- `if (age < 13) { categorie = "enfant"; }`
-- Switch sans `break` continue à exécuter
-- Ternaire pour des conditions simples
+**Hints**:
+- `if (age < 13) { category = "child"; }`
+- Switch without `break` continues executing
+- Ternary for simple conditions
 
-### Exercice 5.5 : Fonctions de Base
-**Objectif** : Créer et utiliser des fonctions JavaScript simples.
+### Exercise 5.5: Basic Functions
+**Objective**: Create and use simple JavaScript functions.
 
-**Instructions** :
-1. Créez un fichier `fonctions.js`
-2. Définissez des fonctions pour :
-   - Saluer quelqu'un : `function saluer(nom)`
-   - Calculer l'aire d'un rectangle
-   - Convertir Celsius en Fahrenheit
-   - Vérifier si un nombre est pair
-3. Utilisez des fonctions fléchées (arrow functions)
-4. Testez les fonctions avec différents paramètres
-5. Gérez les valeurs de retour
+**Instructions**:
+1. Create a file `fonctions.js`
+2. Define functions for:
+   - Greeting someone: `function greet(name)`
+   - Calculating rectangle area
+   - Converting Celsius to Fahrenheit
+   - Checking if a number is even
+3. Use arrow functions
+4. Test functions with different parameters
+5. Handle return values
 
-**Critères de validation** :
-- [ ] Fonctions avec paramètres et retour
-- [ ] Arrow functions utilisées
-- [ ] Fonctions testées avec différents inputs
-- [ ] Valeurs de retour appropriées
+**Validation Criteria**:
+- [ ] Functions with parameters and return
+- [ ] Arrow functions used
+- [ ] Functions tested with different inputs
+- [ ] Appropriate return values
 
-**Indices** :
+**Hints**:
 - `function addition(a, b) { return a + b; }`
-- Arrow : `const addition = (a, b) => a + b;`
-- `return` renvoie une valeur, `console.log` affiche seulement
+- Arrow: `const addition = (a, b) => a + b;`
+- `return` returns a value, `console.log` only displays
 
-### Exercice 5.6 : Manipulation du DOM
-**Objectif** : Interagir avec les éléments HTML via JavaScript.
+### Exercise 5.6: DOM Manipulation
+**Objective**: Interact with HTML elements via JavaScript.
 
-**Instructions** :
-1. Créez une page HTML avec des éléments (boutons, paragraphes, inputs)
-2. Dans `script.js`, utilisez :
-   - `document.getElementById()` pour sélectionner
-   - `document.querySelector()` pour des sélecteurs CSS
-   - `.textContent` pour changer le texte
-   - `.style` pour modifier les styles
-3. Ajoutez des event listeners :
-   - Bouton qui change la couleur de fond
-   - Input qui met à jour un paragraphe en temps réel
-   - Bouton qui cache/affiche des éléments
+**Instructions**:
+1. Create an HTML page with elements (buttons, paragraphs, inputs)
+2. In `script.js`, use:
+   - `document.getElementById()` to select
+   - `document.querySelector()` for CSS selectors
+   - `.textContent` to change text
+   - `.style` to modify styles
+3. Add event listeners:
+   - Button that changes background color
+   - Input that updates a paragraph in real-time
+   - Button that hides/shows elements
 
-**Critères de validation** :
-- [ ] Éléments sélectionnés correctement
-- [ ] Propriétés modifiées (texte, style)
-- [ ] Event listeners fonctionnels
-- [ ] Interactions utilisateur fluides
+**Validation Criteria**:
+- [ ] Elements selected correctly
+- [ ] Properties modified (text, style)
+- [ ] Functional event listeners
+- [ ] Smooth user interactions
 
-**Indices** :
-- `const bouton = document.getElementById('monBouton');`
-- `bouton.addEventListener('click', fonction);`
-- `element.style.color = 'red';` change la couleur
+**Hints**:
+- `const button = document.getElementById('myButton');`
+- `button.addEventListener('click', function);`
+- `element.style.color = 'red';` changes color
 
-## Niveau Avancé
+## Advanced Level
 
-### Exercice 5.7 : Calculateur Interactif
-**Objectif** : Créer une calculatrice complète avec interface utilisateur.
+### Exercise 5.7: Interactive Calculator
+**Objective**: Create a complete calculator with user interface.
 
-**Instructions** :
-1. Créez une page `calculatrice.html` avec :
-   - Deux champs numériques
-   - Un select pour l'opération (+, -, *, /)
-   - Un bouton "Calculer"
-   - Une zone d'affichage du résultat
-   - Un historique des calculs
-2. En JavaScript :
-   - Validez les inputs (nombres uniquement)
-   - Implémentez toutes les opérations
-   - Gérez la division par zéro
-   - Sauvegardez l'historique (array)
-   - Affichez l'historique sous forme de liste
+**Instructions**:
+1. Create a page `calculatrice.html` with:
+   - Two numeric fields
+   - A select for operation (+, -, *, /)
+   - A "Calculate" button
+   - A result display area
+   - A calculation history
+2. In JavaScript:
+   - Validate inputs (numbers only)
+   - Implement all operations
+   - Handle division by zero
+   - Save history (array)
+   - Display history as a list
 
-**Critères de validation** :
-- [ ] Interface utilisateur complète
-- [ ] Validation des entrées
-- [ ] Toutes les opérations fonctionnelles
-- [ ] Historique des calculs maintenu
-- [ ] Gestion des erreurs appropriée
+**Validation Criteria**:
+- [ ] Complete user interface
+- [ ] Input validation
+- [ ] All operations functional
+- [ ] Calculation history maintained
+- [ ] Appropriate error handling
 
-**Indices** :
-- `parseFloat(input.value)` pour convertir en nombre
-- `isNaN()` pour vérifier si c'est un nombre
-- Stockez l'historique dans un array
+**Hints**:
+- `parseFloat(input.value)` to convert to number
+- `isNaN()` to check if it's a number
+- Store history in an array
 
-### Exercice 5.8 : Jeu du Nombre Mystère
-**Objectif** : Créer un jeu interactif où l'utilisateur devine un nombre.
+### Exercise 5.8: Mystery Number Game
+**Objective**: Create an interactive game where the user guesses a number.
 
-**Instructions** :
-1. Créez une page `jeu-nombre.html` avec :
-   - Instructions du jeu
-   - Champ pour saisir un nombre
-   - Bouton "Deviner"
-   - Zone d'affichage des indices
-   - Compteur d'essais
-   - Bouton "Rejouer"
-2. Logique JavaScript :
-   - Générer un nombre aléatoire (1-100)
-   - Comparer la proposition avec le nombre mystère
-   - Donner des indices ("Trop haut", "Trop bas")
-   - Compter les tentatives
-   - Permettre de rejouer
+**Instructions**:
+1. Create a page `jeu-nombre.html` with:
+   - Game instructions
+   - Field to enter a number
+   - "Guess" button
+   - Area to display clues
+   - Attempt counter
+   - "Play Again" button
+2. JavaScript logic:
+   - Generate random number (1-100)
+   - Compare guess with mystery number
+   - Give clues ("Too high", "Too low")
+   - Count attempts
+   - Allow replay
 
-**Critères de validation** :
-- [ ] Jeu entièrement fonctionnel
-- [ ] Interface intuitive et responsive
-- [ ] Indices utiles pour le joueur
-- [ ] Gestion du nombre d'essais
-- [ ] Possibilité de rejouer
+**Validation Criteria**:
+- [ ] Fully functional game
+- [ ] Intuitive and responsive interface
+- [ ] Useful clues for the player
+- - [ ] Attempt count management
+- [ ] Replay possibility
 
-**Indices** :
-- `Math.floor(Math.random() * 100) + 1` pour nombre aléatoire
-- Stockez le nombre mystère dans une variable
-- Utilisez des messages encourageants
+**Hints**:
+- `Math.floor(Math.random() * 100) + 1` for random number
+- Store mystery number in a variable
+- Use encouraging messages
 
-## Défi Bonus
+## Bonus Challenge
 
-### Exercice 5.9 : Liste de Tâches (Todo List)
-**Objectif** : Créer une application de gestion des tâches avec stockage local.
+### Exercise 5.9: Todo List (Task List)
+**Objective**: Create a task management application with local storage.
 
-**Instructions** :
-1. Créez une application complète avec :
-   - Formulaire pour ajouter des tâches
-   - Liste des tâches avec checkboxes
-   - Boutons pour modifier/supprimer
-   - Filtrage (toutes, actives, terminées)
-   - Compteur de tâches restantes
-   - Sauvegarde automatique (localStorage)
-2. Fonctionnalités avancées :
-   - Marquer comme terminée
-   - Édition en ligne des tâches
-   - Suppression avec confirmation
-   - Vidage des tâches terminées
+**Instructions**:
+1. Create a complete application with:
+   - Form to add tasks
+   - Task list with checkboxes
+   - Buttons to edit/delete
+   - Filtering (all, active, completed)
+   - Counter of remaining tasks
+   - Automatic saving (localStorage)
+2. Advanced features:
+   - Mark as completed
+   - Inline task editing
+   - Deletion with confirmation
+   - Clear completed tasks
 
-**Critères de validation** :
-- [ ] Toutes les fonctionnalités CRUD présentes
-- [ ] Interface utilisateur moderne
-- [ ] Données persistées (localStorage)
-- [ ] Filtrage et recherche fonctionnels
-- [ ] Code organisé et commenté
+**Validation Criteria**:
+- [ ] All CRUD features present
+- [ ] Modern user interface
+- [ ] Data persisted (localStorage)
+- [ ] Functional filtering and search
+- [ ] Organized and commented code
 
-**Indices** :
-- Structurez les données : `[{id: 1, text: "...", completed: false}]`
+**Hints**:
+- Structure data: `[{id: 1, text: "...", completed: false}]`
 - `localStorage.setItem('todos', JSON.stringify(todos))`
-- Utilisez des event listeners pour les interactions
+- Use event listeners for interactions
 
-### Exercice 5.10 : Validation de Formulaire Avancée
-**Objectif** : Créer un système de validation de formulaire complet.
+### Exercise 5.10: Advanced Form Validation
+**Objective**: Create a complete form validation system.
 
-**Instructions** :
-1. Créez un formulaire d'inscription avec :
-   - Nom, prénom, email, mot de passe
-   - Confirmation du mot de passe
-   - Date de naissance, pays
-   - Conditions d'utilisation (checkbox)
-2. Validation JavaScript :
-   - Champs requis non vides
-   - Email au bon format
-   - Mot de passe assez fort (longueur, caractères spéciaux)
-   - Confirmation du mot de passe
-   - Âge minimum (13 ans)
-3. Interface utilisateur :
-   - Messages d'erreur spécifiques
-   - Champs valides mis en évidence
-   - Soumission seulement si tout est valide
+**Instructions**:
+1. Create a registration form with:
+   - First name, last name, email, password
+   - Password confirmation
+   - Date of birth, country
+   - Terms of use (checkbox)
+2. JavaScript validation:
+   - Required fields not empty
+   - Email in correct format
+   - Password strong enough (length, special characters)
+   - Password confirmation
+   - Minimum age (13 years)
+3. User interface:
+   - Specific error messages
+   - Valid fields highlighted
+   - Submission only if all valid
 
-**Critères de validation** :
-- [ ] Toutes les validations implémentées
-- [ ] Messages d'erreur utiles
-- [ ] Interface utilisateur intuitive
-- [ ] Prévention de soumission invalide
-- [ ] Feedback visuel en temps réel
+**Validation Criteria**:
+- [ ] All validations implemented
+- [ ] Useful error messages
+- [ ] Intuitive user interface
+- [ ] Prevention of invalid submission
+- [ ] Real-time visual feedback
 
-**Indices** :
-- Regex pour email : `/^[^\s@]+@[^\s@]+\.[^\s@]+$/`
+**Hints**:
+- Regex for email: `/^[^\s@]+@[^\s@]+\.[^\s@]+$/`
 - `input.addEventListener('input', validateFunction)`
-- Utilisez des classes CSS pour les états (valid, invalid)
+- Use CSS classes for states (valid, invalid)
 
-## Intégration Inter-modules
+## Inter-module Integration
 
-### Exercice 5.11 : Préparation Module 6
-**Objectif** : Refactoriser le code JavaScript avec des fonctions organisées.
+### Exercise 5.11: Module 6 Preparation
+**Objective**: Refactor JavaScript code with organized functions.
 
-**Instructions** :
-1. Reprenez votre application de liste de tâches
-2. Refactorisez le code :
-   - Créez des fonctions séparées pour chaque fonctionnalité
-   - Utilisez des objets pour stocker les données
-   - Organisez le code en sections logiques
-   - Ajoutez des commentaires détaillés
-3. Préparez pour les concepts avancés :
-   - Fonctions dans des objets (méthodes)
-   - Arrays avec méthodes avancées
-   - Gestion d'erreurs basique
-4. Documentez les améliorations apportées
+**Instructions**:
+1. Take your todo list application
+2. Refactor the code:
+   - Create separate functions for each feature
+   - Use objects to store data
+   - Organize code in logical sections
+   - Add detailed comments
+3. Prepare for advanced concepts:
+   - Functions in objects (methods)
+   - Arrays with advanced methods
+   - Basic error handling
+4. Document the improvements made
 
-**Critères de validation** :
-- [ ] Code refactorisé et organisé
-- [ ] Fonctions modulaires créées
-- [ ] Commentaires explicatifs ajoutés
-- [ ] Préparation pour les objets visible
-- [ ] Fonctionnalités préservées
+**Validation Criteria**:
+- [ ] Refactored and organized code
+- [ ] Modular functions created
+- [ ] Explanatory comments added
+- [ ] Preparation for objects visible
+- [ ] Features preserved
 
-**Indices** :
-- Regroupez les fonctions similaires ensemble
-- Utilisez des noms descriptifs pour les fonctions
-- Préparez des objets pour stocker l'état de l'application
+**Hints**:
+- Group similar functions together
+- Use descriptive names for functions
+- Prepare objects to store application state
 
-### Exercice 5.12 : Application Interactive Complète
-**Objectif** : Créer une application web complète combinant HTML, CSS, et JavaScript.
+### Exercise 5.12: Complete Interactive Application
+**Objective**: Create a complete web application combining HTML, CSS, and JavaScript.
 
-**Instructions** :
-1. Créez une application de "Gestionnaire de Recettes"
-2. Fonctionnalités :
-   - Ajouter/modifier/supprimer des recettes
-   - Catégoriser les recettes (entrée, plat, dessert)
-   - Recherche par nom ou ingrédients
-   - Affichage en grille/liste
-   - Notation des recettes
-3. Interface moderne :
-   - Design responsive (CSS Grid/Flexbox)
-   - Animations et transitions
-   - Thème cohérent avec variables CSS
-4. Stockage des données (localStorage)
+**Instructions**:
+1. Create a "Recipe Manager" application
+2. Features:
+   - Add/edit/delete recipes
+   - Categorize recipes (appetizer, main course, dessert)
+   - Search by name or ingredients
+   - Grid/list display
+   - Recipe rating
+3. Modern interface:
+   - Responsive design (CSS Grid/Flexbox)
+   - Animations and transitions
+   - Consistent theme with CSS variables
+4. Data storage (localStorage)
 
-**Critères de validation** :
-- [ ] Application entièrement fonctionnelle
-- [ ] Interface utilisateur moderne et intuitive
-- [ ] Données persistées correctement
-- [ ] Recherche et filtrage opérationnels
-- [ ] Code JavaScript organisé
+**Validation Criteria**:
+- [ ] Fully functional application
+- [ ] Modern and intuitive user interface
+- [ ] Data correctly persisted
+- [ ] Operational search and filtering
+- [ ] Organized JavaScript code
 
-**Indices** :
-- Structurez les données : `{id, nom, ingredients: [], instructions, categorie, note}`
-- Utilisez des templates HTML pour générer le contenu
-- Séparez la logique (JavaScript) de la présentation (HTML/CSS)
+**Hints**:
+- Structure data: `{id, name, ingredients: [], instructions, category, rating}`
+- Use HTML templates to generate content
+- Separate logic (JavaScript) from presentation (HTML/CSS)
 
-## Critères de Validation Globaux
+## Global Validation Criteria
 
-Pour réussir ces exercices, assurez-vous que :
+To succeed in these exercises, ensure that:
 
-- **Fonctionnalité** : Code JavaScript s'exécute sans erreurs
-- **Interactivité** : Événements utilisateur gérés correctement
-- **Validation** : Entrées utilisateur validées et sécurisées
-- **Performance** : Code efficace sans blocages
-- **Maintenabilité** : Code commenté et organisé
-- **Compatibilité** : Fonctionne dans les navigateurs modernes
+- **Functionality**: JavaScript code executes without errors
+- **Interactivity**: User events handled correctly
+- **Validation**: User inputs validated and secured
+- **Performance**: Efficient code without blocking
+- **Maintainability**: Commented and organized code
+- **Compatibility**: Works in modern browsers
 
-## Ressources d'Aide
+## Help Resources
 
-- [JavaScript MDN Guide](https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide)
+- [JavaScript MDN Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)
 - [JavaScript.info Tutorial](https://javascript.info/)
 - [Eloquent JavaScript](https://eloquentjavascript.net/)
 - [JavaScript Console Methods](https://developer.mozilla.org/en-US/docs/Web/API/Console)
 - [DOM Manipulation Guide](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
 
-## Prochaines Étapes
+## Next Steps
 
-Ces exercices vous préparent parfaitement pour le Module 6 où vous apprendrez les fonctions avancées et les objets JavaScript. Vous aurez maintenant une base solide pour créer des applications web interactives !
+These exercises perfectly prepare you for Module 6 where you will learn advanced functions and JavaScript objects. You will now have a solid foundation to create interactive web applications!

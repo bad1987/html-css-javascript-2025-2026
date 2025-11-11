@@ -1,124 +1,140 @@
-# Cours HTML, CSS et JavaScript 2025-2026
+# HTML, CSS and JavaScript Course 2025-2026
 
-## Vue d'ensemble du Cours
+## Course Overview
 
-Ce cours complet de 2 mois (16 sessions) est spécialement conçu pour les débutants absolus en programmation. Il transforme les apprenants en développeurs web compétents capables de créer des applications web modernes et interactives.
+This 2-month (16-session) course is designed for complete beginners in programming. Step by step, it guides learners to become confident web developers able to create modern, interactive web applications.
 
-## Structure du Cours
+## Course Structure
 
-### Durée Totale
-- **2 mois** (environ 8 semaines)
-- **2 sessions par semaine**
-- **16 sessions au total**
+### Total Duration
 
-### Prérequis
-- Aucun expérience en programmation requise
-- Connaissances informatiques de base
-- Ordinateur avec navigateur web moderne
-- Éditeur VS Code (fourni gratuitement)
+- **2 months** (around 8 weeks)
+- **2 sessions per week**
+- **16 sessions in total**
 
-## Modules du Cours
+### Prerequisites
 
-### Module 1 : Introduction au Développement Web
-- **Durée** : 1-2 sessions
-- **Objectifs** : Comprendre HTML, CSS, JavaScript et l'écosystème web
-- **Projet** : Première page web personnelle avec objectifs clairs
+- No prior programming experience required
+- Basic computer skills
+- A computer with a modern web browser
+- Visual Studio Code editor (free)
 
-[Accéder au Module 1](module-01-introduction/README.md)
+## Course Modules
 
-### Module 2 : Structure et Sémantique HTML
-- **Durée** : 1-2 sessions
-- **Objectifs** : Éléments HTML sémantiques, accessibilité
-- **Projet** : Page de recette avec structure sémantique
+### Module 01 - Introduction to Web Development
 
-[Accéder au Module 2](module-02-html-structure/README.md)
+- **Duration**: 1–2 sessions
+- **Goals**: Discover how the web works and understand the roles of HTML, CSS, and JavaScript
+- **Practical Project**: Create your first personal web page with clear learning goals
 
-### Module 3 : Notions Fondamentales du CSS
-- **Durée** : 1-2 sessions
-- **Objectifs** : Couleurs, polices, espacement, sélecteurs
-- **Projet** : Page de profil stylisée
+[Go to Module 01 - Introduction to Web Development](module-01-introduction/README.md)
 
-[Accéder au Module 3](module-03-css-fundamentals/README.md)
+### Module 02 - HTML Structure and Semantics
 
-### Module 4 : Mise en Page et Design Responsive avec CSS
-- **Durée** : 1-2 sessions
-- **Objectifs** : Flexbox, CSS Grid, design responsive
-- **Projet** : Portfolio responsive
+- **Duration**: 1–2 sessions
+- **Goals**: Use semantic HTML elements, structure content clearly, and improve accessibility
+- **Practical Project**: Build a recipe page with clean, semantic structure
 
-[Accéder au Module 4](module-04-css-layout/README.md)
+[Go to Module 02 - HTML Structure and Semantics](module-02-html-structure/README.md)
 
-### Module 5 : Notions de Base JavaScript
-- **Durée** : 2 sessions
-- **Objectifs** : Variables, fonctions, DOM manipulation, événements
-- **Projet** : Calculateur interactif avec validation et historique
+### Module 03 - CSS Fundamentals
 
-[Accéder au Module 5](module-05-javascript-basics/README.md)
+- **Duration**: 1–2 sessions
+- **Goals**: Learn colors, typography, spacing, and CSS selectors
+- **Practical Project**: Design a styled profile page
 
-### Module 6 : Fonctions et Objets JavaScript
-- **Durée** : 2 sessions
-- **Objectifs** : Objets, tableaux, classes, gestion d'erreurs
-- **Projet** : Application de gestion de tâches
+[Go to Module 03 - CSS Fundamentals](module-03-css-fundamentals/README.md)
 
-[Accéder au Module 6](module-06-javascript-functions-objects/README.md)
+### Module 04 - CSS Layout and Responsive Design
 
-### Module 7 : JavaScript Avancé et APIs
-- **Durée** : 2 sessions
-- **Objectifs** : Programmation asynchrone, APIs REST, stockage local
-- **Projet** : Application météo avec API externe
+- **Duration**: 1–2 sessions
+- **Goals**: Practice Flexbox, CSS Grid, and responsive design techniques
+- **Practical Project**: Build a responsive portfolio website
 
-[Accéder au Module 7](module-07-advanced-javascript-apis/README.md)
+[Go to Module 04 - CSS Layout and Responsive Design](module-04-css-layout/README.md)
 
-### Module 8 : Applications Web Full-Stack
-- **Durée** : 2 sessions
-- **Objectifs** : Backend Node.js, authentification, déploiement, architecture
-- **Projet** : Blog personnel complet avec authentification, commentaires et gestion d'utilisateurs
+### Module 05 - JavaScript Basics
 
-[Accéder au Module 8](module-08-fullstack-web-applications/README.md)
+- **Duration**: 2 sessions
+- **Goals**: Understand variables, data types, functions, DOM manipulation, and events
+- **Practical Project**: Create an interactive calculator with validation and history
 
-### Module 9 : Sujets Avancés et Bonnes Pratiques
-- **Durée** : 2 sessions
-- **Objectifs** : Patterns de conception, tests, optimisation, outils de développement
-- **Projet** : Refactorisation et optimisation du blog avec tests et CI/CD
+[Go to Module 05 - JavaScript Basics](module-05-javascript-basics/README.md)
 
-[Accéder au Module 9](module-09-advanced-topics-best-practices/README.md)
+### Module 06 - JavaScript Functions and Objects
 
-## Méthodologie Pédagogique
+- **Duration**: 2 sessions
+- **Goals**: Work with objects, arrays, functions, classes, and error handling
+- **Practical Project**: Build a task management application
 
-### Approche Active
-- **Pas de cours magistraux passifs**
-- **Activités pratiques dès la première session**
-- **Projets concrets à chaque module**
-- **Apprentissage par la réalisation**
+[Go to Module 06 - JavaScript Functions and Objects](module-06-javascript-functions-objects/README.md)
 
-### Progression Progressive
-- **Difficulté croissante** : débutant → intermédiaire → avancé
-- **Concepts fondamentaux maîtrisés avant avancés**
-- **Révision régulière des acquis**
-- **Projets de plus en plus complexes**
+### Module 07 - Advanced JavaScript and APIs
 
-## Technologies et Outils
+- **Duration**: 2 sessions
+- **Goals**: Explore asynchronous programming, REST APIs, and local storage
+- **Practical Project**: Build a weather application powered by an external API
 
-### Environnement de Développement
-- **Éditeur** : Visual Studio Code
-- **Navigateur** : Chrome/Firefox/Edge/Safari
-- **Extension** : Live Server pour VS Code
-- **Contrôle de version** : Git et GitHub
+[Go to Module 07 - Advanced JavaScript and APIs](module-07-advanced-javascript-apis/README.md)
 
-### Technologies Apprises
-- **HTML5** : Structure sémantique et accessible
-- **CSS3** : Design moderne et responsive
-- **JavaScript ES6+** : Programmation interactive
-- **Node.js** : Développement backend
-- **APIs REST** : Communication client-serveur
+### Module 08 - Full-Stack Web Applications
 
-## Débouchés Professionnels
+- **Duration**: 2 sessions
+- **Goals**: Discover backend concepts with Node.js, authentication basics, deployment, and modern architecture
+- **Practical Project**: Develop a complete personal blog with authentication, comments, and user management
 
-### Carrières Possibles
-- **Développeur Web Front-end**
-- **Intégrateur Web**
-- **Développeur Full-Stack Junior**
-- **Spécialiste UX/UI**
-- **Développeur d'Applications Web**
+[Go to Module 08 - Full-Stack Web Applications](module-08-fullstack-web-applications/README.md)
 
-**Prêt à commencer votre carrière en développement web ?**
-**Inscrivez-vous dès maintenant et transformez votre avenir numérique !** 🚀
+### Module 09 - Advanced Topics and Best Practices
+
+- **Duration**: 2 sessions
+- **Goals**: Learn design patterns, testing, performance optimization, and developer tooling
+- **Practical Project**: Refactor and optimize the blog with tests and CI/CD
+
+[Go to Module 09 - Advanced Topics and Best Practices](module-09-advanced-topics-best-practices/README.md)
+
+## Teaching Approach
+
+### Active Learning
+
+- **No passive lectures**
+- **Hands-on activities from the very first session**
+- **Concrete projects in every module**
+- **Learning by building real examples**
+
+### Gradual Progression
+
+- **Increasing difficulty**: beginner → intermediate → advanced
+- **Strong foundations before advanced topics**
+- **Regular review of key concepts**
+- **Projects that grow in complexity over time**
+
+## Technologies and Tools
+
+### Development Environment
+
+- **Editor**: Visual Studio Code
+- **Browser**: Chrome, Firefox, Edge, or Safari
+- **Extension**: Live Server for VS Code
+- **Version Control**: Git and GitHub
+
+### Technologies Covered
+
+- **HTML5**: Semantic, accessible page structure
+- **CSS3**: Modern, responsive design
+- **JavaScript ES6+**: Interactive programming
+- **Node.js**: Backend fundamentals
+- **REST APIs**: Client–server communication
+
+## Career Opportunities
+
+### Potential Roles
+
+- **Front-End Web Developer**
+- **Web Integrator**
+- **Junior Full-Stack Developer**
+- **UX/UI-focused Web Developer**
+- **Web Application Developer**
+
+**Ready to start your journey into web development?**
+**Join the course and build a strong foundation for your digital future.** 🚀

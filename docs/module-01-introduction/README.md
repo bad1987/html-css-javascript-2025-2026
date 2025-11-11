@@ -1,130 +1,132 @@
-# Module 1 : Introduction au Développement Web
+# Module 01 - Introduction to Web Development
 
-## Aperçu
-Bienvenue dans votre voyage vers le développement web ! Dans ce module, vous apprendrez ce qu'est HTML et comment il forme la base de chaque site web. Nous commencerons par les bases absolues et construirons votre première page web simple.
+## Overview
+Welcome to your journey into web development. In this module, you will learn what HTML is, how it forms the foundation of every website, and how to create your first simple web page.
 
-## Objectifs d'Apprentissage
-À la fin de ce module, vous serez capable de :
-- Comprendre ce que font HTML, CSS et JavaScript
-- Créer une structure de document HTML de base
-- Ajouter du contenu texte à une page web
-- Utiliser des balises HTML de base pour le formatage
-- Prévisualiser votre travail dans un navigateur
+## Objectives
+By the end of this module, you will be able to:
+- Understand the roles of HTML, CSS, and JavaScript
+- Create a basic HTML document structure
+- Add text content to a web page
+- Use common HTML tags for formatting
+- Preview your work in a web browser
 
-## Prérequis
-- Aucun ! Ceci est conçu pour les débutants complets.
+## Prerequisites
+- None. This module is designed for complete beginners.
 
-## Matériaux Nécessaires
-- Éditeur VS Code (téléchargez depuis https://code.visualstudio.com/)
-- Un navigateur web moderne (Chrome, Firefox, Edge ou Safari)
-- Extension VS Code : Live Server (pour une prévisualisation facile dans le navigateur)
+## Required Materials
+- VS Code editor (download from https://code.visualstudio.com/)
+- A modern web browser (Chrome, Firefox, Edge, or Safari)
+- VS Code extension: Live Server (for easy in-browser preview)
 
-## Structure de Session
-- Session 1 : Qu'est-ce que le Développement Web ? (30 min)
-- Session 2 : Votre Première Page HTML (30 min)
-- Activité Pratique : Construire une Page de Profil Personnel Simple (1 heure)
+## Session Structure
+- Session 1: What is Web Development? (30 min)
+- Session 2: Your First HTML Page (30 min)
+- Practical Activity: Build a Simple Personal Profile Page (1 hour)
 
-## Théorie : Qu'est-ce que le Développement Web ?
+## Theory: What is Web Development?
 
-### Les Trois Piliers du Développement Web
-Chaque site web que vous visitez est construit en utilisant trois technologies de base :
+### The Three Pillars of the Web
+Every website you visit is built using three core technologies:
 
-1. **HTML (HyperText Markup Language)** : La structure et le contenu de la page
-   - Comme le squelette d'un bâtiment
-   - Définit les titres, paragraphes, images, liens
+1. **HTML (HyperText Markup Language)**: The structure and content of the page
+   - Like the skeleton of a building
+   - Defines headings, paragraphs, images, and links
 
-2. **CSS (Cascading Style Sheets)** : Le style visuel et la mise en page
-   - Comme la peinture, les meubles et les décorations
-   - Contrôle les couleurs, polices, espacement, positionnement
+2. **CSS (Cascading Style Sheets)**: The visual style and layout
+   - Like the paint, furniture, and decorations
+   - Controls colors, fonts, spacing, and positioning
 
-3. **JavaScript** : L'interactivité et le comportement
-   - Comme le système électrique et les appareils
-   - Rend les pages réactives aux actions des utilisateurs
+3. **JavaScript**: Interactivity and behavior
+   - Like the electricity and devices
+   - Makes pages respond to user actions
 
-### Comment Fonctionnent les Navigateurs
-Lorsque vous tapez une adresse de site web :
-1. Le navigateur demande le fichier HTML à un serveur
-2. Le navigateur lit le HTML et construit une structure de page
-3. Si CSS/JavaScript sont liés, le navigateur les applique
-4. Vous voyez la page web finale !
+### How Browsers Work (Simplified)
+When you open a website:
+1. The browser requests the HTML file from a server
+2. The browser reads the HTML and builds the page structure
+3. If CSS and JavaScript are linked, the browser loads and applies them
+4. You see the final rendered web page
 
-## Activité Pratique : Votre Première Page HTML
+## Practical Activity: Your First HTML Page
 
-### Étape 1 : Configurer Votre Espace de Travail
-1. Ouvrez VS Code
-2. Créez un nouveau dossier appelé "module-01"
-3. À l'intérieur, créez un fichier appelé "index.html"
-4. Installez l'extension Live Server dans VS Code
+### Step 1: Set Up Your Workspace
+1. Open VS Code
+2. Create a new folder named `module-01`
+3. Inside it, create a file named `index.html`
+4. Install the Live Server extension in VS Code
 
-### Étape 2 : Structure HTML de Base
-Chaque page HTML commence par cette structure de base :
+### Step 2: Basic HTML Structure
+Every HTML page starts with this basic structure:
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Ma Première Page Web</title>
+  <meta charset="UTF-8" />
+  <title>My First Web Page</title>
 </head>
 <body>
-    <!-- Votre contenu va ici -->
+  <!-- Your content goes here -->
 </body>
 </html>
 ```
 
-### Étape 3 : Ajouter du Contenu
-Ajoutons du contenu de base à votre page :
+### Step 3: Add Content
+Add some simple content to your page:
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Ma Première Page Web</title>
+  <meta charset="UTF-8" />
+  <title>My First Web Page</title>
 </head>
 <body>
-    <h1>Bonjour, Monde !</h1>
-    <p>Ceci est ma première page web. J'apprends HTML !</p>
-    <p>HTML signifie <strong>HyperText Markup Language</strong>.</p>
+  <h1>Hello, World!</h1>
+  <p>This is my first web page. I am learning HTML.</p>
+  <p>HTML stands for <strong>HyperText Markup Language</strong>.</p>
 
-    <h2>Mes Objectifs pour Ce Cours</h2>
-    <ul>
-        <li>Apprendre la structure HTML sémantique</li>
-        <li>Maîtriser le style CSS et le design responsive</li>
-        <li>Comprendre l'interactivité JavaScript et les APIs</li>
-        <li>Construire des applications web full-stack</li>
-        <li>Appliquer les bonnes pratiques de développement</li>
-    </ul>
+  <h2>My Goals for This Course</h2>
+  <ul>
+    <li>Learn semantic HTML structure</li>
+    <li>Understand CSS styling and responsive design</li>
+    <li>Explore JavaScript interactivity and APIs</li>
+    <li>Build full-stack web applications</li>
+    <li>Apply modern development best practices</li>
+  </ul>
 </body>
 </html>
 ```
 
-### Étape 4 : Balises HTML Courantes
-| Balise | But | Exemple |
-|--------|-----|---------|
-| `<h1>` à `<h6>` | Titres (h1 est le plus important) | `<h1>Titre Principal</h1>` |
-| `<p>` | Paragraphes | `<p>Ceci est un paragraphe.</p>` |
-| `<strong>` | Texte en gras | `<strong>Important !</strong>` |
-| `<em>` | Texte en italique | `<em>Texte souligné</em>` |
-| `<ul>` | Liste non ordonnée | `<ul><li>Élément 1</li></ul>` |
-| `<ol>` | Liste ordonnée | `<ol><li>Premier</li></ol>` |
+### Step 4: Common HTML Tags
+| Tag        | Purpose                          | Example                              |
+|-----------|----------------------------------|--------------------------------------|
+| `<h1>`–`<h6>` | Headings (h1 is the most important) | `<h1>Main Title</h1>`            |
+| `<p>`     | Paragraph                        | `<p>This is a paragraph.</p>`       |
+| `<strong>`| Bold / strong importance         | `<strong>Important!</strong>`       |
+| `<em>`    | Emphasis (italic)                | `<em>Highlighted text</em>`         |
+| `<ul>`    | Unordered list                   | `<ul><li>Item</li></ul>`            |
+| `<ol>`    | Ordered list                     | `<ol><li>First</li></ol>`           |
 
-## Évaluation
-Créez une page d'introduction personnelle qui inclut :
-- Votre nom comme titre principal
-- Un bref paragraphe sur vous
-- Une liste de 3 choses que vous espérez apprendre
-- Au moins 2 niveaux de titres différents
+## Assessment
+Create a personal introduction page that includes:
+- Your name as the main heading
+- A short paragraph about yourself
+- A list of three things you want to learn
+- At least two different heading levels
 
-## Projet : Page de Profil Personnel
-Construisez une page web simple qui vous présente. Incluez :
-- Un titre principal avec votre nom
-- Plusieurs paragraphes sur vos intérêts
-- Une liste de vos choses préférées
-- Différents formats de texte (gras, italique)
+## Project: Personal Profile Page
+Build a simple web page that introduces you. Include:
+- A main heading with your name
+- Several paragraphs about your interests
+- A list of your favorite things
+- Different text formats (bold, italic)
 
-## Prochaines Étapes
-Excellent travail ! Vous avez créé votre première page web. Dans le prochain module, nous plongerons plus profondément dans la structure HTML et apprendrons les éléments sémantiques qui donnent du sens à votre contenu.
+## Next Steps
+You have created your first web page. In the next module, you will dive deeper into HTML structure and learn semantic elements that give meaning to your content.
 
-## Ressources
-- [MDN Web Docs : Bases HTML](https://developer.mozilla.org/fr/docs/Learn/Getting_started_with_the_web/HTML_basics)
-- [W3Schools Tutoriel HTML](https://www.w3schools.com/html/)
-- [FreeCodeCamp Cours HTML](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/)
+## Resources
+- [MDN Web Docs: HTML basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics)
+- [W3Schools: HTML Tutorial](https://www.w3schools.com/html/)
+- [freeCodeCamp: Basic HTML and HTML5](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/)

@@ -1,354 +1,354 @@
-# Exercices Maison - Module 6 : Fonctions et Objets JavaScript
+# Homework Exercises
 
-## Aperçu
-Ces exercices vous permettent de maîtriser les concepts avancés de JavaScript : fonctions organisées, objets, tableaux avec méthodes, boucles, et gestion d'erreurs. Vous apprendrez à structurer du code maintenable et réutilisable.
+## Overview
+These exercises allow you to master advanced JavaScript concepts: organized functions, objects, arrays with methods, loops, and error handling. You will learn to structure maintainable and reusable code.
 
-## Niveau Débutant
+## Beginner Level
 
-### Exercice 6.1 : Portée des Variables (Scope)
-**Objectif** : Comprendre la différence entre variables locales et globales.
+### Exercise 6.1: Variable Scope
+**Objective**: Understand the difference between local and global variables.
 
-**Instructions** :
-1. Créez un fichier `scope.js`
-2. Déclarez une variable globale
-3. Créez une fonction qui déclare une variable locale avec le même nom
-4. Affichez les valeurs à l'intérieur et à l'extérieur de la fonction
-5. Testez avec `var`, `let`, et `const`
-6. Expliquez les différences dans des commentaires
+**Instructions**:
+1. Create a file `scope.js`
+2. Declare a global variable
+3. Create a function that declares a local variable with the same name
+4. Display values inside and outside the function
+5. Test with `var`, `let`, and `const`
+6. Explain the differences in comments
 
-**Critères de validation** :
-- [ ] Variables globale et locale testées
-- [ ] Différences entre `var`, `let`, `const` démontrées
-- [ ] Commentaires explicatifs présents
-- [ ] Aucun conflit de noms non résolu
+**Validation Criteria**:
+- [ ] Global and local variables tested
+- [ ] Differences between `var`, `let`, `const` demonstrated
+- [ ] Explanatory comments present
+- [ ] No unresolved name conflicts
 
-**Indices** :
-- `var` crée des variables fonctionnelles
-- `let` et `const` créent des variables bloc
-- Les variables locales masquent les globales
+**Hints**:
+- `var` creates functional variables
+- `let` and `const` create block variables
+- Local variables hide globals
 
-### Exercice 6.2 : Fonctions comme Paramètres
-**Objectif** : Passer des fonctions en paramètres d'autres fonctions.
+### Exercise 6.2: Functions as Parameters
+**Objective**: Pass functions as parameters to other functions.
 
-**Instructions** :
-1. Créez un fichier `fonctions-parametres.js`
-2. Définissez une fonction `appliquerOperation` qui prend une fonction en paramètre
-3. Créez des fonctions d'opération simples (addition, multiplication, puissance)
-4. Testez `appliquerOperation` avec différentes fonctions
-5. Utilisez des fonctions fléchées comme paramètres
+**Instructions**:
+1. Create a file `fonctions-parametres.js`
+2. Define a function `appliquerOperation` that takes a function as parameter
+3. Create simple operation functions (addition, multiplication, power)
+4. Test `appliquerOperation` with different functions
+5. Use arrow functions as parameters
 
-**Critères de validation** :
-- [ ] Fonction d'ordre supérieur créée
-- [ ] Plusieurs fonctions callback testées
-- [ ] Syntaxes fléchées et traditionnelles utilisées
-- [ ] Résultats corrects affichés
+**Validation Criteria**:
+- [ ] Higher-order function created
+- [ ] Multiple callback functions tested
+- [ ] Arrow and traditional syntaxes used
+- [ ] Correct results displayed
 
-**Indices** :
+**Hints**:
 - `function appliquerOperation(a, b, operation) { return operation(a, b); }`
-- Callback : `function addition(a, b) { return a + b; }`
-- Appel : `appliquerOperation(5, 3, addition)`
+- Callback: `function addition(a, b) { return a + b; }`
+- Call: `appliquerOperation(5, 3, addition)`
 
-### Exercice 6.3 : Fermetures (Closures)
-**Objectif** : Comprendre et utiliser les fermetures pour créer des fonctions avec état.
+### Exercise 6.3: Closures
+**Objective**: Understand and use closures to create functions with state.
 
-**Instructions** :
-1. Créez un fichier `closures.js`
-2. Implémentez une fonction `creerCompteur` qui retourne une fonction
-3. La fonction interne doit pouvoir accéder à une variable de la fonction externe
-4. Testez plusieurs compteurs indépendants
-5. Créez une fermeture pour générer des IDs uniques
+**Instructions**:
+1. Create a file `closures.js`
+2. Implement a function `creerCompteur` that returns a function
+3. The inner function must be able to access a variable from the outer function
+4. Test multiple independent counters
+5. Create a closure to generate unique IDs
 
-**Critères de validation** :
-- [ ] Fermeture créée et fonctionnelle
-- [ ] État préservé entre appels
-- [ ] Compteurs indépendants testés
-- [ ] Application pratique (générateur d'ID)
+**Validation Criteria**:
+- [ ] Closure created and functional
+- [ ] State preserved between calls
+- [ ] Independent counters tested
+- [ ] Practical application (ID generator)
 
-**Indices** :
-- La fonction interne "se souvient" des variables externes
-- Chaque appel à `creerCompteur()` crée un état séparé
-- Utile pour encapsuler des données privées
+**Hints**:
+- The inner function "remembers" external variables
+- Each call to `creerCompteur()` creates separate state
+- Useful for encapsulating private data
 
-## Niveau Intermédiaire
+## Intermediate Level
 
-### Exercice 6.4 : Méthodes de Tableaux Avancées
-**Objectif** : Maîtriser les méthodes de manipulation des tableaux JavaScript.
+### Exercise 6.4: Advanced Array Methods
+**Objective**: Master JavaScript array manipulation methods.
 
-**Instructions** :
-1. Créez un fichier `tableaux-avances.js`
-2. Utilisez toutes les méthodes principales :
-   - `forEach` pour itérer
-   - `map` pour transformer
-   - `filter` pour filtrer
-   - `find` et `findIndex` pour rechercher
-   - `some` et `every` pour tester des conditions
-   - `reduce` pour accumuler
-3. Créez des exemples pratiques avec un tableau d'objets
-4. Combinez plusieurs méthodes dans des chaînes
+**Instructions**:
+1. Create a file `tableaux-avances.js`
+2. Use all main methods:
+   - `forEach` to iterate
+   - `map` to transform
+   - `filter` to filter
+   - `find` and `findIndex` to search
+   - `some` and `every` to test conditions
+   - `reduce` to accumulate
+3. Create practical examples with an array of objects
+4. Combine multiple methods in chains
 
-**Critères de validation** :
-- [ ] Toutes les méthodes principales utilisées
-- [ ] Exemples pratiques avec objets
-- [ ] Chaînage de méthodes démontré
-- [ ] Résultats corrects et expliqués
+**Validation Criteria**:
+- [ ] All main methods used
+- [ ] Practical examples with objects
+- [ ] Method chaining demonstrated
+- [ ] Correct results explained
 
-**Indices** :
-- `map` transforme chaque élément
-- `filter` garde seulement les éléments qui correspondent
-- `reduce` accumule une valeur unique
+**Hints**:
+- `map` transforms each element
+- `filter` keeps only matching elements
+- `reduce` accumulates a single value
 
-### Exercice 6.5 : Objets et Méthodes
-**Objectif** : Créer et manipuler des objets JavaScript avec méthodes.
+### Exercise 6.5: Objects and Methods
+**Objective**: Create and manipulate JavaScript objects with methods.
 
-**Instructions** :
-1. Créez un fichier `objets-methodes.js`
-2. Définissez un objet `Voiture` avec propriétés et méthodes
-3. Ajoutez des méthodes pour :
-   - Démarrer le moteur
-   - Accélérer
-   - Freiner
-   - Afficher les informations
-4. Créez plusieurs instances de voitures
-5. Testez les méthodes avec différentes valeurs
+**Instructions**:
+1. Create a file `objets-methodes.js`
+2. Define a `Voiture` object with properties and methods
+3. Add methods for:
+   - Start engine
+   - Accelerate
+   - Brake
+   - Display information
+4. Create multiple car instances
+5. Test methods with different values
 
-**Critères de validation** :
-- [ ] Objet avec propriétés et méthodes créé
-- [ ] Méthodes fonctionnelles et cohérentes
-- [ ] Plusieurs instances testées
-- [ ] État de l'objet modifié correctement
+**Validation Criteria**:
+- [ ] Object with properties and methods created
+- [ ] Functional and coherent methods
+- [ ] Multiple instances tested
+- [ ] Object state modified correctly
 
-**Indices** :
-- `this` fait référence à l'instance courante
-- Les méthodes sont des fonctions dans l'objet
-- Utilisez des propriétés pour stocker l'état
+**Hints**:
+- `this` refers to the current instance
+- Methods are functions in the object
+- Use properties to store state
 
-### Exercice 6.6 : Constructeurs et Classes
-**Objectif** : Utiliser les constructeurs et la syntaxe de classe moderne.
+### Exercise 6.6: Constructors and Classes
+**Objective**: Use constructors and modern class syntax.
 
-**Instructions** :
-1. Créez un fichier `constructeurs-classes.js`
-2. Implémentez une fonction constructeur `Personne`
-3. Convertissez-la en classe ES6
-4. Ajoutez des méthodes et propriétés
-5. Créez une sous-classe `Etudiant` qui hérite de `Personne`
-6. Testez l'héritage et le polymorphisme
+**Instructions**:
+1. Create a file `constructeurs-classes.js`
+2. Implement a constructor function `Personne`
+3. Convert it to ES6 class
+4. Add methods and properties
+5. Create a subclass `Etudiant` that inherits from `Personne`
+6. Test inheritance and polymorphism
 
-**Critères de validation** :
-- [ ] Fonction constructeur créée
-- [ ] Classe ES6 équivalente implémentée
-- [ ] Héritage fonctionnel
-- [ ] Polymorphisme démontré
+**Validation Criteria**:
+- [ ] Constructor function created
+- [ ] Equivalent ES6 class implemented
+- [ ] Functional inheritance
+- [ ] Polymorphism demonstrated
 
-**Indices** :
-- Constructeur : `function Personne(nom, age) { this.nom = nom; ... }`
-- Classe : `class Personne { constructor(nom, age) { ... } }`
-- Héritage : `class Etudiant extends Personne { ... }`
+**Hints**:
+- Constructor: `function Personne(nom, age) { this.nom = nom; ... }`
+- Class: `class Personne { constructor(nom, age) { ... } }`
+- Inheritance: `class Etudiant extends Personne { ... }`
 
-## Niveau Avancé
+## Advanced Level
 
-### Exercice 6.7 : Gestionnaire de Bibliothèque
-**Objectif** : Créer un système de gestion de bibliothèque avec objets et tableaux.
+### Exercise 6.7: Library Manager
+**Objective**: Create a library management system with objects and arrays.
 
-**Instructions** :
-1. Créez des classes pour :
-   - `Livre` (titre, auteur, ISBN, disponible)
-   - `Utilisateur` (nom, id, livres empruntés)
-   - `Bibliotheque` (collection de livres, utilisateurs)
-2. Implémentez des méthodes pour :
-   - Ajouter/retirer des livres
-   - Inscrire des utilisateurs
-   - Emprunter/retourner des livres
-   - Rechercher des livres par titre/auteur
-   - Lister les livres disponibles/empruntés
-3. Utilisez des tableaux pour stocker les données
-4. Gérez les erreurs (livre non disponible, utilisateur non trouvé)
+**Instructions**:
+1. Create classes for:
+   - `Livre` (title, author, ISBN, available)
+   - `Utilisateur` (name, id, borrowed books)
+   - `Bibliotheque` (book collection, users)
+2. Implement methods for:
+   - Add/remove books
+   - Register users
+   - Borrow/return books
+   - Search books by title/author
+   - List available/borrowed books
+3. Use arrays to store data
+4. Handle errors (unavailable book, user not found)
 
-**Critères de validation** :
-- [ ] Classes bien structurées créées
-- [ ] Méthodes CRUD complètes implémentées
-- [ ] Gestion d'erreurs appropriée
-- [ ] Recherche et filtrage fonctionnels
+**Validation Criteria**:
+- [ ] Well-structured classes created
+- [ ] Complete CRUD methods implemented
+- [ ] Appropriate error handling
+- [ ] Functional search and filtering
 
-**Indices** :
-- Utilisez des arrays pour `livres` et `utilisateurs`
-- `find()` pour rechercher des éléments
-- `filter()` pour lister les disponibles
+**Hints**:
+- Use arrays for `livres` and `utilisateurs`
+- `find()` to search for elements
+- `filter()` to list available ones
 
-### Exercice 6.8 : Jeu de Cartes
-**Objectif** : Créer un jeu de cartes à jouer avec objets et méthodes.
+### Exercise 6.8: Card Game
+**Objective**: Create a playing card game with objects and methods.
 
-**Instructions** :
-1. Créez des classes pour :
-   - `Carte` (valeur, couleur, symbole)
-   - `Paquet` (collection de cartes, méthodes de manipulation)
-   - `Joueur` (main, score)
-   - `Jeu` (paquet, joueurs, logique du jeu)
-2. Implémentez :
-   - Création et mélange du paquet
-   - Distribution des cartes
-   - Comptage des points
-   - Logique simple de jeu (Blackjack simplifié)
-3. Utilisez des tableaux pour gérer les collections
-4. Gérez l'état du jeu
+**Instructions**:
+1. Create classes for:
+   - `Carte` (value, suit, symbol)
+   - `Paquet` (card collection, manipulation methods)
+   - `Joueur` (hand, score)
+   - `Jeu` (deck, players, game logic)
+2. Implement:
+   - Deck creation and shuffling
+   - Card dealing
+   - Point counting
+   - Simple game logic (simplified Blackjack)
+3. Use arrays to manage collections
+4. Manage game state
 
-**Critères de validation** :
-- [ ] Classes de jeu bien conçues
-- [ ] Logique de jeu fonctionnelle
-- [ ] Mélange et distribution corrects
-- [ ] Gestion des tours et scores
+**Validation Criteria**:
+- [ ] Well-designed game classes
+- [ ] Functional game logic
+- [ ] Correct shuffling and dealing
+- [ ] Turn and score management
 
-**Indices** :
-- Cartes : As=11, figures=10, autres=valeur numérique
-- Mélange : algorithme de Fisher-Yates ou `sort` avec random
-- Vérifiez les conditions de victoire
+**Hints**:
+- Cards: Ace=11, face cards=10, others=numeric value
+- Shuffle: Fisher-Yates algorithm or `sort` with random
+- Check win conditions
 
-## Défi Bonus
+## Bonus Challenge
 
-### Exercice 6.9 : Application de Gestion de Tâches Avancée
-**Objectif** : Refactoriser complètement l'application de tâches avec patterns avancés.
+### Exercise 6.9: Advanced Task Management Application
+**Objective**: Completely refactor the task application with advanced patterns.
 
-**Instructions** :
-1. Créez des classes pour structurer l'application :
-   - `Task` (id, titre, description, priorité, échéance, statut)
-   - `TaskManager` (gestion des tâches, filtres, recherche)
-   - `TaskUI` (interface utilisateur, événements)
-   - `Storage` (persistance des données)
-2. Implémentez des fonctionnalités avancées :
-   - Tri par priorité/échéance/statut
-   - Recherche textuelle dans les tâches
-   - Catégorisation par projets
-   - Statistiques (tâches terminées, en retard)
-   - Export/import des données
-3. Utilisez des patterns de conception :
-   - Observer pour les mises à jour UI
-   - Factory pour créer différents types de tâches
-   - Singleton pour le gestionnaire
+**Instructions**:
+1. Create classes to structure the application:
+   - `Task` (id, title, description, priority, deadline, status)
+   - `TaskManager` (task management, filters, search)
+   - `TaskUI` (user interface, events)
+   - `Storage` (data persistence)
+2. Implement advanced features:
+   - Sort by priority/deadline/status
+   - Text search in tasks
+   - Categorization by projects
+   - Statistics (completed tasks, overdue)
+   - Data export/import
+3. Use design patterns:
+   - Observer for UI updates
+   - Factory to create different task types
+   - Singleton for the manager
 
-**Critères de validation** :
-- [ ] Architecture MVC-like implémentée
-- [ ] Patterns de conception utilisés
-- [ ] Fonctionnalités avancées présentes
-- [ ] Code modulaire et maintenable
-- [ ] Interface utilisateur améliorée
+**Validation Criteria**:
+- [ ] MVC-like architecture implemented
+- [ ] Design patterns used
+- [ ] Advanced features present
+- [ ] Modular and maintainable code
+- [ ] Improved user interface
 
-**Indices** :
-- Séparez les responsabilités (modèle/vue/contrôleur)
-- Utilisez des modules pour organiser le code
-- Implémentez une recherche avec `filter` et `includes`
+**Hints**:
+- Separate responsibilities (model/view/controller)
+- Use modules to organize code
+- Implement search with `filter` and `includes`
 
-### Exercice 6.10 : Système de Réservation
-**Objectif** : Créer un système de réservation de ressources avec gestion d'erreurs.
+### Exercise 6.10: Reservation System
+**Objective**: Create a resource reservation system with error handling.
 
-**Instructions** :
-1. Créez des classes pour :
-   - `Ressource` (nom, type, disponibilité)
-   - `Reservation` (ressource, utilisateur, dateDebut, dateFin)
-   - `Utilisateur` (nom, email, réservations)
-   - `ReservationManager` (logique métier)
-2. Implémentez :
-   - Vérification de disponibilité
-   - Création/modification/annulation de réservations
-   - Gestion des conflits
-   - Notifications d'échéance
-3. Gérez les erreurs :
-   - Ressource non disponible
-   - Dates invalides
-   - Conflits de réservation
-   - Utilisateur non autorisé
-4. Utilisez `try/catch` pour la gestion d'erreurs
+**Instructions**:
+1. Create classes for:
+   - `Ressource` (name, type, availability)
+   - `Reservation` (resource, user, startDate, endDate)
+   - `Utilisateur` (name, email, reservations)
+   - `ReservationManager` (business logic)
+2. Implement:
+   - Availability checking
+   - Reservation creation/modification/cancellation
+   - Conflict management
+   - Due date notifications
+3. Handle errors:
+   - Unavailable resource
+   - Invalid dates
+   - Reservation conflicts
+   - Unauthorized user
+4. Use `try/catch` for error handling
 
-**Critères de validation** :
-- [ ] Classes métier bien conçues
-- [ ] Gestion d'erreurs complète
-- [ ] Logique de réservation robuste
-- [ ] Validation des données d'entrée
-- [ ] Interface de gestion fonctionnelle
+**Validation Criteria**:
+- [ ] Well-designed business classes
+- [ ] Complete error handling
+- [ ] Robust reservation logic
+- [ ] Input data validation
+- [ ] Functional management interface
 
-**Indices** :
-- Utilisez `Date` pour les comparaisons temporelles
-- `throw new Error("Message")` pour les erreurs
-- `try { ... } catch(error) { ... }` pour la gestion
+**Hints**:
+- Use `Date` for time comparisons
+- `throw new Error("Message")` for errors
+- `try { ... } catch(error) { ... }` for handling
 
-## Intégration Inter-modules
+## Inter-module Integration
 
-### Exercice 6.11 : Préparation Module 7
-**Objectif** : Préparer l'intégration d'APIs en structurant le code pour les requêtes asynchrones.
+### Exercise 6.11: Module 7 Preparation
+**Objective**: Prepare API integration by structuring code for asynchronous requests.
 
-**Instructions** :
-1. Refactorisez votre application de tâches
-2. Créez des fonctions pour simuler des appels API :
-   - `fetchTasks()` - retourne une promesse
-   - `saveTask(task)` - sauvegarde avec délai simulé
-   - `updateTask(id, updates)` - mise à jour asynchrone
-   - `deleteTask(id)` - suppression avec confirmation
-3. Utilisez des promesses pour :
-   - Délais simulés (`setTimeout`)
-   - Gestion d'erreurs réseau
-   - Chaînage d'opérations
-4. Préparez pour les vraies APIs (structure similaire)
+**Instructions**:
+1. Refactor your task application
+2. Create functions to simulate API calls:
+   - `fetchTasks()` - returns a promise
+   - `saveTask(task)` - saves with simulated delay
+   - `updateTask(id, updates)` - asynchronous update
+   - `deleteTask(id)` - deletion with confirmation
+3. Use promises for:
+   - Simulated delays (`setTimeout`)
+   - Network error handling
+   - Operation chaining
+4. Prepare for real APIs (similar structure)
 
-**Critères de validation** :
-- [ ] Fonctions asynchrones créées
-- [ ] Promesses utilisées correctement
-- [ ] Gestion d'erreurs implémentée
-- [ ] Code préparé pour les vraies APIs
-- [ ] Interface utilisateur préservée
+**Validation Criteria**:
+- [ ] Asynchronous functions created
+- [ ] Promises used correctly
+- [ ] Error handling implemented
+- [ ] Code prepared for real APIs
+- [ ] User interface preserved
 
-**Indices** :
+**Hints**:
 - `return new Promise((resolve, reject) => { ... })`
-- Simulez le réseau avec `setTimeout`
-- Utilisez `async/await` dans les fonctions appelantes
+- Simulate network with `setTimeout`
+- Use `async/await` in calling functions
 
-### Exercice 6.12 : Application de Blog avec Commentaires
-**Objectif** : Créer une application de blog complète avec système de commentaires.
+### Exercise 6.12: Blog Application with Comments
+**Objective**: Create a complete blog application with comment system.
 
-**Instructions** :
-1. Créez des classes pour :
-   - `Article` (titre, contenu, auteur, date, tags)
-   - `Commentaire` (auteur, contenu, date, articleId)
-   - `Utilisateur` (profil, articles, commentaires)
-   - `BlogManager` (gestion globale)
-2. Implémentez :
-   - CRUD complet pour articles et commentaires
-   - Système d'authentification simulé
-   - Recherche et filtrage par tags/auteur
-   - Tri chronologique et par popularité
-   - Statistiques de blog (articles, commentaires, utilisateurs)
-3. Utilisez des tableaux et objets avancés
-4. Gérez les relations entre entités
+**Instructions**:
+1. Create classes for:
+   - `Article` (title, content, author, date, tags)
+   - `Commentaire` (author, content, date, articleId)
+   - `Utilisateur` (profile, articles, comments)
+   - `BlogManager` (global management)
+2. Implement:
+   - Complete CRUD for articles and comments
+   - Simulated authentication system
+   - Search and filtering by tags/author
+   - Chronological and popularity sorting
+   - Blog statistics (articles, comments, users)
+3. Use advanced arrays and objects
+4. Manage relationships between entities
 
-**Critères de validation** :
-- [ ] Application complète et fonctionnelle
-- [ ] Relations entre entités gérées
-- [ ] Interface utilisateur moderne
-- [ ] Fonctionnalités de recherche avancées
-- [ ] Code organisé en modules
+**Validation Criteria**:
+- [ ] Complete and functional application
+- [ ] Relationships between entities managed
+- [ ] Modern user interface
+- [ ] Advanced search features
+- [ ] Code organized in modules
 
-**Indices** :
-- Utilisez des IDs pour lier les entités
-- `filter` et `find` pour les relations
-- Organisez le code en fichiers séparés
-- Pensez à la scalabilité
+**Hints**:
+- Use IDs to link entities
+- `filter` and `find` for relationships
+- Organize code in separate files
+- Think about scalability
 
-## Critères de Validation Globaux
+## Global Validation Criteria
 
-Pour réussir ces exercices, assurez-vous que :
+To succeed in these exercises, ensure that:
 
-- **Modularité** : Code organisé en fonctions et objets logiques
-- **Réutilisabilité** : Fonctions et classes génériques
-- **Robustesse** : Gestion d'erreurs et validation des données
-- **Maintenabilité** : Code commenté et bien structuré
-- **Performance** : Algorithmes efficaces pour les tableaux
-- **Lisibilité** : Noms descriptifs et structure claire
+- **Modularity**: Code organized in logical functions and objects
+- **Reusability**: Generic functions and classes
+- **Robustness**: Error handling and data validation
+- **Maintainability**: Commented and well-structured code
+- **Performance**: Efficient algorithms for arrays
+- **Readability**: Descriptive names and clear structure
 
-## Ressources d'Aide
+## Help Resources
 
-- [MDN JavaScript Guide](https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide)
+- [MDN JavaScript Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)
 - [JavaScript Patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
 - [Eloquent JavaScript - Objects](https://eloquentjavascript.net/06_object.html)
 - [JavaScript Array Methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
 - [JavaScript Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
 
-## Prochaines Étapes
+## Next Steps
 
-Ces exercices vous préparent parfaitement pour le Module 7 où vous apprendrez la programmation asynchrone et les APIs. Vous aurez maintenant une base solide pour créer des applications JavaScript complexes et maintenables !
+These exercises perfectly prepare you for Module 7 where you will learn asynchronous programming and APIs. You will now have a solid foundation to create complex and maintainable JavaScript applications!

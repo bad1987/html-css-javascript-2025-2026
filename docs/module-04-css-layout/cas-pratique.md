@@ -1,62 +1,62 @@
-# Cas Pratique : Site Web d'Agence Créative
+# Practical Project: Creative Agency Website
 
-## Contexte du Projet
-Vous maîtrisez maintenant les bases du CSS et vous voulez créer un site web professionnel avec une mise en page moderne. Ce projet vous permettra d'appliquer Flexbox et CSS Grid pour créer des layouts responsives et attrayants.
+## Project Context
+Now that you have mastered the basics of CSS, you are ready to create a professional website with a modern layout. This project will allow you to apply Flexbox and CSS Grid to create responsive and attractive layouts.
 
-## Objectif
-Créer un site web d'agence créative avec plusieurs sections utilisant différentes techniques de mise en page CSS (Flexbox, Grid, modèle de boîte).
+## Objective
+Create a creative agency website with multiple sections using different CSS layout techniques (Flexbox, Grid, box model).
 
-## Structure du Projet
+## Project Structure
 ```
-agence-creative/
-├── index.html              # Page d'accueil
-├── services.html           # Page Services
-├── portfolio.html          # Page Portfolio
-├── contact.html            # Page Contact
+creative-agency/
+├── index.html              # Home page
+├── services.html           # Services page
+├── portfolio.html          # Portfolio page
+├── contact.html            # Contact page
 ├── css/
-│   ├── style.css          # Styles principaux
-│   ├── layout.css         # Styles de mise en page
-│   └── responsive.css     # Styles responsives
-├── images/                # Images du projet
+│   ├── style.css          # Main styles
+│   ├── layout.css         # Layout styles
+│   └── responsive.css     # Responsive styles
+├── images/                # Project images
 └── README.md
 ```
 
-## Étapes de Réalisation
+## Implementation Steps
 
-### Étape 1 : Configuration du Projet
-1. Créez le dossier `agence-creative`
-2. Organisez les fichiers selon la structure ci-dessus
-3. Préparez des images représentatives (logo, projets, équipe)
+### Step 1: Project Setup
+1. Create the folder `creative-agency`
+2. Organize files according to the structure above
+3. Prepare representative images (logo, projects, team)
 
-### Étape 2 : Structure HTML de Base (index.html)
-Créez une page d'accueil moderne avec plusieurs sections :
+### Step 2: Basic HTML Structure (index.html)
+Create a modern home page with multiple sections:
 
 ```html
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agence Créative - Design & Développement Web</title>
+    <title>Creative Agency - Web Design & Development</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
-    <!-- Header avec navigation -->
+    <!-- Header with navigation -->
     <header class="header">
         <nav class="navbar">
             <div class="nav-container">
                 <div class="logo">
                     <a href="index.html">
-                        <img src="images/logo.png" alt="Logo Agence Créative" class="logo-img">
-                        <span class="logo-text">Agence Créative</span>
+                        <img src="images/logo.png" alt="Creative Agency Logo" class="logo-img">
+                        <span class="logo-text">Creative Agency</span>
                     </a>
                 </div>
 
                 <div class="nav-menu">
                     <ul class="nav-list">
-                        <li class="nav-item"><a href="index.html" class="nav-link active">Accueil</a></li>
+                        <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
                         <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
                         <li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
                         <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
@@ -72,19 +72,19 @@ Créez une page d'accueil moderne avec plusieurs sections :
         </nav>
     </header>
 
-    <!-- Section Hero -->
+    <!-- Hero Section -->
     <section class="hero">
         <div class="hero-container">
             <div class="hero-content">
-                <h1 class="hero-title">Créons l'Avenir Digital Ensemble</h1>
-                <p class="hero-subtitle">Nous transformons vos idées en expériences web exceptionnelles qui captivent vos utilisateurs et boostent votre business.</p>
+                <h1 class="hero-title">Let's Build the Digital Future Together</h1>
+                <p class="hero-subtitle">We transform your ideas into exceptional web experiences that captivate your users and boost your business.</p>
                 <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">Commencer un Projet</a>
-                    <a href="#portfolio" class="btn btn-secondary">Voir Notre Travail</a>
+                    <a href="#contact" class="btn btn-primary">Start a Project</a>
+                    <a href="#portfolio" class="btn btn-secondary">See Our Work</a>
                 </div>
             </div>
             <div class="hero-image">
-                <img src="images/hero-image.jpg" alt="Équipe créative au travail" class="hero-img">
+                <img src="images/hero-image.jpg" alt="Creative team at work" class="hero-img">
             </div>
         </div>
     </section>
@@ -93,8 +93,8 @@ Créez une page d'accueil moderne avec plusieurs sections :
     <section class="services" id="services">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Nos Services</h2>
-                <p class="section-subtitle">Des solutions complètes pour votre présence digitale</p>
+                <h2 class="section-title">Our Services</h2>
+                <p class="section-subtitle">Complete solutions for your digital presence</p>
             </div>
 
             <div class="services-grid">
@@ -102,13 +102,13 @@ Créez une page d'accueil moderne avec plusieurs sections :
                     <div class="service-icon">
                         <img src="images/icons/design.svg" alt="Design Icon">
                     </div>
-                    <h3>Design UX/UI</h3>
-                    <p>Création d'interfaces utilisateur intuitives et esthétiques qui offrent une expérience exceptionnelle.</p>
+                    <h3>UX/UI Design</h3>
+                    <p>Creating intuitive and aesthetic user interfaces that provide exceptional experiences.</p>
                     <ul class="service-features">
-                        <li>Analyse des besoins utilisateurs</li>
-                        <li>Wireframes et maquettes</li>
-                        <li>Design system complet</li>
-                        <li>Tests utilisateurs</li>
+                        <li>User needs analysis</li>
+                        <li>Wireframes and mockups</li>
+                        <li>Complete design system</li>
+                        <li>User testing</li>
                     </ul>
                 </div>
 
@@ -116,13 +116,13 @@ Créez une page d'accueil moderne avec plusieurs sections :
                     <div class="service-icon">
                         <img src="images/icons/dev.svg" alt="Development Icon">
                     </div>
-                    <h3>Développement Web</h3>
-                    <p>Transformation de vos designs en sites web performants utilisant les dernières technologies.</p>
+                    <h3>Web Development</h3>
+                    <p>Transforming your designs into high-performance websites using the latest technologies.</p>
                     <ul class="service-features">
                         <li>HTML5, CSS3, JavaScript</li>
-                        <li>Frameworks modernes (React, Vue)</li>
-                        <li>Backend robuste (Node.js)</li>
-                        <li>Optimisation performance</li>
+                        <li>Modern frameworks (React, Vue)</li>
+                        <li>Robust backend (Node.js)</li>
+                        <li>Performance optimization</li>
                     </ul>
                 </div>
 
@@ -130,13 +130,13 @@ Créez une page d'accueil moderne avec plusieurs sections :
                     <div class="service-icon">
                         <img src="images/icons/strat.svg" alt="Strategy Icon">
                     </div>
-                    <h3>Stratégie Digitale</h3>
-                    <p>Développement de stratégies digitales pour atteindre vos objectifs business et accroître votre visibilité.</p>
+                    <h3>Digital Strategy</h3>
+                    <p>Developing digital strategies to achieve your business goals and increase your visibility.</p>
                     <ul class="service-features">
-                        <li>Audit digital</li>
-                        <li>SEO et référencement</li>
-                        <li>Marketing de contenu</li>
-                        <li>Analytics et reporting</li>
+                        <li>Digital audit</li>
+                        <li>SEO and search engine optimization</li>
+                        <li>Content marketing</li>
+                        <li>Analytics and reporting</li>
                     </ul>
                 </div>
             </div>
@@ -147,12 +147,12 @@ Créez une page d'accueil moderne avec plusieurs sections :
     <section class="portfolio" id="portfolio">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Notre Portfolio</h2>
-                <p class="section-subtitle">Découvrez nos réalisations les plus récentes</p>
+                <h2 class="section-title">Our Portfolio</h2>
+                <p class="section-subtitle">Discover our latest achievements</p>
             </div>
 
             <div class="portfolio-filters">
-                <button class="filter-btn active" data-filter="all">Tous</button>
+                <button class="filter-btn active" data-filter="all">All</button>
                 <button class="filter-btn" data-filter="web">Web</button>
                 <button class="filter-btn" data-filter="mobile">Mobile</button>
                 <button class="filter-btn" data-filter="branding">Branding</button>
@@ -160,107 +160,107 @@ Créez une page d'accueil moderne avec plusieurs sections :
 
             <div class="portfolio-grid">
                 <div class="portfolio-item web mobile">
-                    <img src="images/portfolio/project1.jpg" alt="Application E-commerce">
+                    <img src="images/portfolio/project1.jpg" alt="E-commerce application">
                     <div class="portfolio-overlay">
-                        <h3>Boutique E-commerce</h3>
-                        <p>Site e-commerce responsive avec paiement intégré</p>
+                        <h3>E-commerce Store</h3>
+                        <p>Responsive e-commerce site with integrated payment</p>
                         <div class="project-tags">
                             <span class="tag">React</span>
                             <span class="tag">Stripe</span>
                             <span class="tag">MongoDB</span>
                         </div>
-                        <a href="#" class="btn btn-primary">Voir le Projet</a>
+                        <a href="#" class="btn btn-primary">View Project</a>
                     </div>
                 </div>
 
                 <div class="portfolio-item web">
-                    <img src="images/portfolio/project2.jpg" alt="Site Vitrine Restaurant">
+                    <img src="images/portfolio/project2.jpg" alt="Restaurant showcase website">
                     <div class="portfolio-overlay">
                         <h3>Restaurant La Belle Époque</h3>
-                        <p>Site vitrine élégant avec réservation en ligne</p>
+                        <p>Elegant showcase website with online booking</p>
                         <div class="project-tags">
                             <span class="tag">HTML</span>
                             <span class="tag">CSS</span>
                             <span class="tag">JavaScript</span>
                         </div>
-                        <a href="#" class="btn btn-primary">Voir le Projet</a>
+                        <a href="#" class="btn btn-primary">View Project</a>
                     </div>
                 </div>
 
                 <div class="portfolio-item mobile branding">
-                    <img src="images/portfolio/project3.jpg" alt="Application Mobile Fitness">
+                    <img src="images/portfolio/project3.jpg" alt="Fitness mobile application">
                     <div class="portfolio-overlay">
                         <h3>App Fitness Coach</h3>
-                        <p>Application mobile de coaching sportif personnalisé</p>
+                        <p>Personalized fitness coaching mobile app</p>
                         <div class="project-tags">
                             <span class="tag">React Native</span>
                             <span class="tag">Firebase</span>
                             <span class="tag">AI</span>
                         </div>
-                        <a href="#" class="btn btn-primary">Voir le Projet</a>
+                        <a href="#" class="btn btn-primary">View Project</a>
                     </div>
                 </div>
 
                 <div class="portfolio-item web branding">
-                    <img src="images/portfolio/project4.jpg" alt="Identité Visuelle Startup">
+                    <img src="images/portfolio/project4.jpg" alt="Startup visual identity">
                     <div class="portfolio-overlay">
                         <h3>TechStartup Branding</h3>
-                        <p>Refonte complète de l'identité visuelle et du site web</p>
+                        <p>Complete redesign of the visual identity and website</p>
                         <div class="project-tags">
                             <span class="tag">Brand Design</span>
                             <span class="tag">WordPress</span>
                             <span class="tag">SEO</span>
                         </div>
-                        <a href="#" class="btn btn-primary">Voir le Projet</a>
+                        <a href="#" class="btn btn-primary">View Project</a>
                     </div>
                 </div>
 
                 <div class="portfolio-item web mobile">
-                    <img src="images/portfolio/project5.jpg" alt="Plateforme Éducative">
+                    <img src="images/portfolio/project5.jpg" alt="Educational platform">
                     <div class="portfolio-overlay">
-                        <h3>Plateforme d'E-learning</h3>
-                        <p>Solution complète de formation en ligne</p>
+                        <h3>E-learning Platform</h3>
+                        <p>Complete online learning solution</p>
                         <div class="project-tags">
                             <span class="tag">Vue.js</span>
                             <span class="tag">Node.js</span>
                             <span class="tag">PostgreSQL</span>
                         </div>
-                        <a href="#" class="btn btn-primary">Voir le Projet</a>
+                        <a href="#" class="btn btn-primary">View Project</a>
                     </div>
                 </div>
 
                 <div class="portfolio-item branding">
-                    <img src="images/portfolio/project6.jpg" alt="Campagne Marketing">
+                    <img src="images/portfolio/project6.jpg" alt="Marketing campaign">
                     <div class="portfolio-overlay">
-                        <h3>Campagne Marketing Digital</h3>
-                        <p>Stratégie complète de marketing digital et contenu</p>
+                        <h3>Digital Marketing Campaign</h3>
+                        <p>Complete digital marketing and content strategy</p>
                         <div class="project-tags">
                             <span class="tag">Social Media</span>
                             <span class="tag">Content</span>
                             <span class="tag">Analytics</span>
                         </div>
-                        <a href="#" class="btn btn-primary">Voir le Projet</a>
+                        <a href="#" class="btn btn-primary">View Project</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Section Équipe -->
+    <!-- Team Section -->
     <section class="team">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Notre Équipe</h2>
-                <p class="section-subtitle">Les talents derrière vos projets</p>
+                <h2 class="section-title">Our Team</h2>
+                <p class="section-subtitle">The talents behind your projects</p>
             </div>
 
             <div class="team-grid">
                 <div class="team-member">
-                    <img src="images/team/sarah.jpg" alt="Sarah Martin - Directrice Créative">
+                    <img src="images/team/sarah.jpg" alt="Sarah Martin - Creative Director">
                     <div class="member-info">
                         <h3>Sarah Martin</h3>
-                        <p class="member-role">Directrice Créative</p>
-                        <p class="member-bio">Designer UX/UI avec 8 ans d'expérience dans la création d'expériences utilisateur exceptionnelles.</p>
+                        <p class="member-role">Creative Director</p>
+                        <p class="member-bio">UX/UI designer with 8 years of experience creating exceptional user experiences.</p>
                         <div class="member-social">
                             <a href="#" class="social-link">LinkedIn</a>
                             <a href="#" class="social-link">Dribbble</a>
@@ -269,11 +269,11 @@ Créez une page d'accueil moderne avec plusieurs sections :
                 </div>
 
                 <div class="team-member">
-                    <img src="images/team/marc.jpg" alt="Marc Dubois - Développeur Senior">
+                    <img src="images/team/marc.jpg" alt="Marc Dubois - Senior Developer">
                     <div class="member-info">
                         <h3>Marc Dubois</h3>
-                        <p class="member-role">Développeur Senior</p>
-                        <p class="member-bio">Expert en développement full-stack, passionné par les technologies web modernes et les architectures scalables.</p>
+                        <p class="member-role">Senior Developer</p>
+                        <p class="member-bio">Full-stack expert passionate about modern web technologies and scalable architectures.</p>
                         <div class="member-social">
                             <a href="#" class="social-link">GitHub</a>
                             <a href="#" class="social-link">LinkedIn</a>
@@ -282,11 +282,11 @@ Créez une page d'accueil moderne avec plusieurs sections :
                 </div>
 
                 <div class="team-member">
-                    <img src="images/team/lea.jpg" alt="Léa Moreau - Chef de Projet">
+                    <img src="images/team/lea.jpg" alt="Léa Moreau - Project Manager">
                     <div class="member-info">
                         <h3>Léa Moreau</h3>
-                        <p class="member-role">Chef de Projet</p>
-                        <p class="member-bio">Spécialiste en gestion de projet digital, elle assure la réussite de vos projets de la conception au déploiement.</p>
+                        <p class="member-role">Project Manager</p>
+                        <p class="member-bio">Digital project management specialist ensuring project success from concept to launch.</p>
                         <div class="member-social">
                             <a href="#" class="social-link">LinkedIn</a>
                             <a href="#" class="social-link">Twitter</a>
@@ -302,8 +302,8 @@ Créez une page d'accueil moderne avec plusieurs sections :
         <div class="container">
             <div class="contact-content">
                 <div class="contact-info">
-                    <h2>Prêt à Commencer ?</h2>
-                    <p>Discutons de votre projet et créons ensemble quelque chose d'extraordinaire.</p>
+                    <h2>Ready to Get Started?</h2>
+                    <p>Let’s discuss your project and create something outstanding together.</p>
 
                     <div class="contact-details">
                         <div class="contact-item">
@@ -311,12 +311,12 @@ Créez une page d'accueil moderne avec plusieurs sections :
                             <p>contact@agence-creative.fr</p>
                         </div>
                         <div class="contact-item">
-                            <h4>📱 Téléphone</h4>
+                            <h4>📱 Phone</h4>
                             <p>+33 1 23 45 67 89</p>
                         </div>
                         <div class="contact-item">
-                            <h4>📍 Adresse</h4>
-                            <p>123 Avenue des Créatifs<br>75001 Paris, France</p>
+                            <h4>📍 Address</h4>
+                            <p>123 Creatives Avenue<br>75001 Paris, France</p>
                         </div>
                     </div>
                 </div>
@@ -325,11 +325,11 @@ Créez une page d'accueil moderne avec plusieurs sections :
                     <form action="#" method="post">
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="firstName">Prénom *</label>
+                                <label for="firstName">First Name *</label>
                                 <input type="text" id="firstName" name="firstName" required>
                             </div>
                             <div class="form-group">
-                                <label for="lastName">Nom *</label>
+                                <label for="lastName">Last Name *</label>
                                 <input type="text" id="lastName" name="lastName" required>
                             </div>
                         </div>
@@ -340,29 +340,29 @@ Créez une page d'accueil moderne avec plusieurs sections :
                         </div>
 
                         <div class="form-group">
-                            <label for="company">Entreprise</label>
+                            <label for="company">Company</label>
                             <input type="text" id="company" name="company">
                         </div>
 
                         <div class="form-group">
-                            <label for="project">Type de Projet</label>
+                            <label for="project">Project Type</label>
                             <select id="project" name="project">
-                                <option value="">Sélectionnez un type</option>
-                                <option value="website">Site Web</option>
-                                <option value="webapp">Application Web</option>
-                                <option value="mobile">Application Mobile</option>
-                                <option value="branding">Identité Visuelle</option>
-                                <option value="consulting">Conseil</option>
-                                <option value="other">Autre</option>
+                                <option value="">Select a type</option>
+                                <option value="website">Website</option>
+                                <option value="webapp">Web Application</option>
+                                <option value="mobile">Mobile Application</option>
+                                <option value="branding">Visual Identity</option>
+                                <option value="consulting">Consulting</option>
+                                <option value="other">Other</option>
                             </select>
                         </div>
 
                         <div class="form-group">
                             <label for="message">Message *</label>
-                            <textarea id="message" name="message" rows="5" placeholder="Décrivez votre projet..." required></textarea>
+                            <textarea id="message" name="message" rows="5" placeholder="Describe your project..." required></textarea>
                         </div>
 
-                        <button type="submit" class="btn btn-primary">Envoyer le Message</button>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
                     </form>
                 </div>
             </div>
@@ -375,27 +375,27 @@ Créez une page d'accueil moderne avec plusieurs sections :
             <div class="footer-content">
                 <div class="footer-section">
                     <div class="footer-logo">
-                        <img src="images/logo-white.png" alt="Logo Agence Créative">
-                        <p>Créons l'avenir digital ensemble</p>
+                        <img src="images/logo-white.png" alt="Creative Agency Logo">
+                        <p>Let’s build the digital future together</p>
                     </div>
                 </div>
 
                 <div class="footer-section">
                     <h4>Services</h4>
                     <ul>
-                        <li><a href="services.html">Design UX/UI</a></li>
-                        <li><a href="services.html">Développement Web</a></li>
-                        <li><a href="services.html">Stratégie Digitale</a></li>
+                        <li><a href="services.html">UX/UI Design</a></li>
+                        <li><a href="services.html">Web Development</a></li>
+                        <li><a href="services.html">Digital Strategy</a></li>
                         <li><a href="services.html">SEO & Analytics</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-section">
-                    <h4>Entreprise</h4>
+                    <h4>Company</h4>
                     <ul>
-                        <li><a href="#">À Propos</a></li>
-                        <li><a href="#">Équipe</a></li>
-                        <li><a href="#">Carrières</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Team</a></li>
+                        <li><a href="#">Careers</a></li>
                         <li><a href="#">Blog</a></li>
                     </ul>
                 </div>
@@ -417,7 +417,7 @@ Créez une page d'accueil moderne avec plusieurs sections :
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2024 Agence Créative. Tous droits réservés. | <a href="#">Mentions légales</a> | <a href="#">Politique de confidentialité</a></p>
+                <p>&copy; 2024 Creative Agency. All rights reserved. | <a href="#">Legal Notice</a> | <a href="#">Privacy Policy</a></p>
             </div>
         </div>
     </footer>
@@ -427,11 +427,11 @@ Créez une page d'accueil moderne avec plusieurs sections :
 </html>
 ```
 
-### Étape 3 : Styles CSS avec Flexbox et Grid (css/layout.css)
-Implémentez les techniques de mise en page modernes :
+### Step 3: CSS Layout Styles with Flexbox and Grid (css/layout.css)
+Implement modern layout techniques:
 
 ```css
-/* Layout CSS - Flexbox et Grid */
+/* Layout CSS - Flexbox and Grid */
 
 /* Variables CSS */
 :root {
@@ -452,7 +452,7 @@ Implémentez les techniques de mise en page modernes :
     --container-max-width: 1200px;
 }
 
-/* Container et Layout de Base */
+/* Container and Base Layout */
 .container {
     max-width: var(--container-max-width);
     margin: 0 auto;
@@ -463,7 +463,7 @@ Implémentez les techniques de mise en page modernes :
     box-sizing: border-box;
 }
 
-/* Navigation avec Flexbox */
+/* Navigation with Flexbox */
 .navbar {
     position: fixed;
     top: 0;
@@ -539,7 +539,7 @@ Implémentez les techniques de mise en page modernes :
     transition: var(--transition);
 }
 
-/* Section Hero avec Flexbox */
+/* Hero Section with Flexbox */
 .hero {
     padding: 120px 0 80px;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -593,7 +593,7 @@ Implémentez les techniques de mise en page modernes :
     box-shadow: var(--shadow-lg);
 }
 
-/* Boutons */
+/* Buttons */
 .btn {
     display: inline-flex;
     align-items: center;
@@ -631,7 +631,7 @@ Implémentez les techniques de mise en page modernes :
     transform: translateY(-2px);
 }
 
-/* Sections communes */
+/* Common sections */
 .section-header {
     text-align: center;
     margin-bottom: 4rem;
@@ -651,7 +651,7 @@ Implémentez les techniques de mise en page modernes :
     margin: 0 auto;
 }
 
-/* Services avec Grid */
+/* Services with Grid */
 .services {
     padding: 5rem 0;
     background: var(--bg-light);
@@ -722,7 +722,7 @@ Implémentez les techniques de mise en page modernes :
     border-bottom: none;
 }
 
-/* Portfolio avec Grid et Flexbox */
+/* Portfolio with Grid and Flexbox */
 .portfolio {
     padding: 5rem 0;
 }
@@ -822,7 +822,7 @@ Implémentez les techniques de mise en page modernes :
     font-weight: 500;
 }
 
-/* Équipe avec Grid */
+/* Team with Grid */
 .team {
     padding: 5rem 0;
     background: var(--bg-light);
@@ -901,7 +901,7 @@ Implémentez les techniques de mise en page modernes :
     color: white;
 }
 
-/* Section Contact avec Flexbox */
+/* Contact Section with Flexbox */
 .contact {
     padding: 5rem 0;
 }
@@ -994,7 +994,7 @@ Implémentez les techniques de mise en page modernes :
     min-height: 120px;
 }
 
-/* Footer avec Grid */
+/* Footer with Grid */
 .footer {
     background: var(--bg-dark);
     color: white;
@@ -1084,13 +1084,13 @@ Implémentez les techniques de mise en page modernes :
 }
 ```
 
-### Étape 4 : Styles Responsives (css/responsive.css)
-Adaptez le design aux appareils mobiles :
+### Step 4: Responsive Styles (css/responsive.css)
+Adapt the design for mobile devices:
 
 ```css
 /* Responsive Design */
 
-/* Mobile First - Styles de base pour mobile */
+/* Mobile First - Base styles for mobile */
 @media (max-width: 768px) {
     .container {
         padding: 0 15px;
@@ -1199,7 +1199,7 @@ Adaptez le design aux appareils mobiles :
         padding: 1.5rem;
     }
 
-    /* Équipe */
+    /* Team */
     .team-grid {
         grid-template-columns: 1fr;
     }
@@ -1261,7 +1261,7 @@ Adaptez le design aux appareils mobiles :
     }
 }
 
-/* Tablette */
+/* Tablet */
 @media (min-width: 769px) and (max-width: 1024px) {
     .hero-container {
         gap: 3rem;
@@ -1288,7 +1288,7 @@ Adaptez le design aux appareils mobiles :
     }
 }
 
-/* Desktop large */
+/* Large Desktop */
 @media (min-width: 1200px) {
     .hero-title {
         font-size: 4rem;
@@ -1311,7 +1311,7 @@ Adaptez le design aux appareils mobiles :
     }
 }
 
-/* Animations et transitions améliorées pour desktop */
+/* Enhanced animations and transitions for desktop */
 @media (min-width: 769px) {
     .service-card {
         transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -1339,75 +1339,75 @@ Adaptez le design aux appareils mobiles :
 }
 ```
 
-## Instructions de Test
+## Testing Instructions
 
-### Validation Layout (40%)
-- [ ] Navigation sticky fonctionne correctement
-- [ ] Section hero utilise Flexbox pour disposition côte à côte
-- [ ] Grille des services s'adapte au nombre de colonnes
-- [ ] Portfolio utilise CSS Grid avec overlays au hover
-- [ ] Section équipe présente les membres en grille
-- [ ] Formulaire de contact utilise Flexbox pour les champs
+### Layout Validation (40%)
+- [ ] Sticky navigation works correctly
+- [ ] Hero section uses Flexbox for side-by-side layout
+- [ ] Services grid adapts column count
+- [ ] Portfolio uses CSS Grid with hover overlays
+- [ ] Team section displays members in a grid
+- [ ] Contact form uses Flexbox for the fields
 
-### Validation Responsive (30%)
-- [ ] Menu hamburger apparaît sur mobile
-- [ ] Grilles s'adaptent aux différentes tailles d'écran
-- [ ] Images et contenus sont lisibles sur petit écran
-- [ ] Formulaires sont utilisables sur mobile
+### Responsive Validation (30%)
+- [ ] Hamburger menu appears on mobile
+- [ ] Grids adapt to different screen sizes
+- [ ] Images and content are readable on small screens
+- [ ] Forms are usable on mobile
 
-### Validation Technique (20%)
-- [ ] Modèle de boîte respecté (padding, margin, border)
-- [ ] Propriétés Flexbox utilisées correctement (justify-content, align-items)
-- [ ] CSS Grid implémenté pour les layouts complexes
-- [ ] Transitions et animations fluides
+### Technical Validation (20%)
+- [ ] Box model correctly applied (padding, margin, border)
+- [ ] Flexbox properties correctly used (justify-content, align-items)
+- [ ] CSS Grid implemented for complex layouts
+- [ ] Smooth transitions and animations
 
-### Validation Utilisateur (10%)
-- [ ] Site navigable au clavier
-- [ ] Liens et boutons clairement identifiables
-- [ ] Contenu hiérarchisé et lisible
-- [ ] Design professionnel et cohérent
+### User Experience Validation (10%)
+- [ ] Site is keyboard navigable
+- [ ] Links and buttons are clearly identifiable
+- [ ] Content is well-structured and readable
+- [ ] Design is professional and consistent
 
-## Défis Supplémentaires
+## Additional Challenges
 
-### Niveau 1 : Améliorations Visuelles
-- Ajoutez des icônes SVG personnalisées pour chaque service
-- Implémentez un système de thème sombre/clair
-- Créez des animations d'entrée pour les sections (Intersection Observer)
-- Ajoutez un effet parallax à la section hero
+### Level 1: Visual Enhancements
+- Add custom SVG icons for each service
+- Implement a dark/light theme system
+- Create entrance animations for sections (Intersection Observer)
+- Add a parallax effect to the hero section
 
-### Niveau 2 : Fonctionnalités Interactives
-- Créez un système de filtrage dynamique pour le portfolio
-- Implémentez un slider/ carousel pour les témoignages clients
-- Ajoutez une fonctionnalité de recherche en temps réel
-- Créez un modal pour afficher les détails des projets
+### Level 2: Interactive Features
+- Create a dynamic filtering system for the portfolio
+- Implement a slider/carousel for customer testimonials
+- Add a real-time search feature
+- Create a modal to display project details
 
-### Niveau 3 : Optimisations Avancées
-- Utilisez CSS Grid pour un système de layout 12 colonnes
-- Implémentez un système de variables CSS personnalisables
-- Ajoutez des animations complexes avec CSS keyframes
-- Créez un système de composants réutilisables
+### Level 3: Advanced Optimizations
+- Use CSS Grid for a 12-column layout system
+- Implement a customizable CSS variables system
+- Add complex animations with CSS keyframes
+- Create a system of reusable components
 
-## Critères d'Évaluation
+## Evaluation Criteria
 
-### Mise en Page Flexbox (30%)
-- Utilisation appropriée des propriétés Flexbox
-- Gestion correcte des directions et alignements
-- Adaptation responsive des layouts flexibles
+### Flexbox Layout (30%)
+- Appropriate use of Flexbox properties
+- Correct handling of directions and alignment
+- Responsive adaptation of flexible layouts
 
-### Mise en Page Grid (30%)
-- Implémentation correcte de CSS Grid
-- Gestion des zones de grille et des espaces
-- Adaptation des grilles aux différentes tailles
+### Grid Layout (30%)
+- Correct implementation of CSS Grid
+- Proper management of grid areas and spacing
+- Grids adapted to different screen sizes
 
 ### Responsive Design (25%)
-- Breakpoints appropriés pour tous les appareils
-- Adaptation intelligente des contenus
-- Performance optimisée sur mobile
+- Appropriate breakpoints for all devices
+- Smart content adaptation
+- Optimized performance on mobile
 
-### Qualité du Code (15%)
-- Structure CSS organisée et modulaire
-- Commentaires explicatifs
-- Respect des bonnes pratiques CSS
+### Code Quality (15%)
+- Organized and modular CSS structure
+- Helpful explanatory comments
+- Compliance with CSS best practices
 
-## Prochaines Étapes
-Bravo pour votre site web d'agence créative ! Vous maîtrisez maintenant Flexbox et CSS Grid. Au prochain module, nous ajouterons de l'interactivité avec JavaScript pour créer des applications web dynamiques.
+## Next Steps
+Well done on your creative agency website! You now have solid control of Flexbox and CSS Grid. In the next module, we will add interactivity with JavaScript to build dynamic web applications.

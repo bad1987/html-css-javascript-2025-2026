@@ -1,204 +1,204 @@
-# Module 3 : Notions Fondamentales du CSS
+# Module 03 - CSS Fundamentals
 
-## Aperçu
-Maintenant que vous maîtrisez la structure HTML, ajoutons de la beauté à vos pages avec CSS ! Ce module vous apprendra les bases du style CSS pour contrôler l'apparence de vos éléments HTML.
+## Overview
+Now that you have mastered HTML structure, let's add beauty to your pages with CSS! This module will teach you the basics of CSS styling to control the appearance of your HTML elements.
 
-## Objectifs d'Apprentissage
-À la fin de ce module, vous serez capable de :
-- Comprendre comment fonctionne CSS
-- Appliquer des couleurs et des polices
-- Contrôler les espacements et les dimensions
-- Utiliser des sélecteurs CSS de base
-- Lier des fichiers CSS à vos pages HTML
-- Créer des designs visuellement attrayants
+## Objectives
+By the end of this module, you will be able to:
+- Understand how CSS works
+- Apply colors and fonts
+- Control spacing and dimensions
+- Use basic CSS selectors
+- Link CSS files to your HTML pages
+- Create visually appealing designs
 
-## Prérequis
-- Module 1 et 2 : Connaissances HTML de base et structure
-- Compréhension des éléments HTML courants
+## Prerequisites
+- Modules 1 and 2: Basic HTML knowledge and structure
+- Understanding of common HTML elements
 
-## Matériaux Nécessaires
-- Éditeur VS Code avec extension Live Server
-- Navigateur web moderne
-- Fichiers HTML des modules précédents
+## Required Materials
+- VS Code with Live Server extension
+- Modern web browser
+- HTML files from previous modules
 
-## Structure de Session
-- Session 1 : Introduction à CSS (30 min)
-- Session 2 : Couleurs, Polices et Texte (30 min)
-- Activité Pratique : Styler une Page Personnelle (1 heure)
+## Session Structure
+- Session 1: CSS Introduction (30 min)
+- Session 2: Colors, Fonts, and Text (30 min)
+- Practical Activity: Style a Personal Page (1 hour)
 
-## Théorie : Qu'est-ce que CSS ?
+## Theory: What is CSS?
 
-### Comment CSS Fonctionne
-CSS (Cascading Style Sheets) contrôle l'apparence de vos éléments HTML. Il fonctionne comme une "feuille de style" qui dit au navigateur comment afficher chaque élément.
+### How CSS Works
+CSS (Cascading Style Sheets) controls the appearance of your HTML elements. It works like a "stylesheet" that tells the browser how to display each element.
 
-### Trois Façons d'Appliquer CSS
+### Three Ways to Apply CSS
 
-1. **CSS Inline** (directement dans les balises HTML) :
+1. **Inline CSS** (directly in HTML tags):
 ```html
-<p style="color: blue; font-size: 20px;">Texte stylé</p>
+<p style="color: blue; font-size: 20px;">Styled text</p>
 ```
 
-2. **CSS Interne** (dans la section `<head>`) :
+2. **Internal CSS** (in the `<head>` section):
 ```html
 <head>
-    <style>
-        p { color: blue; font-size: 20px; }
-    </style>
+  <style>
+    p { color: blue; font-size: 20px; }
+  </style>
 </head>
 ```
 
-3. **CSS Externe** (fichier séparé - recommandé) :
+3. **External CSS** (separate file - recommended):
 ```html
 <head>
-    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 ```
 
-## Activité Pratique : Votre Première Feuille de Style
+## Practical Activity: Your First Stylesheet
 
-### Étape 1 : Créer un Fichier CSS
-1. Créez un fichier `style.css` dans le même dossier que votre `index.html`
-2. Liez-le dans votre HTML avec : `<link rel="stylesheet" href="style.css">`
+### Step 1: Create a CSS File
+1. Create a `style.css` file in the same folder as your `index.html`
+2. Link it in your HTML with: `<link rel="stylesheet" href="style.css">`
 
-### Étape 2 : Sélecteurs CSS de Base
+### Step 2: Basic CSS Selectors
 
 ```css
-/* Tous les paragraphes */
+/* All paragraphs */
 p {
-    color: blue;
-    font-size: 16px;
+  color: blue;
+  font-size: 16px;
 }
 
-/* Éléments par classe */
-.destacado {
-    font-weight: bold;
-    background-color: yellow;
+/* Elements by class */
+.highlighted {
+  font-weight: bold;
+  background-color: yellow;
 }
 
-/* Éléments par ID */
-#principal {
-    border: 2px solid black;
-    padding: 10px;
+/* Elements by ID */
+#main {
+  border: 2px solid black;
+  padding: 10px;
 }
 ```
 
-### Étape 3 : Propriétés de Couleur
+### Step 3: Color Properties
 
 ```css
-/* Noms de couleurs */
+/* Color names */
 h1 {
-    color: red;
+  color: red;
 }
 
-/* Codes hexadécimaux */
+/* Hexadecimal codes */
 h2 {
-    color: #FF0000;
+  color: #FF0000;
 }
 
 /* RGB */
 p {
-    color: rgb(255, 0, 0);
+  color: rgb(255, 0, 0);
 }
 
-/* Couleurs d'arrière-plan */
+/* Background colors */
 body {
-    background-color: #f0f0f0;
+  background-color: #f0f0f0;
 }
 ```
 
-### Étape 4 : Polices et Texte
+### Step 4: Fonts and Text
 
 ```css
-/* Famille de polices */
+/* Font family */
 body {
-    font-family: Arial, sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 h1 {
-    font-family: 'Georgia', serif;
-    font-size: 32px;
-    font-weight: bold;
+  font-family: 'Georgia', serif;
+  font-size: 32px;
+  font-weight: bold;
 }
 
-/* Espacement des lignes */
+/* Line spacing */
 p {
-    line-height: 1.6;
+  line-height: 1.6;
 }
 
-/* Alignement du texte */
+/* Text alignment */
 h1 {
-    text-align: center;
+  text-align: center;
 }
 
 p {
-    text-align: justify;
+  text-align: justify;
 }
 ```
 
-### Étape 5 : Espacement et Dimensions
+### Step 5: Spacing and Dimensions
 
 ```css
-/* Marges (extérieur) */
+/* Margins (outside) */
 div {
-    margin: 20px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 15px;
-    margin-right: 15px;
+  margin: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
-/* Rembourrage (intérieur) */
+/* Padding (inside) */
 div {
-    padding: 15px;
+  padding: 15px;
 }
 
-/* Largeur et hauteur */
+/* Width and height */
 img {
-    width: 300px;
-    height: 200px;
+  width: 300px;
+  height: 200px;
 }
 
-/* Bordures */
+/* Borders */
 div {
-    border: 1px solid #ccc;
-    border-radius: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 ```
 
-## Projet : Page Personnelle Stylée
+## Project: Styled Personal Page
 
-Améliorez votre page de profil du Module 1 avec du CSS :
+Enhance your profile page from Module 1 with CSS:
 
 ```html
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Profil</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Profile</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header id="principal">
-        <h1>Mon Profil Personnel</h1>
-        <p>Développeur Web en Apprentissage</p>
-    </header>
+  <header id="main">
+    <h1>My Personal Profile</h1>
+    <p>Web Developer in Training</p>
+  </header>
 
-    <main>
-        <section class="about">
-            <h2>À Propos de Moi</h2>
-            <p>Je suis passionné par le développement web et j'apprends HTML, CSS et JavaScript.</p>
-        </section>
+  <main>
+    <section class="about">
+      <h2>About Me</h2>
+      <p>I am passionate about web development and learning HTML, CSS, and JavaScript.</p>
+    </section>
 
-        <section class="interets">
-            <h2>Mes Intérêts</h2>
-            <ul>
-                <li>Programmation</li>
-                <li class="destacado">Design Web</li>
-                <li>Technologie</li>
-            </ul>
-        </section>
-    </main>
+    <section class="interests">
+      <h2>My Interests</h2>
+      <ul>
+        <li>Programming</li>
+        <li class="highlighted">Web Design</li>
+        <li>Technology</li>
+      </ul>
+    </section>
+  </main>
 </body>
 </html>
 ```
@@ -206,79 +206,79 @@ Améliorez votre page de profil du Module 1 avec du CSS :
 ```css
 /* style.css */
 body {
-    font-family: Arial, sans-serif;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f8f9fa;
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f9fa;
 }
 
-#principal {
-    background-color: #007bff;
-    color: white;
-    padding: 40px;
-    text-align: center;
-    border-radius: 10px;
-    margin-bottom: 30px;
+#main {
+  background-color: #007bff;
+  color: white;
+  padding: 40px;
+  text-align: center;
+  border-radius: 10px;
+  margin-bottom: 30px;
 }
 
 h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
+  font-size: 2.5em;
+  margin-bottom: 10px;
 }
 
 h2 {
-    color: #333;
-    border-bottom: 2px solid #007bff;
-    padding-bottom: 10px;
+  color: #333;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 10px;
 }
 
 section {
-    background-color: white;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.destacado {
-    background-color: #fff3cd;
-    padding: 5px;
-    border-radius: 3px;
+.highlighted {
+  background-color: #fff3cd;
+  padding: 5px;
+  border-radius: 3px;
 }
 
 ul {
-    background-color: #f8f9fa;
-    padding: 15px;
-    border-radius: 5px;
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 5px;
 }
 
 li {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 ```
 
-## Évaluation
-1. Créez une page avec au moins 3 sections différentes
-2. Appliquez des couleurs cohérentes dans tout le design
-3. Utilisez au moins 4 propriétés CSS différentes
-4. Assurez-vous que la page est lisible et attrayante
+## Assessment
+1. Create a page with at least 3 different sections
+2. Apply consistent colors throughout the design
+3. Use at least 4 different CSS properties
+4. Ensure the page is readable and attractive
 
-## Défi Supplémentaire
-Ajoutez des effets hover (survol) :
+## Extra Challenge
+Add hover effects:
 
 ```css
-.destacado:hover {
-    background-color: #ffeaa7;
-    cursor: pointer;
-    transition: background-color 0.3s;
+.highlighted:hover {
+  background-color: #ffeaa7;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 ```
 
-## Prochaines Étapes
-Bravo pour vos premiers pas en CSS ! Au prochain module, nous apprendrons la mise en page CSS pour organiser vos éléments sur la page.
+## Next Steps
+Great work on your first CSS steps! In the next module, we will learn CSS layout techniques to organize your elements on the page.
 
-## Ressources
-- [MDN : Premiers Pas en CSS](https://developer.mozilla.org/fr/docs/Learn/CSS/First_steps)
-- [CSS-Tricks Guide Complet](https://css-tricks.com/guides/)
-- [FreeCodeCamp CSS](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/)
+## Resources
+- [MDN: Getting Started with CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps)
+- [CSS-Tricks Complete Guide](https://css-tricks.com/guides/)
+- [freeCodeCamp CSS](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/)

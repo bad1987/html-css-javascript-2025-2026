@@ -1,254 +1,254 @@
-# Exercices Maison - Module 1 : Introduction au Développement Web
+# Homework Exercises
 
-## Aperçu
-Ces exercices pratiques vous permettent de mettre en application les concepts fondamentaux du développement web apprises dans ce module. Tous les exercices sont à réaliser en français.
+## Overview
+These practical exercises allow you to apply the fundamental concepts of web development learned in this module. All exercises are to be completed in English.
 
-## Niveau Débutant
+## Beginner Level
 
-### Exercice 1.1 : Votre Première Page Web
-**Objectif** : Créer une page HTML simple avec structure de base.
+### Exercise 1.1: Your First Web Page
+**Objective**: Create a simple HTML page with basic structure.
 
-**Instructions** :
-1. Créez un fichier `ma-premiere-page.html`
-2. Utilisez la structure HTML de base (DOCTYPE, html, head, body)
-3. Ajoutez un titre principal avec votre nom
-4. Incluez au moins 3 paragraphes décrivant vos intérêts
-5. Utilisez au moins 2 niveaux de titres différents (h1, h2)
+**Instructions**:
+1. Create a file `ma-premiere-page.html`
+2. Use the basic HTML structure (DOCTYPE, html, head, body)
+3. Add a main title with your name
+4. Include at least 3 paragraphs describing your interests
+5. Use at least 2 different heading levels (h1, h2)
 
-**Critères de validation** :
-- [ ] Page s'ouvre correctement dans un navigateur
-- [ ] Structure HTML valide
-- [ ] Au moins 3 paragraphes
-- [ ] Titres hiérarchisés correctement
+**Validation Criteria**:
+- [ ] Page opens correctly in a browser
+- [ ] Valid HTML structure
+- [ ] At least 3 paragraphs
+- [ ] Headings hierarchically correct
 
-**Indices** :
-- Commencez toujours par `<!DOCTYPE html>`
-- Utilisez `<h1>` pour le titre principal
-- Les paragraphes utilisent la balise `<p>`
+**Hints**:
+- Always start with `<!DOCTYPE html>`
+- Use `<h1>` for the main title
+- Paragraphs use the `<p>` tag
 
-### Exercice 1.2 : Mise en Forme Basique
-**Objectif** : Ajouter du formatage simple au texte.
+### Exercise 1.2: Basic Formatting
+**Objective**: Add simple formatting to text.
 
-**Instructions** :
-1. Sur la page créée à l'exercice 1.1
-2. Mettez en gras un mot important dans chaque paragraphe
-3. Soulignez votre nom dans le titre
-4. Créez une liste de vos 3 choses préférées
+**Instructions**:
+1. On the page created in exercise 1.1
+2. Bold an important word in each paragraph
+3. Underline your name in the title
+4. Create a list of your 3 favorite things
 
-**Critères de validation** :
-- [ ] Texte en gras visible (`<strong>` ou `<b>`)
-- [ ] Texte souligné visible (`<em>` ou `<i>`)
-- [ ] Liste avec au moins 3 éléments (`<ul>` et `<li>`)
+**Validation Criteria**:
+- [ ] Bold text visible (`<strong>` or `<b>`)
+- [ ] Underlined text visible (`<em>` or `<i>`)
+- [ ] List with at least 3 items (`<ul>` and `<li>`)
 
-**Indices** :
-- Utilisez `<strong>` pour le texte en gras
-- Utilisez `<em>` pour le texte souligné
-- Les listes utilisent `<ul>` (non ordonnée) ou `<ol>` (ordonnée)
+**Hints**:
+- Use `<strong>` for bold text
+- Use `<em>` for underlined text
+- Lists use `<ul>` (unordered) or `<ol>` (ordered)
 
-### Exercice 1.3 : Liens et Images
-**Objectif** : Ajouter des liens hypertextes et une image à votre page.
+### Exercise 1.3: Links and Images
+**Objective**: Add hyperlinks and an image to your page.
 
-**Instructions** :
-1. Ajoutez un lien vers votre site web préféré
-2. Ajoutez un lien vers une autre page HTML (même si elle n'existe pas encore)
-3. Insérez une image depuis le web avec un texte alternatif descriptif
-4. Créez une section "Liens utiles" avec 3 liens externes
+**Instructions**:
+1. Add a link to your favorite website
+2. Add a link to another HTML page (even if it doesn't exist yet)
+3. Insert an image from the web with a descriptive alt text
+4. Create a "Useful Links" section with 3 external links
 
-**Critères de validation** :
-- [ ] Au moins 2 liens fonctionnels (`<a href="...">`)
-- [ ] Une image avec attribut `alt` (`<img src="..." alt="...">`)
-- [ ] Liens s'ouvrent dans le navigateur
+**Validation Criteria**:
+- [ ] At least 2 functional links (`<a href="...">`)
+- [ ] One image with `alt` attribute (`<img src="..." alt="...">`)
+- [ ] Links open in the browser
 
-**Indices** :
-- Les liens utilisent `<a href="url">texte</a>`
-- Les images utilisent `<img src="url" alt="description">`
-- Pensez toujours à l'accessibilité avec l'attribut `alt`
+**Hints**:
+- Links use `<a href="url">text</a>`
+- Images use `<img src="url" alt="description">`
+- Always think about accessibility with the `alt` attribute
 
-## Niveau Intermédiaire
+## Intermediate Level
 
-### Exercice 1.4 : Portfolio Personnalisé
-**Objectif** : Créer une page de portfolio complète.
+### Exercise 1.4: Personal Portfolio
+**Objective**: Create a complete portfolio page.
 
-**Instructions** :
-1. Créez une page `portfolio.html`
-2. Incluez une photo de profil ou un avatar
-3. Ajoutez une section "À propos" avec titre et paragraphes
-4. Créez une section "Compétences" sous forme de liste
-5. Ajoutez une section "Contact" avec email et liens vers réseaux sociaux
-6. Utilisez tous les éléments HTML appris
+**Instructions**:
+1. Create a page `portfolio.html`
+2. Include a profile photo or avatar
+3. Add an "About" section with title and paragraphs
+4. Create a "Skills" section as a list
+5. Add a "Contact" section with email and social media links
+6. Use all HTML elements learned
 
-**Critères de validation** :
-- [ ] Structure sémantique appropriée
-- [ ] Au moins 5 paragraphes de contenu
-- [ ] Images avec textes alternatifs
-- [ ] Navigation entre sections avec des ancres
-- [ ] Liens externes fonctionnels
+**Validation Criteria**:
+- [ ] Appropriate semantic structure
+- [ ] At least 5 paragraphs of content
+- [ ] Images with alt texts
+- [ ] Navigation between sections with anchors
+- [ ] Functional external links
 
-**Indices** :
-- Utilisez des ancres pour naviguer sur la page (`<a href="#section">`)
-- Organisez le contenu en sections logiques
-- Pensez à l'expérience utilisateur
+**Hints**:
+- Use anchors to navigate on the page (`<a href="#section">`)
+- Organize content into logical sections
+- Think about user experience
 
-### Exercice 1.5 : Comparaison de Technologies
-**Objectif** : Créer une page explicative des trois piliers du web.
+### Exercise 1.5: Technology Comparison
+**Objective**: Create an explanatory page of the three pillars of the web.
 
-**Instructions** :
-1. Créez une page `technologies-web.html`
-2. Créez une section pour chaque technologie (HTML, CSS, JavaScript)
-3. Pour chaque technologie, incluez :
-   - Un titre descriptif
-   - 2-3 paragraphes d'explication
-   - Une liste des principales fonctionnalités
-   - Une liste des avantages
-4. Ajoutez des liens vers des ressources d'apprentissage
-5. Créez un tableau comparatif des trois technologies
+**Instructions**:
+1. Create a page `technologies-web.html`
+2. Create a section for each technology (HTML, CSS, JavaScript)
+3. For each technology, include:
+   - A descriptive title
+   - 2-3 explanation paragraphs
+   - A list of main features
+   - A list of advantages
+4. Add links to learning resources
+5. Create a comparison table of the three technologies
 
-**Critères de validation** :
-- [ ] Trois sections distinctes et bien organisées
-- [ ] Contenu informatif et précis
-- [ ] Tableau comparatif avec en-têtes appropriées
-- [ ] Liens vers ressources externes
+**Validation Criteria**:
+- [ ] Three distinct and well-organized sections
+- [ ] Informative and accurate content
+- [ ] Comparison table with appropriate headers
+- [ ] Links to external resources
 
-**Indices** :
-- Utilisez `<table>`, `<thead>`, `<tbody>` pour le tableau
-- Organisez le contenu avec des sections claires
-- Rendez le contenu engageant et accessible
+**Hints**:
+- Use `<table>`, `<thead>`, `<tbody>` for the table
+- Organize content with clear sections
+- Make content engaging and accessible
 
-## Niveau Avancé
+## Advanced Level
 
-### Exercice 1.6 : Site Multi-pages
-**Objectif** : Créer un petit site web avec plusieurs pages liées.
+### Exercise 1.6: Multi-page Site
+**Objective**: Create a small website with multiple linked pages.
 
-**Instructions** :
-1. Créez 3 pages HTML : `index.html`, `about.html`, `contact.html`
-2. Chaque page doit avoir :
-   - Un header avec navigation vers les autres pages
-   - Un contenu principal unique
-   - Un footer avec informations de copyright
-3. La page index doit présenter votre site
-4. La page about doit raconter votre parcours
-5. La page contact doit inclure un formulaire (même non fonctionnel)
-6. Utilisez une navigation cohérente sur toutes les pages
+**Instructions**:
+1. Create 3 HTML pages: `index.html`, `about.html`, `contact.html`
+2. Each page must have:
+   - A header with navigation to other pages
+   - Unique main content
+   - A footer with copyright information
+3. The index page should present your site
+4. The about page should tell your story
+5. The contact page should include a form (even if not functional)
+6. Use consistent navigation across all pages
 
-**Critères de validation** :
-- [ ] Navigation fonctionnelle entre toutes les pages
-- [ ] Contenu unique et pertinent pour chaque page
-- [ ] Structure cohérente sur toutes les pages
-- [ ] Liens relatifs corrects (`href="about.html"`)
+**Validation Criteria**:
+- [ ] Functional navigation between all pages
+- [ ] Unique and relevant content for each page
+- [ ] Consistent structure across all pages
+- [ ] Correct relative links (`href="about.html"`)
 
-**Indices** :
-- Utilisez des chemins relatifs pour les liens
-- Maintenez une structure similaire sur chaque page
-- Pensez à l'expérience de navigation
+**Hints**:
+- Use relative paths for links
+- Maintain similar structure on each page
+- Think about navigation experience
 
-### Exercice 1.7 : Formulaire d'Inscription
-**Objectif** : Créer un formulaire complet d'inscription utilisateur.
+### Exercise 1.7: Registration Form
+**Objective**: Create a complete user registration form.
 
-**Instructions** :
-1. Créez une page `inscription.html`
-2. Incluez les champs suivants :
-   - Nom complet (texte)
+**Instructions**:
+1. Create a page `inscription.html`
+2. Include the following fields:
+   - Full name (text)
    - Email (email)
-   - Mot de passe (password)
-   - Confirmation du mot de passe (password)
-   - Date de naissance (date)
-   - Pays (select avec options)
-   - Centres d'intérêt (checkboxes multiples)
+   - Password (password)
+   - Password confirmation (password)
+   - Date of birth (date)
+   - Country (select with options)
+   - Interests (multiple checkboxes)
    - Newsletter (checkbox)
-   - Commentaire (textarea)
-3. Ajoutez des labels appropriés pour chaque champ
-4. Incluez des boutons "Soumettre" et "Réinitialiser"
-5. Organisez le formulaire en sections logiques
+   - Comment (textarea)
+3. Add appropriate labels for each field
+4. Include "Submit" and "Reset" buttons
+5. Organize the form into logical sections
 
-**Critères de validation** :
-- [ ] Tous les types de champs appropriés utilisés
-- [ ] Labels associés aux champs (`<label for="...">`)
-- [ ] Boutons de soumission et réinitialisation
-- [ ] Structure organisée avec `<fieldset>` si approprié
+**Validation Criteria**:
+- [ ] All appropriate field types used
+- [ ] Labels associated with fields (`<label for="...">`)
+- [ ] Submit and reset buttons
+- [ ] Organized structure with `<fieldset>` if appropriate
 
-**Indices** :
-- Utilisez les attributs `name`, `id`, et `type` appropriés
-- Les `<label>` améliorent l'accessibilité
-- Testez le formulaire dans un navigateur
+**Hints**:
+- Use appropriate `name`, `id`, and `type` attributes
+- `<label>` tags improve accessibility
+- Test the form in a browser
 
-## Défi Bonus
+## Bonus Challenge
 
-### Exercice 1.8 : CV Web Interactif
-**Objectif** : Créer un CV en ligne moderne et interactif.
+### Exercise 1.8: Interactive Web Resume
+**Objective**: Create a modern and interactive online resume.
 
-**Instructions** :
-1. Créez une page `cv.html` complète
-2. Incluez toutes les sections classiques d'un CV :
-   - En-tête avec informations personnelles
-   - Expérience professionnelle
-   - Formation
-   - Compétences techniques
-   - Projets personnels
-   - Centres d'intérêt
+**Instructions**:
+1. Create a complete `cv.html` page
+2. Include all classic resume sections:
+   - Header with personal information
+   - Professional experience
+   - Education
+   - Technical skills
+   - Personal projects
+   - Interests
    - Contact
-3. Utilisez des ancres pour naviguer rapidement entre sections
-4. Ajoutez des liens vers vos profils professionnels
-5. Incluez des images ou icônes appropriées
-6. Rendez-le responsive en pensée (même sans CSS pour l'instant)
+3. Use anchors to quickly navigate between sections
+4. Add links to your professional profiles
+5. Include appropriate images or icons
+6. Make it responsive in thought (even without CSS for now)
 
-**Critères de validation** :
-- [ ] Structure sémantique complète et logique
-- [ ] Navigation interne fluide
-- [ ] Contenu professionnel et bien présenté
-- [ ] Liens externes pertinents
-- [ ] Images avec textes alternatifs
+**Validation Criteria**:
+- [ ] Complete and logical semantic structure
+- [ ] Smooth internal navigation
+- [ ] Professional and well-presented content
+- [ ] Relevant external links
+- [ ] Images with alt texts
 
-**Indices** :
-- Pensez à la hiérarchie des informations
-- Utilisez des listes pour les compétences et expériences
-- Les ancres permettent une navigation rapide
+**Hints**:
+- Think about information hierarchy
+- Use lists for skills and experiences
+- Anchors allow quick navigation
 
-## Intégration Inter-modules
+## Inter-module Integration
 
-### Exercice 1.9 : Préparation Module 2
-**Objectif** : Anticiper les concepts du Module 2 en appliquant la sémantique HTML.
+### Exercise 1.9: Module 2 Preparation
+**Objective**: Anticipate Module 2 concepts by applying HTML semantics.
 
-**Instructions** :
-1. Reprenez votre portfolio de l'exercice 1.4
-2. Remplacez les `<div>` génériques par des éléments sémantiques appropriés :
-   - `<header>` pour l'en-tête
-   - `<nav>` pour la navigation
-   - `<main>` pour le contenu principal
-   - `<section>` pour chaque section majeure
-   - `<footer>` pour le pied de page
-3. Ajoutez des métadonnées pertinentes dans le `<head>`
-4. Créez une structure de navigation avec des liens d'ancrage
-5. Testez l'accessibilité de base (navigation au clavier)
+**Instructions**:
+1. Take your portfolio from exercise 1.4
+2. Replace generic `<div>` with appropriate semantic elements:
+   - `<header>` for the header
+   - `<nav>` for navigation
+   - `<main>` for main content
+   - `<section>` for each major section
+   - `<footer>` for the footer
+3. Add relevant metadata in the `<head>`
+4. Create an anchor-based navigation structure
+5. Test basic accessibility (keyboard navigation)
 
-**Critères de validation** :
-- [ ] Éléments sémantiques utilisés correctement
-- [ ] Métadonnées dans le `<head>` (charset, viewport, description)
-- [ ] Navigation par ancres fonctionnelle
-- [ ] Structure logique et accessible
+**Validation Criteria**:
+- [ ] Semantic elements used correctly
+- [ ] Metadata in the `<head>` (charset, viewport, description)
+- [ ] Functional anchor navigation
+- [ ] Logical and accessible structure
 
-**Indices** :
-- Les éléments sémantiques améliorent le SEO et l'accessibilité
-- Utilisez `<meta charset="UTF-8">` pour le jeu de caractères
-- Testez avec la touche Tab pour la navigation clavier
+**Hints**:
+- Semantic elements improve SEO and accessibility
+- Use `<meta charset="UTF-8">` for character set
+- Test with Tab key for keyboard navigation
 
-## Critères de Validation Globaux
+## Global Validation Criteria
 
-Pour réussir ces exercices, assurez-vous que :
+To succeed in these exercises, ensure that:
 
-- **Validité** : Le code HTML passe la validation W3C
-- **Accessibilité** : Utilisation d'attributs `alt` et labels appropriés
-- **Sémantique** : Utilisation correcte des balises selon leur but
-- **Navigation** : Liens fonctionnels et intuitifs
-- **Contenu** : Texte original et pertinent
-- **Structure** : Organisation logique et hiérarchisée
+- **Validity**: HTML code passes W3C validation
+- **Accessibility**: Use of `alt` attributes and appropriate labels
+- **Semantics**: Correct use of tags according to their purpose
+- **Navigation**: Functional and intuitive links
+- **Content**: Original and relevant text
+- **Structure**: Logical and hierarchical organization
 
-## Ressources d'Aide
+## Help Resources
 
-- [MDN Web Docs - HTML Basics](https://developer.mozilla.org/fr/docs/Learn/Getting_started_with_the_web/HTML_basics)
+- [MDN Web Docs - HTML Basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics)
 - [W3Schools HTML Tutorial](https://www.w3schools.com/html/)
 - [HTML Validator](https://validator.w3.org/)
 - [Web Accessibility Guidelines](https://www.w3.org/WAI/WCAG21/quickref/)
 
-## Prochaines Étapes
+## Next Steps
 
-Une fois ces exercices terminés, vous serez prêt à aborder le Module 2 avec une solide compréhension des bases HTML. N'hésitez pas à expérimenter et à personnaliser vos créations !
+Once these exercises are completed, you will be ready to tackle Module 2 with a solid understanding of HTML basics. Don't hesitate to experiment and personalize your creations!

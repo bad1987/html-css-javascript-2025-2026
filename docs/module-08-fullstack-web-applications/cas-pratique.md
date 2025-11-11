@@ -1,12 +1,12 @@
-# Cas Pratique : Plateforme de Partage de Recettes Culinaires
+# Practical Project: Recipe Sharing Platform
 
-## Contexte du Projet
-Vous maîtrisez maintenant le développement web full-stack. Ce projet final vous permettra de créer une application complète de partage de recettes culinaires avec authentification, upload d'images, commentaires, et système de notation.
+## Project Context
+You now master full-stack web development. This final project will allow you to create a complete recipe sharing application with authentication, image uploads, comments, and rating system.
 
-## Objectif
-Créer une plateforme web complète où les utilisateurs peuvent partager, découvrir et interagir avec des recettes culinaires.
+## Objective
+Create a complete web platform where users can share, discover, and interact with culinary recipes.
 
-## Structure du Projet
+## Project Structure
 ```
 recipe-platform/
 ├── backend/
@@ -51,9 +51,9 @@ recipe-platform/
 └── .env                       # Variables d'environnement
 ```
 
-## Étapes de Réalisation
+## Implementation Steps
 
-### Étape 1 : Configuration du Backend
+### Step 1: Backend Configuration
 Configurez le serveur Express avec les middlewares nécessaires :
 
 ```javascript
@@ -125,7 +125,7 @@ app.listen(PORT, () => {
 });
 ```
 
-### Étape 2 : Modèles de Données
+### Step 2: Data Models
 Créez les modèles de données avec validation :
 
 ```javascript
@@ -459,7 +459,7 @@ recipeSchema.statics.search = function(query, filters = {}) {
 module.exports = mongoose.model('Recipe', recipeSchema);
 ```
 
-### Étape 3 : Routes API
+### Step 3: API Routes
 Implémentez les routes RESTful :
 
 ```javascript
@@ -705,7 +705,7 @@ router.post('/:id/rate', authenticateToken, async (req, res) => {
 module.exports = router;
 ```
 
-### Étape 4 : Frontend - Interface Utilisateur
+### Step 4: Frontend - User Interface
 Créez l'interface utilisateur réactive :
 
 ```html
@@ -935,7 +935,7 @@ Créez l'interface utilisateur réactive :
 </html>
 ```
 
-## Instructions de Test
+## Test Instructions
 
 ### Validation Architecture Full-Stack (40%)
 - [ ] Serveur Express configuré correctement avec tous les middlewares
@@ -964,27 +964,27 @@ Créez l'interface utilisateur réactive :
 - [ ] Protection contre les attaques XSS
 - [ ] Gestion appropriée des erreurs
 
-## Défis Supplémentaires
+## Additional Challenges
 
-### Niveau 1 : Fonctionnalités Sociales
+### Level 1: Social Features
 - Ajouter un système de commentaires sur les recettes
 - Implémenter un système de favoris personnels
 - Créer un système de suivi d'utilisateurs
 - Ajouter des notifications en temps réel
 
-### Niveau 2 : Fonctionnalités Avancées
+### Level 2: Advanced Features
 - Implémenter un système de recherche avancée avec filtres
 - Ajouter des plans de repas hebdomadaires
 - Créer une liste de courses générée automatiquement
 - Intégrer une API de nutrition
 
-### Niveau 3 : Performance et Déploiement
+### Level 3: Performance and Deployment
 - Optimiser les images et implémenter le lazy loading
 - Ajouter un cache Redis pour les données fréquemment accédées
 - Configurer le déploiement sur Heroku ou Vercel
 - Implémenter des tests automatisés complets
 
-## Critères d'Évaluation
+## Evaluation Criteria
 
 ### Backend (35%)
 - Architecture Express.js propre et organisée
@@ -1012,5 +1012,5 @@ Créez l'interface utilisateur réactive :
 - Protection contre les vulnérabilités communes
 - Code maintenable et testé
 
-## Prochaines Étapes
+## Next Steps
 Félicitations ! Vous avez créé votre première application web full-stack complète. Au prochain module, nous explorerons les sujets avancés et les bonnes pratiques pour devenir un développeur web professionnel.

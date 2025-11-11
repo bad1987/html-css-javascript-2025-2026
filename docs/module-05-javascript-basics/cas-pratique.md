@@ -1,12 +1,12 @@
-# Cas Pratique : Calculateur de Budget Personnel
+# Practical Project: Personal Budget Calculator
 
-## Contexte du Projet
-Vous venez d'apprendre les bases de JavaScript et vous voulez créer une application interactive utile au quotidien. Ce projet vous permettra de pratiquer tous les concepts JavaScript fondamentaux : variables, conditions, boucles, fonctions, événements et manipulation du DOM.
+## Project Context
+You have just learned the basics of JavaScript and want to build a helpful interactive application for everyday life. This project lets you practice every fundamental JavaScript concept—variables, conditions, loops, functions, events, and DOM manipulation.
 
-## Objectif
-Créer une application web complète de calcul de budget personnel avec suivi des revenus et dépenses, calculs automatiques, et stockage local des données.
+## Goal
+Build a complete personal budget web app that tracks income and expenses, provides automatic calculations, and stores data locally.
 
-## Structure du Projet
+## Project Structure
 ```
 calculateur-budget/
 ├── index.html          # Page principale
@@ -14,29 +14,29 @@ calculateur-budget/
 │   ├── style.css       # Styles principaux
 │   └── responsive.css  # Styles responsives
 ├── js/
-│   ├── app.js          # Logique principale
-│   ├── budget.js       # Gestion du budget
-│   └── storage.js      # Gestion du stockage local
+│   ├── app.js          # Main logic
+│   ├── budget.js       # Budget management
+│   └── storage.js      # Local storage management
 └── README.md
 ```
 
-## Étapes de Réalisation
+## Implementation Steps
 
-### Étape 1 : Configuration du Projet
-1. Créez le dossier `calculateur-budget`
-2. Structurez les fichiers selon l'arborescence ci-dessus
-3. Créez un fichier HTML de base avec la structure
+### Step 1: Project Setup
+1. Create the `budget-calculator` folder.
+2. Organize the files following the structure above.
+3. Create a basic HTML file with the standard structure.
 
-### Étape 2 : Interface HTML (index.html)
-Créez une interface moderne et intuitive :
+### Step 2: HTML Interface (index.html)
+Create a modern, intuitive interface:
 
 ```html
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculateur de Budget Personnel</title>
+    <title>Personal Budget Calculator</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -44,24 +44,24 @@ Créez une interface moderne et intuitive :
 <body>
     <div class="container">
         <header class="header">
-            <h1>💰 Calculateur de Budget Personnel</h1>
-            <p>Gérez vos finances personnelles avec facilité</p>
+            <h1>💰 Personal Budget Calculator</h1>
+            <p>Manage your personal finances with ease</p>
         </header>
 
         <div class="dashboard">
             <div class="balance-card">
-                <h2>Solde Actuel</h2>
+                <h2>Current Balance</h2>
                 <div class="balance-amount" id="balance-amount">0,00 €</div>
-                <div class="balance-status" id="balance-status">Équilibré</div>
+                <div class="balance-status" id="balance-status">Balanced</div>
             </div>
 
             <div class="summary-cards">
                 <div class="summary-card income">
-                    <h3>Revenus Totaux</h3>
+                    <h3>Total Income</h3>
                     <div class="amount" id="total-income">0,00 €</div>
                 </div>
                 <div class="summary-card expense">
-                    <h3>Dépenses Totales</h3>
+                    <h3>Total Expenses</h3>
                     <div class="amount" id="total-expense">0,00 €</div>
                 </div>
             </div>
@@ -69,66 +69,66 @@ Créez une interface moderne et intuitive :
 
         <div class="forms-section">
             <div class="form-container">
-                <h2>Ajouter une Transaction</h2>
+                <h2>Add a Transaction</h2>
                 <form id="transaction-form">
                     <div class="form-group">
                         <label for="description">Description</label>
-                        <input type="text" id="description" placeholder="Ex: Salaire, Courses, Loyer..." required>
+                        <input type="text" id="description" placeholder="Ex: Salary, Groceries, Rent..." required>
                     </div>
 
                     <div class="form-group">
-                        <label for="amount">Montant (€)</label>
+                        <label for="amount">Amount (€)</label>
                         <input type="number" id="amount" step="0.01" min="0.01" placeholder="0,00" required>
                     </div>
 
                     <div class="form-group">
                         <label for="type">Type</label>
                         <select id="type" required>
-                            <option value="">Sélectionnez un type</option>
-                            <option value="income">Revenu</option>
-                            <option value="expense">Dépense</option>
+                            <option value="">Select a type</option>
+                            <option value="income">Income</option>
+                            <option value="expense">Expense</option>
                         </select>
                     </div>
 
                     <div class="form-group">
-                        <label for="category">Catégorie</label>
+                        <label for="category">Category</label>
                         <select id="category" required>
-                            <option value="">Sélectionnez une catégorie</option>
-                            <!-- Options seront ajoutées par JavaScript -->
+                            <option value="">Select a category</option>
+                            <!-- Options will be added by JavaScript -->
                         </select>
                     </div>
 
-                    <button type="submit" class="btn btn-primary">Ajouter la Transaction</button>
+                    <button type="submit" class="btn btn-primary">Add Transaction</button>
                 </form>
             </div>
 
             <div class="filters-container">
-                <h2>Filtres</h2>
+                <h2>Filters</h2>
                 <div class="filters">
                     <div class="filter-group">
-                        <label for="filter-type">Type :</label>
+                        <label for="filter-type">Type:</label>
                         <select id="filter-type">
-                            <option value="all">Tous</option>
-                            <option value="income">Revenus</option>
-                            <option value="expense">Dépenses</option>
+                            <option value="all">All</option>
+                            <option value="income">Income</option>
+                            <option value="expense">Expenses</option>
                         </select>
                     </div>
 
                     <div class="filter-group">
-                        <label for="filter-category">Catégorie :</label>
+                        <label for="filter-category">Category:</label>
                         <select id="filter-category">
-                            <option value="all">Toutes</option>
-                            <!-- Options seront ajoutées par JavaScript -->
+                            <option value="all">All</option>
+                            <!-- Options will be added by JavaScript -->
                         </select>
                     </div>
 
                     <div class="filter-group">
-                        <label for="sort-by">Trier par :</label>
+                        <label for="sort-by">Sort by:</label>
                         <select id="sort-by">
-                            <option value="date-desc">Date (récent)</option>
-                            <option value="date-asc">Date (ancien)</option>
-                            <option value="amount-desc">Montant (élevé)</option>
-                            <option value="amount-asc">Montant (faible)</option>
+                            <option value="date-desc">Date (recent)</option>
+                            <option value="date-asc">Date (oldest)</option>
+                            <option value="amount-desc">Amount (highest)</option>
+                            <option value="amount-asc">Amount (lowest)</option>
                         </select>
                     </div>
                 </div>
@@ -136,47 +136,47 @@ Créez une interface moderne et intuitive :
         </div>
 
         <div class="transactions-section">
-            <h2>Historique des Transactions</h2>
+            <h2>Transaction History</h2>
             <div class="transactions-list" id="transactions-list">
                 <div class="empty-state">
-                    <p>Aucune transaction pour le moment.</p>
-                    <p>Ajoutez votre première transaction ci-dessus !</p>
+                    <p>No transactions yet.</p>
+                    <p>Add your first transaction above!</p>
                 </div>
             </div>
         </div>
 
         <div class="charts-section">
-            <h2>Analyse de vos Finances</h2>
+            <h2>Analyze Your Finances</h2>
             <div class="charts-container">
                 <div class="chart-card">
-                    <h3>Répartition par Catégorie</h3>
+                    <h3>Breakdown by Category</h3>
                     <canvas id="category-chart" width="300" height="300"></canvas>
                 </div>
                 <div class="chart-card">
-                    <h3>Évolution Mensuelle</h3>
+                    <h3>Monthly Trend</h3>
                     <canvas id="monthly-chart" width="400" height="200"></canvas>
                 </div>
             </div>
         </div>
 
         <div class="export-section">
-            <h2>Exporter vos Données</h2>
+            <h2>Export Your Data</h2>
             <div class="export-buttons">
-                <button id="export-json" class="btn btn-secondary">Exporter en JSON</button>
-                <button id="export-csv" class="btn btn-secondary">Exporter en CSV</button>
-                <button id="clear-data" class="btn btn-danger">Effacer Toutes les Données</button>
+                <button id="export-json" class="btn btn-secondary">Export to JSON</button>
+                <button id="export-csv" class="btn btn-secondary">Export to CSV</button>
+                <button id="clear-data" class="btn btn-danger">Clear All Data</button>
             </div>
         </div>
     </div>
 
-    <!-- Modal de confirmation -->
+    <!-- Confirmation modal -->
     <div id="confirm-modal" class="modal">
         <div class="modal-content">
-            <h3>Confirmer la Suppression</h3>
-            <p>Êtes-vous sûr de vouloir supprimer cette transaction ?</p>
+            <h3>Confirm Deletion</h3>
+            <p>Are you sure you want to delete this transaction?</p>
             <div class="modal-buttons">
-                <button id="confirm-delete" class="btn btn-danger">Supprimer</button>
-                <button id="cancel-delete" class="btn btn-secondary">Annuler</button>
+                <button id="confirm-delete" class="btn btn-danger">Delete</button>
+                <button id="cancel-delete" class="btn btn-secondary">Cancel</button>
             </div>
         </div>
     </div>
@@ -192,11 +192,11 @@ Créez une interface moderne et intuitive :
 </html>
 ```
 
-### Étape 3 : Gestion du Stockage Local (js/storage.js)
-Implémentez la persistance des données :
+### Step 3: Local Storage Management (`js/storage.js`)
+Implement data persistence:
 
 ```javascript
-// js/storage.js - Gestion du stockage local
+// js/storage.js - Local storage management
 
 class StorageManager {
     constructor() {
@@ -210,8 +210,8 @@ class StorageManager {
             localStorage.setItem(this.TRANSACTIONS_KEY, JSON.stringify(transactions));
             return true;
         } catch (error) {
-            console.error('Erreur lors de la sauvegarde:', error);
-            this.showToast('Erreur lors de la sauvegarde des données', 'error');
+            console.error('Error while saving:', error);
+            this.showToast('Error while saving data', 'error');
             return false;
         }
     }
@@ -221,8 +221,8 @@ class StorageManager {
             const data = localStorage.getItem(this.TRANSACTIONS_KEY);
             return data ? JSON.parse(data) : [];
         } catch (error) {
-            console.error('Erreur lors du chargement:', error);
-            this.showToast('Erreur lors du chargement des données', 'error');
+            console.error('Error while loading:', error);
+            this.showToast('Error while loading data', 'error');
             return [];
         }
     }
@@ -233,12 +233,12 @@ class StorageManager {
             localStorage.removeItem(this.SETTINGS_KEY);
             return true;
         } catch (error) {
-            console.error('Erreur lors de la suppression:', error);
+            console.error('Error while clearing:', error);
             return false;
         }
     }
 
-    // Export des données
+    // Data export
     exportToJSON() {
         const transactions = this.loadTransactions();
         const dataStr = JSON.stringify(transactions, null, 2);
@@ -249,21 +249,21 @@ class StorageManager {
         const transactions = this.loadTransactions();
 
         if (transactions.length === 0) {
-            this.showToast('Aucune donnée à exporter', 'warning');
+            this.showToast('No data to export', 'warning');
             return;
         }
 
-        // En-têtes CSV
-        const headers = ['Date', 'Description', 'Montant', 'Type', 'Catégorie'];
+        // CSV headers
+        const headers = ['Date', 'Description', 'Amount', 'Type', 'Category'];
         let csvContent = headers.join(',') + '\n';
 
-        // Données
+        // Rows
         transactions.forEach(transaction => {
             const row = [
                 transaction.date,
-                `"${transaction.description}"`, // Échapper les virgules
+                `"${transaction.description}"`, // Escape commas
                 transaction.amount.toString().replace('.', ','),
-                transaction.type === 'income' ? 'Revenu' : 'Dépense',
+                transaction.type === 'income' ? 'Income' : 'Expense',
                 transaction.category
             ];
             csvContent += row.join(',') + '\n';
@@ -288,7 +288,7 @@ class StorageManager {
         URL.revokeObjectURL(url);
     }
 
-    // Notifications (toast)
+    // Toast notifications
     showToast(message, type = 'info') {
         const toastContainer = document.getElementById('toast-container');
 
@@ -304,16 +304,16 @@ class StorageManager {
 
         toastContainer.appendChild(toast);
 
-        // Animation d'entrée
+        // Intro animation
         setTimeout(() => toast.classList.add('show'), 100);
 
-        // Fermeture automatique
+        // Auto-close
         setTimeout(() => {
             toast.classList.remove('show');
             setTimeout(() => toast.remove(), 300);
         }, 5000);
 
-        // Fermeture manuelle
+        // Manual close
         toast.querySelector('.toast-close').addEventListener('click', () => {
             toast.classList.remove('show');
             setTimeout(() => toast.remove(), 300);
@@ -331,15 +331,14 @@ class StorageManager {
     }
 }
 
-// Instance globale
+// Global instance
 const storageManager = new StorageManager();
 ```
 
-### Étape 4 : Logique du Budget (js/budget.js)
-Implémentez la gestion des transactions et calculs :
-
+### Step 4: Budget Logic (`js/budget.js`)
+Implement transaction management and calculations:
 ```javascript
-// js/budget.js - Logique métier du budget
+// js/budget.js - Budget business logic
 
 class BudgetManager {
     constructor(storageManager) {
@@ -347,20 +346,20 @@ class BudgetManager {
         this.transactions = [];
         this.categories = {
             income: [
-                'Salaire',
+                'Salary',
                 'Freelance',
-                'Investissements',
-                'Autres revenus'
+                'Investments',
+                'Other income'
             ],
             expense: [
-                'Alimentation',
+                'Food',
                 'Transport',
-                'Logement',
-                'Loisirs',
-                'Santé',
-                'Éducation',
+                'Housing',
+                'Entertainment',
+                'Healthcare',
+                'Education',
                 'Shopping',
-                'Autres'
+                'Other'
             ]
         };
         this.loadTransactions();
@@ -369,11 +368,11 @@ class BudgetManager {
     // Transactions
     addTransaction(description, amount, type, category) {
         if (!description || !amount || !type || !category) {
-            throw new Error('Tous les champs sont requis');
+            throw new Error('All fields are required');
         }
 
         if (amount <= 0) {
-            throw new Error('Le montant doit être positif');
+            throw new Error('Amount must be positive');
         }
 
         const transaction = {
@@ -389,23 +388,23 @@ class BudgetManager {
         this.transactions.unshift(transaction); // Ajouter au début
         this.saveTransactions();
 
-        this.storage.showToast('Transaction ajoutée avec succès', 'success');
+        this.storage.showToast('Transaction added successfully', 'success');
         return transaction;
     }
 
     removeTransaction(id) {
         const index = this.transactions.findIndex(t => t.id === id);
         if (index === -1) {
-            throw new Error('Transaction non trouvée');
+            throw new Error('Transaction not found');
         }
 
         this.transactions.splice(index, 1);
         this.saveTransactions();
 
-        this.storage.showToast('Transaction supprimée', 'success');
+        this.storage.showToast('Transaction deleted', 'success');
     }
 
-    // Sauvegarde et chargement
+    // Save & load
     saveTransactions() {
         this.storage.saveTransactions(this.transactions);
     }
@@ -414,7 +413,7 @@ class BudgetManager {
         this.transactions = this.storage.loadTransactions();
     }
 
-    // Calculs
+    // Calculations
     getTotalIncome() {
         return this.transactions
             .filter(t => t.type === 'income')
@@ -431,21 +430,21 @@ class BudgetManager {
         return this.getTotalIncome() - this.getTotalExpense();
     }
 
-    // Filtrage et tri
+    // Filtering & sorting
     getFilteredTransactions(filters = {}) {
         let filtered = [...this.transactions];
 
-        // Filtre par type
+        // Filter by type
         if (filters.type && filters.type !== 'all') {
             filtered = filtered.filter(t => t.type === filters.type);
         }
 
-        // Filtre par catégorie
+        // Filter by category
         if (filters.category && filters.category !== 'all') {
             filtered = filtered.filter(t => t.category === filters.category);
         }
 
-        // Tri
+        // Sorting
         if (filters.sortBy) {
             filtered.sort((a, b) => {
                 switch (filters.sortBy) {
@@ -466,7 +465,7 @@ class BudgetManager {
         return filtered;
     }
 
-    // Statistiques par catégorie
+    // Category statistics
     getCategoryStats() {
         const stats = {};
 
@@ -487,7 +486,7 @@ class BudgetManager {
         return Object.values(stats);
     }
 
-    // Évolution mensuelle
+    // Monthly trend
     getMonthlyEvolution() {
         const monthly = {};
 
@@ -515,12 +514,12 @@ class BudgetManager {
 
         return Object.values(monthly)
             .sort((a, b) => a.month.localeCompare(b.month))
-            .slice(-6); // Derniers 6 mois
+            .slice(-6); // Last 6 months
     }
 
-    // Formatage
+    // Formatting
     formatCurrency(amount) {
-        return new Intl.NumberFormat('fr-FR', {
+        return new Intl.NumberFormat('en-US', {
             style: 'currency',
             currency: 'EUR'
         }).format(amount);
@@ -528,7 +527,7 @@ class BudgetManager {
 
     formatDate(dateString) {
         const date = new Date(dateString);
-        return date.toLocaleDateString('fr-FR', {
+        return date.toLocaleDateString('en-US', {
             year: 'numeric',
             month: 'long',
             day: 'numeric'
@@ -540,42 +539,41 @@ class BudgetManager {
         const errors = [];
 
         if (!description || description.trim().length < 3) {
-            errors.push('La description doit contenir au moins 3 caractères');
+            errors.push('Description must contain at least 3 characters');
         }
 
         const numAmount = parseFloat(amount);
         if (isNaN(numAmount) || numAmount <= 0) {
-            errors.push('Le montant doit être un nombre positif');
+            errors.push('Amount must be a positive number');
         }
 
         if (!type || !['income', 'expense'].includes(type)) {
-            errors.push('Le type doit être revenu ou dépense');
+            errors.push('Type must be income or expense');
         }
 
         if (!category) {
-            errors.push('Une catégorie doit être sélectionnée');
+            errors.push('A category must be selected');
         }
 
         return errors;
     }
 
-    // Réinitialisation
+    // Reset
     clearAllData() {
         this.transactions = [];
         this.storage.clearAllData();
-        this.storage.showToast('Toutes les données ont été supprimées', 'warning');
+        this.storage.showToast('All data has been deleted', 'warning');
     }
 }
 
-// Instance globale
+// Global instance
 let budgetManager = null;
 ```
 
-### Étape 5 : Interface Utilisateur (js/app.js)
-Créez l'interface interactive :
-
+### Step 5: User Interface (`js/app.js`)
+Create the interactive interface:
 ```javascript
-// js/app.js - Interface utilisateur et gestion des événements
+// js/app.js - User interface and event handling
 
 class BudgetApp {
     constructor() {
@@ -593,14 +591,14 @@ class BudgetApp {
     }
 
     setupEventListeners() {
-        // Formulaire de transaction
+        // Transaction form
         const transactionForm = document.getElementById('transaction-form');
         transactionForm.addEventListener('submit', (e) => {
             e.preventDefault();
             this.handleTransactionSubmit();
         });
 
-        // Filtres
+        // Filters
         document.getElementById('filter-type').addEventListener('change', () => this.updateTransactionsList());
         document.getElementById('filter-category').addEventListener('change', () => this.updateTransactionsList());
         document.getElementById('sort-by').addEventListener('change', () => this.updateTransactionsList());
@@ -618,7 +616,7 @@ class BudgetApp {
             this.confirmClearData();
         });
 
-        // Modal de confirmation
+        // Confirmation modal
         document.getElementById('confirm-delete').addEventListener('click', () => {
             this.confirmDeleteTransaction();
         });
@@ -627,7 +625,7 @@ class BudgetApp {
             this.hideModal();
         });
 
-        // Fermeture du modal en cliquant en dehors
+        // Close modal when clicking outside
         document.getElementById('confirm-modal').addEventListener('click', (e) => {
             if (e.target.id === 'confirm-modal') {
                 this.hideModal();
@@ -649,13 +647,13 @@ class BudgetApp {
                 return;
             }
 
-            // Ajout de la transaction
+            // Add the transaction
             this.budgetManager.addTransaction(description, amount, type, category);
 
-            // Réinitialisation du formulaire
+            // Reset form
             document.getElementById('transaction-form').reset();
 
-            // Mise à jour de l'interface
+            // Refresh UI
             this.updateUI();
 
         } catch (error) {
@@ -678,7 +676,7 @@ class BudgetApp {
         document.getElementById('total-income').textContent = this.budgetManager.formatCurrency(totalIncome);
         document.getElementById('total-expense').textContent = this.budgetManager.formatCurrency(totalExpense);
 
-        // Mise à jour du statut
+        // Update status
         const balanceElement = document.getElementById('balance-amount');
         const statusElement = document.getElementById('balance-status');
 
@@ -687,14 +685,14 @@ class BudgetApp {
 
         if (balance > 0) {
             balanceElement.classList.add('positive');
-            statusElement.textContent = 'Équilibré';
+            statusElement.textContent = 'Balanced';
             statusElement.classList.add('positive');
         } else if (balance < 0) {
             balanceElement.classList.add('negative');
-            statusElement.textContent = 'Déficit';
+            statusElement.textContent = 'Deficit';
             statusElement.classList.add('negative');
         } else {
-            statusElement.textContent = 'Équilibré';
+            statusElement.textContent = 'Balanced';
         }
     }
 
@@ -711,8 +709,8 @@ class BudgetApp {
         if (transactions.length === 0) {
             container.innerHTML = `
                 <div class="empty-state">
-                    <p>Aucune transaction trouvée.</p>
-                    <p>Modifiez vos filtres ou ajoutez une nouvelle transaction.</p>
+                    <p>No transactions found.</p>
+                    <p>Adjust your filters or add a new transaction.</p>
                 </div>
             `;
             return;
@@ -731,14 +729,14 @@ class BudgetApp {
                     <span class="amount ${transaction.type}">
                         ${transaction.type === 'income' ? '+' : '-'}${this.budgetManager.formatCurrency(transaction.amount)}
                     </span>
-                    <button class="delete-btn" data-id="${transaction.id}" title="Supprimer">
+                    <button class="delete-btn" data-id="${transaction.id}" title="Delete">
                         🗑️
                     </button>
                 </div>
             </div>
         `).join('');
 
-        // Gestionnaires d'événements pour suppression
+        // Event listeners for deletion
         container.querySelectorAll('.delete-btn').forEach(btn => {
             btn.addEventListener('click', (e) => {
                 e.stopPropagation();
@@ -752,16 +750,16 @@ class BudgetApp {
         const categorySelect = document.getElementById('category');
         const filterCategorySelect = document.getElementById('filter-category');
 
-        // Fonction pour ajouter les options
+        // Helper to add options
         const addCategoryOptions = (select) => {
-            // Vider les options existantes sauf la première
+            // Clear existing options except the first one
             while (select.children.length > 1) {
                 select.removeChild(select.lastChild);
             }
 
-            // Ajouter les catégories de revenus
+            // Add income categories
             const incomeGroup = document.createElement('optgroup');
-            incomeGroup.label = 'Revenus';
+            incomeGroup.label = 'Income';
             this.budgetManager.categories.income.forEach(category => {
                 const option = document.createElement('option');
                 option.value = category;
@@ -770,9 +768,9 @@ class BudgetApp {
             });
             select.appendChild(incomeGroup);
 
-            // Ajouter les catégories de dépenses
+            // Add expense categories
             const expenseGroup = document.createElement('optgroup');
-            expenseGroup.label = 'Dépenses';
+            expenseGroup.label = 'Expenses';
             this.budgetManager.categories.expense.forEach(category => {
                 const option = document.createElement('option');
                 option.value = category;
@@ -809,7 +807,7 @@ class BudgetApp {
     }
 
     confirmClearData() {
-        if (confirm('Êtes-vous sûr de vouloir effacer TOUTES les données ? Cette action est irréversible.')) {
+        if (confirm('Are you sure you want to delete ALL data? This action cannot be undone.')) {
             this.budgetManager.clearAllData();
             this.updateUI();
         }
@@ -884,7 +882,7 @@ class BudgetApp {
     updateCategoryChart() {
         const categoryStats = this.budgetManager.getCategoryStats();
 
-        // Regrouper par type pour les dépenses seulement
+        // Group by type (expenses only)
         const expenseStats = categoryStats.filter(stat => stat.type === 'expense');
 
         const labels = expenseStats.map(stat => stat.category);
@@ -901,7 +899,7 @@ class BudgetApp {
         const labels = monthlyData.map(month => {
             const [year, monthNum] = month.month.split('-');
             const date = new Date(year, monthNum - 1);
-            return date.toLocaleDateString('fr-FR', { month: 'short', year: 'numeric' });
+            return date.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
         });
 
         const incomeData = monthlyData.map(month => month.income);
@@ -914,84 +912,85 @@ class BudgetApp {
     }
 }
 
-// Initialisation de l'application
+// App initialization
 document.addEventListener('DOMContentLoaded', () => {
     new BudgetApp();
 });
 ```
 
-## Instructions de Test
+## Testing Checklist
 
-### Validation Fonctionnelle (40%)
-- [ ] Ajout de transactions fonctionne correctement
-- [ ] Calculs de solde, revenus et dépenses sont exacts
-- [ ] Filtres et tri fonctionnent correctement
-- [ ] Suppression de transactions avec confirmation
-- [ ] Stockage local persiste les données
+### Functional Validation (40%)
+- [ ] Adding transactions works correctly
+- [ ] Balance, income, and expense calculations are accurate
+- [ ] Filters and sorting behave as expected
+- [ ] Transaction deletion requires confirmation
+- [ ] Local storage persists data between sessions
 
-### Validation Technique (30%)
-- [ ] Toutes les variables sont correctement déclarées et utilisées
-- [ ] Conditions if/else gèrent tous les cas possibles
-- [ ] Boucles forEach/map/filter fonctionnent correctement
-- [ ] Fonctions sont définies et appelées correctement
-- [ ] Événements sont gérés proprement
+### Technical Validation (30%)
+- [ ] Variables are properly declared and used
+- [ ] If/else conditions cover every scenario
+- [ ] forEach/map/filter loops operate correctly
+- [ ] Functions are defined and called appropriately
+- [ ] Events are handled cleanly
 
-### Validation Interface (20%)
-- [ ] Interface s'adapte aux écrans mobiles
-- [ ] Messages d'erreur s'affichent correctement
-- [ ] Animations et transitions sont fluides
-- [ ] Design est intuitif et professionnel
+### Interface Validation (20%)
+- [ ] Interface adapts to mobile screens
+- [ ] Error messages display properly
+- [ ] Animations and transitions run smoothly
+- [ ] Design is intuitive and professional
 
-### Validation Données (10%)
-- [ ] Export JSON et CSV fonctionne correctement
-- [ ] Import des données au chargement fonctionne
-- [ ] Validation des formulaires empêche les erreurs
+### Data Validation (10%)
+- [ ] JSON and CSV exports work correctly
+- [ ] Data loads properly at startup
+- [ ] Form validation prevents invalid input
 
-## Défis Supplémentaires
+## Additional Challenges
 
-### Niveau 1 : Améliorations Fonctionnelles
-- Ajoutez une fonctionnalité de recherche textuelle
-- Implémentez des catégories personnalisées
-- Créez un système de budgets par catégorie
-- Ajoutez des rappels pour les échéances
+### Level 1: Feature Enhancements
+- Add a text search capability
+- Implement custom categories
+- Create per-category budgets
+- Add reminders for due dates
 
-### Niveau 2 : Fonctionnalités Avancées
-- Implémentez une synchronisation cloud (avec API)
-- Créez des rapports PDF des finances
-- Ajoutez un système de tags et de notes
-- Implémentez des objectifs financiers
+### Level 2: Advanced Features
+- Implement cloud sync (via API)
+- Generate PDF finance reports
+- Add a tagging and notes system
+- Implement financial goals
 
-### Niveau 3 : Optimisations Techniques
-- Ajoutez des tests unitaires pour les fonctions critiques
-- Implémentez la mise en cache des calculs
-- Ajoutez un service worker pour le mode hors ligne
-- Optimisez les performances avec la virtualisation des listes
+### Level 3: Technical Optimizations
+- Add unit tests for critical functions
+- Implement calculation caching
+- Add a service worker for offline mode
+- Optimize performance with list virtualization
 
-## Critères d'Évaluation
+## Evaluation Criteria
 
-### Programmation JavaScript (40%)
-- Utilisation correcte des variables, types de données et opérateurs
-- Implémentation correcte des conditions et boucles
-- Création et utilisation appropriée des fonctions
-- Gestion correcte des événements et du DOM
+### JavaScript Programming (40%)
+- Correct use of variables, data types, and operators
+- Proper implementation of conditions and loops
+- Appropriate creation and use of functions
+- Solid event and DOM handling
 
-### Logique Applicative (30%)
-- Calculs financiers corrects et précis
-- Gestion d'état cohérente
-- Validation des données appropriée
-- Gestion d'erreurs robuste
+### Application Logic (30%)
+- Accurate financial calculations
+- Consistent state management
+- Appropriate data validation
+- Robust error handling
 
-### Interface Utilisateur (20%)
-- Design responsive et moderne
-- Expérience utilisateur fluide
-- Feedback visuel approprié
-- Accessibilité respectée
+### User Interface (20%)
+- Modern, responsive design
+- Smooth user experience
+- Clear visual feedback
+- Accessibility considered
 
-### Qualité du Code (10%)
-- Code organisé et commenté
-- Respect des bonnes pratiques JavaScript
-- Gestion d'erreurs appropriée
-- Performance optimisée
+### Code Quality (10%)
+- Organized, well-structured code
+- JavaScript best practices respected
+- Proper error management
+- Optimized performance
 
-## Prochaines Étapes
-Félicitations pour votre première application JavaScript complète ! Vous maîtrisez maintenant les bases de JavaScript. Au prochain module, nous approfondirons les fonctions et objets pour créer du code plus modulaire et maintenable.
+## Next Steps
+
+Congratulations on building your first complete JavaScript application! You now have a solid grasp of JavaScript fundamentals. In the next module, we will dive deeper into functions and objects to create more modular, maintainable code.

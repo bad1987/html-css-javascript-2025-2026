@@ -1,309 +1,309 @@
-# Exercices Maison - Module 4 : Mise en Page et Design Responsive avec CSS
+# Homework Exercises
 
-## Aperçu
-Ces exercices vous permettent de maîtriser Flexbox, CSS Grid, et le design responsive. Vous apprendrez à créer des layouts modernes qui s'adaptent à tous les appareils et tailles d'écran.
+## Overview
+These exercises allow you to master Flexbox, CSS Grid, and responsive design. You will learn to create modern layouts that adapt to all devices and screen sizes.
 
-## Niveau Débutant
+## Beginner Level
 
-### Exercice 4.1 : Introduction à Flexbox
-**Objectif** : Comprendre et utiliser les bases de Flexbox pour aligner des éléments.
+### Exercise 4.1: Introduction to Flexbox
+**Objective**: Understand and use Flexbox basics to align elements.
 
-**Instructions** :
-1. Créez une page `flexbox-basics.html` avec plusieurs conteneurs
-2. Expérimentez avec les propriétés Flexbox :
-   - `display: flex` pour activer Flexbox
-   - `justify-content` pour l'alignement horizontal
-   - `align-items` pour l'alignement vertical
-   - `flex-direction` pour changer la direction
-3. Créez différents exemples :
-   - Navigation centrée horizontalement
-   - Carte avec image et texte alignés
-   - Boutons alignés à droite
-   - Contenu centré verticalement et horizontalement
+**Instructions**:
+1. Create a page `flexbox-basics.html` with multiple containers
+2. Experiment with Flexbox properties:
+   - `display: flex` to activate Flexbox
+   - `justify-content` for horizontal alignment
+   - `align-items` for vertical alignment
+   - `flex-direction` to change direction
+3. Create different examples:
+   - Centered horizontal navigation
+   - Card with aligned image and text
+   - Buttons aligned to the right
+   - Content centered both vertically and horizontally
 
-**Critères de validation** :
-- [ ] Au moins 5 exemples Flexbox différents
-- [ ] Utilisation de toutes les propriétés de base
-- [ ] Alignements corrects visibles
-- [ ] Code commenté expliquant chaque exemple
+**Validation Criteria**:
+- [ ] At least 5 different Flexbox examples
+- [ ] Use of all basic properties
+- [ ] Correct alignments visible
+- [ ] Commented code explaining each example
 
-**Indices** :
-- `justify-content: center` centre horizontalement
-- `align-items: center` centre verticalement
-- `flex-direction: column` change en disposition verticale
+**Hints**:
+- `justify-content: center` centers horizontally
+- `align-items: center` centers vertically
+- `flex-direction: column` changes to vertical layout
 
-### Exercice 4.2 : Modèle de Boîte CSS
-**Objectif** : Maîtriser le modèle de boîte avec margin, border, padding, et content.
+### Exercise 4.2: CSS Box Model
+**Objective**: Master the box model with margin, border, padding, and content.
 
-**Instructions** :
-1. Créez une page `box-model.html` démontrant le modèle de boîte
-2. Créez plusieurs boîtes avec différentes propriétés :
-   - Marges extérieures (`margin`)
-   - Bordures (`border`)
-   - Espacement intérieur (`padding`)
-   - Dimensions du contenu (`width`, `height`)
-3. Utilisez les outils de développement pour inspecter les boîtes
-4. Démontrez la différence entre `box-sizing: content-box` et `border-box`
+**Instructions**:
+1. Create a page `box-model.html` demonstrating the box model
+2. Create multiple boxes with different properties:
+   - External margins (`margin`)
+   - Borders (`border`)
+   - Internal spacing (`padding`)
+   - Content dimensions (`width`, `height`)
+3. Use developer tools to inspect the boxes
+4. Demonstrate the difference between `box-sizing: content-box` and `border-box`
 
-**Critères de validation** :
-- [ ] Différentes configurations de boîte visibles
-- [ ] Utilisation de toutes les propriétés du modèle de boîte
-- [ ] Explication des différences de `box-sizing`
-- [ ] Outils de développement utilisés pour l'inspection
+**Validation Criteria**:
+- [ ] Different box configurations visible
+- [ ] Use of all box model properties
+- [ ] Explanation of `box-sizing` differences
+- [ ] Developer tools used for inspection
 
-**Indices** :
-- `box-sizing: border-box` inclut padding et border dans la largeur
-- `margin: 0 auto` centre horizontalement les blocs
-- Inspectez avec F12 > Elements dans Chrome
+**Hints**:
+- `box-sizing: border-box` includes padding and border in width
+- `margin: 0 auto` centers blocks horizontally
+- Inspect with F12 > Elements in Chrome
 
-## Niveau Intermédiaire
+## Intermediate Level
 
-### Exercice 4.3 : Layout de Portfolio Responsive
-**Objectif** : Créer un portfolio complet avec navigation, sections, et design responsive.
+### Exercise 4.3: Responsive Portfolio Layout
+**Objective**: Create a complete portfolio with navigation, sections, and responsive design.
 
-**Instructions** :
-1. Créez un portfolio multi-sections (`portfolio-responsive.html`)
-2. Incluez :
-   - Header avec navigation (Flexbox)
-   - Section hero avec titre et description
-   - Section projets sous forme de grille
-   - Section à propos avec layout flexible
-   - Footer avec informations de contact
-3. Rendez-le responsive :
-   - Navigation hamburger pour mobile
-   - Grille adaptative (3 colonnes → 2 → 1)
-   - Tailles de police adaptatives
-   - Espacement ajusté selon l'écran
+**Instructions**:
+1. Create a multi-section portfolio (`portfolio-responsive.html`)
+2. Include:
+   - Header with navigation (Flexbox)
+   - Hero section with title and description
+   - Projects section as a grid
+   - About section with flexible layout
+   - Footer with contact information
+3. Make it responsive:
+   - Hamburger navigation for mobile
+   - Adaptive grid (3 columns → 2 → 1)
+   - Adaptive font sizes
+   - Screen-adjusted spacing
 
-**Critères de validation** :
-- [ ] Layout utilisant Flexbox et Grid
-- [ ] Design responsive sur mobile/tablette/desktop
-- [ ] Navigation fonctionnelle sur tous les appareils
-- [ ] Images et contenu adaptés aux écrans
+**Validation Criteria**:
+- [ ] Layout using Flexbox and Grid
+- [ ] Responsive design on mobile/tablet/desktop
+- [ ] Functional navigation on all devices
+- [ ] Images and content adapted to screens
 
-**Indices** :
-- `@media (max-width: 768px)` pour les breakpoints
+**Hints**:
+- `@media (max-width: 768px)` for breakpoints
 - `grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))`
-- Utilisez des unités relatives (`rem`, `em`, `%`)
+- Use relative units (`rem`, `em`, `%`)
 
-### Exercice 4.4 : Introduction à CSS Grid
-**Objectif** : Apprendre les bases de CSS Grid pour créer des layouts complexes.
+### Exercise 4.4: Introduction to CSS Grid
+**Objective**: Learn CSS Grid basics to create complex layouts.
 
-**Instructions** :
-1. Créez une page `grid-basics.html` avec différents layouts Grid
-2. Expérimentez avec :
-   - `grid-template-columns` et `grid-template-rows`
-   - `grid-column` et `grid-row` pour positionner des éléments
-   - `grid-gap` pour l'espacement
-   - `grid-template-areas` pour des layouts nommés
-3. Créez des exemples pratiques :
-   - Grille de galerie photo
-   - Layout de magazine (en-tête, sidebar, contenu principal)
-   - Formulaire organisé en grille
+**Instructions**:
+1. Create a page `grid-basics.html` with different Grid layouts
+2. Experiment with:
+   - `grid-template-columns` and `grid-template-rows`
+   - `grid-column` and `grid-row` to position elements
+   - `grid-gap` for spacing
+   - `grid-template-areas` for named layouts
+3. Create practical examples:
+   - Photo gallery grid
+   - Magazine layout (header, sidebar, main content)
+   - Grid-organized form
 
-**Critères de validation** :
-- [ ] Au moins 4 exemples Grid différents
-- [ ] Utilisation de `grid-template-areas`
-- [ ] Positionnement explicite d'éléments
-- [ ] Espacement cohérent avec `gap`
+**Validation Criteria**:
+- [ ] At least 4 different Grid examples
+- [ ] Use of `grid-template-areas`
+- [ ] Explicit element positioning
+- [ ] Consistent spacing with `gap`
 
-**Indices** :
-- `grid-template-columns: 1fr 2fr 1fr` crée des colonnes proportionnelles
-- `grid-column: 1 / 3` fait span sur 2 colonnes
-- Nommez les areas : `grid-template-areas: "header header" "nav main"`
+**Hints**:
+- `grid-template-columns: 1fr 2fr 1fr` creates proportional columns
+- `grid-column: 1 / 3` spans across 2 columns
+- Name areas: `grid-template-areas: "header header" "nav main"`
 
-## Niveau Avancé
+## Advanced Level
 
-### Exercice 4.5 : Application de Gestion de Projets
-**Objectif** : Créer une interface de gestion de projets avec layout complexe.
+### Exercise 4.5: Project Management Application
+**Objective**: Create a project management interface with complex layout.
 
-**Instructions** :
-1. Créez une application `gestion-projets.html` avec :
-   - Sidebar de navigation (projets, tâches)
-   - En-tête avec recherche et profil utilisateur
-   - Zone principale avec tableau de bord
-   - Grille de cartes de projets
-   - Modales pour créer/éditer des projets
-2. Utilisez CSS Grid pour le layout principal :
-   - Grid areas pour l'organisation globale
-   - Grilles imbriquées pour les sections
-   - Flexbox pour les composants internes
-3. Rendez tout responsive avec breakpoints intelligents
+**Instructions**:
+1. Create an application `project-management.html` with:
+   - Navigation sidebar (projects, tasks)
+   - Header with search and user profile
+   - Main area with dashboard
+   - Project cards grid
+   - Modals for creating/editing projects
+2. Use CSS Grid for main layout:
+   - Grid areas for global organization
+   - Nested grids for sections
+   - Flexbox for internal components
+3. Make everything responsive with smart breakpoints
 
-**Critères de validation** :
-- [ ] Layout complexe utilisant Grid et Flexbox
-- [ ] Interface fonctionnelle et intuitive
-- [ ] Design entièrement responsive
-- [ ] Animations et transitions fluides
-- [ ] Architecture CSS organisée (BEM ou similaire)
+**Validation Criteria**:
+- [ ] Complex layout using Grid and Flexbox
+- [ ] Functional and intuitive interface
+- [ ] Fully responsive design
+- [ ] Smooth animations and transitions
+- [ ] Organized CSS architecture (BEM or similar)
 
-**Indices** :
-- Utilisez `grid-template-areas` pour le layout principal
-- Pensez mobile-first pour le responsive
-- Organisez votre CSS en composants modulaires
+**Hints**:
+- Use `grid-template-areas` for main layout
+- Think mobile-first for responsive
+- Organize your CSS into modular components
 
-### Exercice 4.6 : Framework CSS Simplifié
-**Objectif** : Créer votre propre système de grille responsive inspiré de Bootstrap.
+### Exercise 4.6: Simplified CSS Framework
+**Objective**: Create your own responsive grid system inspired by Bootstrap.
 
-**Instructions** :
-1. Créez un fichier `mon-framework.css` avec :
-   - Système de grille (12 colonnes)
-   - Classes utilitaires (`col-6`, `offset-3`)
+**Instructions**:
+1. Create a file `my-framework.css` with:
+   - Grid system (12 columns)
+   - Utility classes (`col-6`, `offset-3`)
    - Breakpoints (`sm-`, `md-`, `lg-`)
-   - Conteneurs responsives
-   - Utilitaires d'espacement (`m-3`, `p-2`)
-2. Créez une page de démonstration montrant :
-   - Grille de base (lignes et colonnes)
-   - Grille responsive (colonnes qui s'empilent)
-   - Utilitaires utilisés dans un vrai layout
-3. Documentez votre framework
+   - Responsive containers
+   - Spacing utilities (`m-3`, `p-2`)
+2. Create a demonstration page showing:
+   - Basic grid (rows and columns)
+   - Responsive grid (columns that stack)
+   - Utilities used in a real layout
+3. Document your framework
 
-**Critères de validation** :
-- [ ] Système de grille fonctionnel (12 colonnes)
-- [ ] Breakpoints mobiles/tablettes/desktop
-- [ ] Utilitaires d'espacement complets
-- [ ] Documentation claire des classes
-- [ ] Démonstration pratique complète
+**Validation Criteria**:
+- [ ] Functional grid system (12 columns)
+- [ ] Mobile/tablet/desktop breakpoints
+- [ ] Complete spacing utilities
+- [ ] Clear documentation of classes
+- [ ] Complete practical demonstration
 
-**Indices** :
+**Hints**:
 - `.container { max-width: 1200px; margin: 0 auto; }`
 - `.row { display: flex; flex-wrap: wrap; }`
 - `.col-6 { flex: 0 0 50%; max-width: 50%; }`
 
-## Défi Bonus
+## Bonus Challenge
 
-### Exercice 4.7 : Design System Complet
-**Objectif** : Créer un design system complet avec layout, composants, et thème.
+### Exercise 4.7: Complete Design System
+**Objective**: Create a complete design system with layout, components, and theme.
 
-**Instructions** :
-1. Étendez votre framework CSS avec :
-   - Variables CSS pour thème (couleurs, polices, espacement)
-   - Composants de base (boutons, cartes, formulaires)
-   - Utilitaires avancés (display, position, z-index)
-   - Thème sombre/clair intégré
-   - Animations et transitions globales
-2. Créez une page de styleguide (`styleguide.html`) montrant :
-   - Tous les composants avec variations
-   - Palette de couleurs et typographie
-   - Grille et breakpoints
-   - Exemples d'usage
-3. Rendez-le maintenable et extensible
+**Instructions**:
+1. Extend your CSS framework with:
+   - CSS variables for theme (colors, fonts, spacing)
+   - Basic components (buttons, cards, forms)
+   - Advanced utilities (display, position, z-index)
+   - Integrated dark/light theme
+   - Global animations and transitions
+2. Create a styleguide page (`styleguide.html`) showing:
+   - All components with variations
+   - Color palette and typography
+   - Grid and breakpoints
+   - Usage examples
+3. Make it maintainable and extensible
 
-**Critères de validation** :
-- [ ] Design system cohérent et complet
-- [ ] Variables CSS organisées
-- [ ] Composants réutilisables
-- [ ] Styleguide professionnel
-- [ ] Thème extensible
+**Validation Criteria**:
+- [ ] Consistent and complete design system
+- [ ] Organized CSS variables
+- [ ] Reusable components
+- [ ] Professional styleguide
+- [ ] Extensible theme
 
-**Indices** :
-- Utilisez `:root` pour les variables globales
-- Préfixez les classes de composants (`ds-button`, `ds-card`)
-- Documentez avec des exemples de code
+**Hints**:
+- Use `:root` for global variables
+- Prefix component classes (`ds-button`, `ds-card`)
+- Document with code examples
 
-### Exercice 4.8 : Optimisation de Performance Layout
-**Objectif** : Optimiser un layout existant pour de meilleures performances.
+### Exercise 4.8: Layout Performance Optimization
+**Objective**: Optimize an existing layout for better performance.
 
-**Instructions** :
-1. Prenez un layout complexe existant
-2. Identifiez les problèmes de performance :
-   - Layout shifts coûteux (changement de `display`)
-   - Repaints et reflows inutiles
-   - Sélecteurs inefficaces
-   - Images non optimisées
-3. Appliquez les optimisations :
-   - Utilisez `contain` pour isoler les layouts
-   - Préférez `transform` aux changements de position
-   - Optimisez les images (formats, tailles)
-   - Réduisez la complexité des sélecteurs
-4. Mesurez les améliorations avec les outils de développement
+**Instructions**:
+1. Take an existing complex layout
+2. Identify performance issues:
+   - Costly layout shifts (changing `display`)
+   - Unnecessary repaints and reflows
+   - Inefficient selectors
+   - Unoptimized images
+3. Apply optimizations:
+   - Use `contain` to isolate layouts
+   - Prefer `transform` to position changes
+   - Optimize images (formats, sizes)
+   - Reduce selector complexity
+4. Measure improvements with developer tools
 
-**Critères de validation** :
-- [ ] Analyse de performance fournie (avant/après)
-- [ ] Optimisations appliquées et justifiées
-- [ ] Amélioration mesurable des métriques
-- [ ] Layout préservé visuellement
-- [ ] Code plus maintenable
+**Validation Criteria**:
+- [ ] Performance analysis provided (before/after)
+- [ ] Applied optimizations justified
+- [ ] Measurable improvement in metrics
+- [ ] Layout visually preserved
+- [ ] More maintainable code
 
-**Indices** :
-- Utilisez l'onglet Performance de Chrome DevTools
-- `contain: layout style paint` isole les sous-arbres
-- Préchargez les ressources critiques
-- Utilisez `content-visibility: auto` pour les longues pages
+**Hints**:
+- Use Chrome DevTools Performance tab
+- `contain: layout style paint` isolates subtrees
+- Preload critical resources
+- Use `content-visibility: auto` for long pages
 
-## Intégration Inter-modules
+## Inter-module Integration
 
-### Exercice 4.9 : Préparation Module 5
-**Objectif** : Préparer l'intégration JavaScript en ajoutant des classes pour l'interactivité.
+### Exercise 4.9: Module 5 Preparation
+**Objective**: Prepare JavaScript integration by adding classes for interactivity.
 
-**Instructions** :
-1. Reprenez votre portfolio responsive
-2. Ajoutez des classes et attributs pour JavaScript :
-   - `data-*` pour stocker des informations
-   - Classes pour les états (`is-active`, `is-hidden`)
-   - IDs pour les éléments interactifs
-   - Attributs pour la validation de formulaires
-3. Préparez les structures pour :
-   - Navigation JavaScript (menu mobile)
-   - Filtres et recherche
-   - Modales et popups
-   - Formulaires avec validation
-4. Documentez les hooks JavaScript dans des commentaires
+**Instructions**:
+1. Take your responsive portfolio
+2. Add classes and attributes for JavaScript:
+   - `data-*` to store information
+   - Classes for states (`is-active`, `is-hidden`)
+   - IDs for interactive elements
+   - Attributes for form validation
+3. Prepare structures for:
+   - JavaScript navigation (mobile menu)
+   - Filters and search
+   - Modals and popups
+   - Forms with validation
+4. Document JavaScript hooks in comments
 
-**Critères de validation** :
-- [ ] Attributs `data-*` appropriés ajoutés
-- [ ] Classes d'état définies en CSS
-- [ ] Structure prête pour JavaScript
-- [ ] Commentaires indiquant les fonctionnalités futures
-- [ ] Compatibilité avec l'ajout de JS préservée
+**Validation Criteria**:
+- [ ] Appropriate `data-*` attributes added
+- [ ] State classes defined in CSS
+- [ ] Structure ready for JavaScript
+- [ ] Comments indicating future features
+- [ ] Compatibility with JS addition preserved
 
-**Indices** :
-- `data-project-id="123"` pour identifier les éléments
-- Préparez des classes `.js-hidden` pour JavaScript
-- Anticipez les event listeners nécessaires
+**Hints**:
+- `data-project-id="123"` to identify elements
+- Prepare `.js-hidden` classes for JavaScript
+- Anticipate necessary event listeners
 
-### Exercice 4.10 : Application Web Moderne
-**Objectif** : Créer une application web complète combinant tous les apprentissages.
+### Exercise 4.10: Modern Web Application
+**Objective**: Create a complete web application combining all learnings.
 
-**Instructions** :
-1. Créez une application de "Bloc-notes" (`notes-app.html`)
-2. Fonctionnalités :
-   - Créer/modifier/supprimer des notes
-   - Catégoriser les notes (travail, personnel, idées)
-   - Recherche dans les notes
-   - Vue grille/liste
-   - Thème sombre/clair
-3. Layout responsive complet :
-   - Sidebar pour la navigation/catégories
-   - Zone principale pour les notes
-   - Header avec contrôles
-   - Modales pour créer/éditer
-4. Préparez pour JavaScript (structure seulement)
+**Instructions**:
+1. Create a "Notes" application (`notes-app.html`)
+2. Features:
+   - Create/edit/delete notes
+   - Categorize notes (work, personal, ideas)
+   - Search in notes
+   - Grid/list view
+   - Dark/light theme
+3. Complete responsive layout:
+   - Sidebar for navigation/categories
+   - Main area for notes
+   - Header with controls
+   - Modals for creating/editing
+4. Prepare for JavaScript (structure only)
 
-**Critères de validation** :
-- [ ] Interface utilisateur complète et intuitive
-- [ ] Layout entièrement responsive
-- [ ] Architecture préparée pour JavaScript
-- [ ] Design moderne et accessible
-- [ ] Fonctionnalités futures bien structurées
+**Validation Criteria**:
+- [ ] Complete and intuitive user interface
+- [ ] Fully responsive layout
+- [ ] Architecture prepared for JavaScript
+- [ ] Modern and accessible design
+- [ ] Future features well structured
 
-**Indices** :
-- Utilisez Grid pour le layout principal
-- Préparez des classes pour les états (active, selected)
-- Anticipez la persistance avec localStorage
+**Hints**:
+- Use Grid for main layout
+- Prepare classes for states (active, selected)
+- Anticipate persistence with localStorage
 
-## Critères de Validation Globaux
+## Global Validation Criteria
 
-Pour réussir ces exercices, assurez-vous que :
+To succeed in these exercises, ensure that:
 
-- **Responsive** : Design fonctionnel sur tous les appareils (mobile/tablette/desktop)
-- **Performance** : Layouts optimisés (éviter les shifts de layout)
-- **Accessibilité** : Navigation clavier et lecteurs d'écran supportés
-- **Maintenabilité** : Code CSS organisé et documenté
-- **Modernité** : Utilisation de Grid et Flexbox appropriée
-- **Compatibilité** : Support des navigateurs modernes
+- **Responsive**: Functional design on all devices (mobile/tablet/desktop)
+- **Performance**: Optimized layouts (avoid layout shifts)
+- **Accessibility**: Keyboard navigation and screen readers supported
+- **Maintainability**: Organized and documented CSS code
+- **Modernity**: Appropriate use of Grid and Flexbox
+- **Compatibility**: Support for modern browsers
 
-## Ressources d'Aide
+## Help Resources
 
 - [CSS Grid Complete Guide](https://css-tricks.com/snippets/css/complete-guide-grid/)
 - [Flexbox Complete Guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
@@ -311,6 +311,6 @@ Pour réussir ces exercices, assurez-vous que :
 - [CSS Performance Tools](https://developers.google.com/web/tools/chrome-devtools)
 - [Grid by Example](https://gridbyexample.com/)
 
-## Prochaines Étapes
+## Next Steps
 
-Ces exercices vous préparent parfaitement pour le Module 5 où vous ajouterez de l'interactivité avec JavaScript. Vous maîtriserez maintenant les layouts modernes et responsives pour créer des applications web professionnelles !
+These exercises perfectly prepare you for Module 5 where you will add interactivity with JavaScript. You will now master modern and responsive layouts to create professional web applications!

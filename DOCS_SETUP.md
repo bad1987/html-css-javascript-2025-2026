@@ -1,47 +1,59 @@
 # MkDocs Documentation Setup
 
-This repository contains a complete HTML/CSS/JavaScript course that can be served as a documentation website using MkDocs.
+This repository contains the complete HTML, CSS and JavaScript Course 2025-2026, published as a documentation website using MkDocs.
+
+This guide explains how to install the dependencies, run the documentation locally, and build the static site.
 
 ## Setup Instructions
 
-1. **Install dependencies**:
+1. Install Python dependencies:
+
    ```bash
    pip install -r requirements.txt
    ```
 
-2. **Serve the documentation locally**:
+2. Serve the documentation locally (live preview with auto-reload):
+
    ```bash
    mkdocs serve
    ```
 
-3. **Build the static site** (for offline distribution):
+3. Build the static site (for offline distribution or deployment):
+
    ```bash
    mkdocs build
    ```
 
-## Accessing the Documentation
+## Documentation Structure
 
-- When running `mkdocs serve`, the documentation will be available at `http://127.0.0.1:8000`
-- The complete course is organized by modules, with each module containing:
-  - Main content (README.md)
-  - Practical cases (cas-pratique.md)
-  - Homework exercises (exercices-maison.md)
+- `docs/` contains all source Markdown files for the course.
+  - Each module is stored in its own subdirectory under `docs/` (paths and filenames are preserved).
+  - Typical module content:
+    - `README.md`: main module content
+    - `cas-pratique.md`: Practical Project
+    - `exercices-maison.md`: Homework Exercises
+
+- `site/` is the generated output directory created by `mkdocs build`.
+  - It contains the static HTML, assets, and compiled site.
+  - Do not edit files in `site/` manually; always edit content in `docs/` and rebuild with MkDocs.
 
 ## Benefits for Students
 
-- **Offline Access**: Students can download and access the complete course without internet
-- **Better Navigation**: Easy-to-use navigation and search functionality
-- **Responsive Design**: Works well on mobile devices and desktop computers
-- **Searchable Content**: Students can quickly find specific topics
+- Offline access: the generated `site/` can be shared for use without an internet connection.
+- Better navigation: clear sidebar navigation and structured modules.
+- Responsive design: works on desktop, tablet, and mobile.
+- Searchable content: built-in search makes it easy to find topics.
 
-## Course Structure
+## Module Overview
 
-- **Module 1**: Introduction au Développement Web
-- **Module 2**: Structure et Sémantique HTML
-- **Module 3**: Notions Fondamentales du CSS
-- **Module 4**: Mise en Page et Design Responsive avec CSS
-- **Module 5**: Notions de Base JavaScript
-- **Module 6**: Fonctions et Objets JavaScript
-- **Module 7**: JavaScript Avancé et APIs
-- **Module 8**: Applications Web Full-Stack
-- **Module 9**: Sujets Avancés et Bonnes Pratiques
+The modules in the documentation follow these themes (URLs and directory names remain unchanged):
+
+- Module 01 - Introduction to Web Development
+- Module 02 - HTML Structure and Semantics
+- Module 03 - CSS Fundamentals
+- Module 04 - CSS Layout and Responsive Design
+- Module 05 - JavaScript Basics
+- Module 06 - JavaScript Functions and Objects
+- Module 07 - Advanced JavaScript and APIs
+- Module 08 - Full-Stack Web Applications
+- Module 09 - Advanced Topics and Best Practices

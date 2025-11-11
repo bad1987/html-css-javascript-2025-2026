@@ -1,39 +1,39 @@
-# Module 2 : Structure et Sémantique HTML
+# Module 02 - HTML Structure and Semantics
 
-## Aperçu
-Maintenant que vous connaissez les bases du HTML, construisons une structure de page web appropriée. Vous apprendrez les éléments HTML sémantiques qui donnent du sens à votre contenu et rendent vos sites accessibles à tous, y compris les lecteurs d'écran et les moteurs de recherche.
+## Overview
+Now that you know the basics of HTML, this module focuses on building well-structured pages using semantic elements. You will learn how to give meaning to your content, improve accessibility, and help search engines and assistive technologies better understand your pages.
 
-## Objectifs d'Apprentissage
-À la fin de ce module, vous serez capable de :
-- Utiliser des éléments HTML sémantiques pour une meilleure structure
-- Créer du contenu web accessible
-- Construire des mises en page de page web complètes
-- Ajouter des images, liens et multimédia
-- Comprendre la structure des documents HTML
+## Objectives
+By the end of this module, you will be able to:
+- Use semantic HTML elements to create meaningful structure
+- Build accessible web content
+- Create complete page layouts with sections and navigation
+- Add images, links, and basic media
+- Understand the overall structure of an HTML document
 
-## Prérequis
-- Module 1 : Connaissances HTML de base
-- Compréhension des balises de base (h1, p, ul, etc.)
+## Prerequisites
+- Module 01 - Introduction to Web Development: basic HTML knowledge
+- Understanding of basic tags (h1, p, ul, etc.)
 
-## Matériaux Nécessaires
-- Éditeur VS Code avec extension Live Server
-- Images d'exemple (ou utilisez des URLs d'images en ligne)
+## Required Materials
+- VS Code with Live Server extension
+- Sample images (or online image URLs)
 
-## Structure de Session
-- Session 1 : Éléments HTML Sémantiques (30 min)
-- Session 2 : Liens, Images et Multimédia (30 min)
-- Activité Pratique : Construire une Page de Recette Complète (1 heure)
+## Session Structure
+- Session 1: Semantic HTML Elements (30 min)
+- Session 2: Links, Images, and Media (30 min)
+- Practical Activity: Build a Complete Recipe Page (1 hour)
 
-## Théorie : HTML Sémantique
+## Theory: Semantic HTML
 
-### Pourquoi le HTML Sémantique est Important
-Le HTML sémantique utilise des balises significatives qui décrivent le but du contenu :
+### Why Semantic HTML Matters
+Semantic HTML uses meaningful tags that describe the purpose of content.
 
-**Avantages :**
-- **Accessibilité** : Les lecteurs d'écran peuvent mieux naviguer
-- **SEO** : Les moteurs de recherche comprennent votre contenu
-- **Maintenabilité** : Le code est plus facile à lire et à mettre à jour
-- **Standards** : Suit les meilleures pratiques du développement web
+Benefits:
+- Accessibility: Screen readers can navigate pages more easily
+- SEO: Search engines better understand your content
+- Maintainability: Code is easier to read and update
+- Standards: Encourages modern web best practices
 
 ### Éléments Sémantiques Courants
 
@@ -47,158 +47,163 @@ Le HTML sémantique utilise des balises significatives qui décrivent le but du 
 | `<aside>` | Contenu latéral | Barres latérales, infos liées |
 | `<footer>` | Pied de page du site/page | Copyright, contact |
 
-## Activité Pratique : Liens et Images
+## Practical Activity: Links and Images
 
-### Ajouter des Liens
-Les liens connectent vos pages et permettent la navigation :
-
-```html
-<!-- URL absolue -->
-<a href="https://www.google.com">Visiter Google</a>
-
-<!-- Lien relatif (même dossier) -->
-<a href="about.html">À Propos</a>
-
-<!-- Lien avec target="_blank" s'ouvre dans un nouvel onglet -->
-<a href="https://example.com" target="_blank">Ouvrir dans un Nouvel Onglet</a>
-```
-
-### Ajouter des Images
-Les images rendent vos pages visuelles :
+### Adding Links
+Links connect your pages and enable navigation:
 
 ```html
-<!-- Image de base -->
-<img src="photo.jpg" alt="Description de l'image">
+<!-- Absolute URL -->
+<a href="https://www.google.com">Visit Google</a>
 
-<!-- Image avec taille -->
-<img src="photo.jpg" alt="Mon chat" width="300" height="200">
+<!-- Relative link (same folder) -->
+<a href="about.html">About</a>
 
-<!-- Image du web -->
-<img src="https://example.com/image.jpg" alt="Image en ligne">
+<!-- Open link in a new tab -->
+<a href="https://example.com" target="_blank" rel="noopener noreferrer">
+  Open in a new tab
+</a>
 ```
 
-**Important :** Incluez toujours du texte `alt` pour l'accessibilité !
+### Adding Images
+Images make your pages more visual and engaging:
 
-## Projet : Page de Site de Recettes
+```html
+<!-- Basic image -->
+<img src="photo.jpg" alt="Short descriptive text" />
 
-Créez une page de recette complète utilisant le HTML sémantique :
+<!-- Image with size -->
+<img src="photo.jpg" alt="My cat" width="300" height="200" />
+
+<!-- Remote image -->
+<img src="https://example.com/image.jpg" alt="Online image example" />
+```
+
+Important: Always include meaningful `alt` text for accessibility.
+
+## Project: Recipe Website Page
+
+Create a complete recipe page using semantic HTML:
 
 ```html
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recette de Cookies aux Pépites de Chocolat</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Classic Chocolate Chip Cookies</title>
 </head>
 <body>
-    <header>
-        <h1>Ma Collection de Recettes</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Accueil</a></li>
-                <li><a href="#recipes">Recettes</a></li>
-                <li><a href="#about">À Propos</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <h1>My Recipe Collection</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#recipes">Recipes</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main>
-        <article>
-            <header>
-                <h2>Cookies aux Pépites de Chocolat Classiques</h2>
-                <p>Temps de préparation : 15 min | Temps de cuisson : 12 min | Pour 24 cookies</p>
-            </header>
+  <main>
+    <article>
+      <header>
+        <h2>Classic Chocolate Chip Cookies</h2>
+        <p>Prep time: 15 min | Cook time: 12 min | Yield: 24 cookies</p>
+      </header>
 
-            <section id="ingredients">
-                <h3>Ingrédients</h3>
-                <ul>
-                    <li>2 1/4 tasses de farine tout usage</li>
-                    <li>1 cuillère à café de bicarbonate de soude</li>
-                    <li>1 tasse de beurre non salé, ramolli</li>
-                    <li>3/4 tasse de sucre granulé</li>
-                    <li>3/4 tasse de sucre brun</li>
-                    <li>2 gros œufs</li>
-                    <li>2 cuillères à café d'extrait de vanille</li>
-                    <li>2 tasses de pépites de chocolat</li>
-                </ul>
-            </section>
-
-            <section id="instructions">
-                <h3>Instructions</h3>
-                <ol>
-                    <li>Préchauffez le four à 190°C</li>
-                    <li>Crèmez le beurre avec les sucres</li>
-                    <li>Incorporez les œufs et la vanille</li>
-                    <li>Mélangez les ingrédients secs séparément</li>
-                    <li>Combinez les ingrédients humides et secs</li>
-                    <li>Incorporez les pépites de chocolat</li>
-                    <li>Déposez des cuillerées sur la plaque</li>
-                    <li>Cuisez 9-11 minutes</li>
-                </ol>
-            </section>
-
-            <section id="tips">
-                <h3>Conseils du Chef</h3>
-                <p>Pour des cookies plus moelleux, sous-cuisez légèrement. Ils continueront de cuire sur la plaque chaude.</p>
-            </section>
-        </article>
-    </main>
-
-    <aside>
-        <h3>Recettes Populaires</h3>
+      <section id="ingredients">
+        <h3>Ingredients</h3>
         <ul>
-            <li><a href="brownies.html">Brownies Fudge</a></li>
-            <li><a href="muffins.html">Muffins aux Myrtilles</a></li>
-            <li><a href="cake.html">Cupcakes Vanille</a></li>
+          <li>2 1/4 cups all-purpose flour</li>
+          <li>1 teaspoon baking soda</li>
+          <li>1 cup unsalted butter, softened</li>
+          <li>3/4 cup granulated sugar</li>
+          <li>3/4 cup brown sugar</li>
+          <li>2 large eggs</li>
+          <li>2 teaspoons vanilla extract</li>
+          <li>2 cups chocolate chips</li>
         </ul>
-    </aside>
+      </section>
 
-    <footer>
-        <p>&copy; 2024 Ma Collection de Recettes. Tous droits réservés.</p>
-    </footer>
+      <section id="instructions">
+        <h3>Instructions</h3>
+        <ol>
+          <li>Preheat the oven to 190°C (375°F).</li>
+          <li>Cream the butter with both sugars until smooth.</li>
+          <li>Mix in the eggs and vanilla.</li>
+          <li>In a separate bowl, combine flour and baking soda.</li>
+          <li>Gradually mix dry ingredients into the wet mixture.</li>
+          <li>Stir in the chocolate chips.</li>
+          <li>Drop spoonfuls of dough onto a baking tray.</li>
+          <li>Bake for 9–11 minutes until lightly golden.</li>
+        </ol>
+      </section>
+
+      <section id="tips">
+        <h3>Baking Tips</h3>
+        <p>
+          For softer cookies, slightly underbake them. They will continue to cook
+          on the hot tray after you remove them from the oven.
+        </p>
+      </section>
+    </article>
+  </main>
+
+  <aside>
+    <h3>Popular Recipes</h3>
+    <ul>
+      <li><a href="brownies.html">Fudgy Brownies</a></li>
+      <li><a href="muffins.html">Blueberry Muffins</a></li>
+      <li><a href="cake.html">Vanilla Cupcakes</a></li>
+    </ul>
+  </aside>
+
+  <footer>
+    <p>&copy; 2024 My Recipe Collection. All rights reserved.</p>
+  </footer>
 </body>
 </html>
 ```
 
-## Évaluation
-Construisez une page de portfolio personnel avec :
-- Structure sémantique appropriée (header, nav, main, footer)
-- Plusieurs sections pour différentes zones de contenu
-- Liens vers des sites web externes et navigation interne
-- Images avec du texte alt descriptif et accessibilité
-- Au moins 3 pages différentes liées ensemble
-- Utilisation appropriée des éléments sémantiques pour le SEO
+## Assessment
+Build a personal portfolio site with:
+- Proper semantic structure (header, nav, main, footer)
+- Multiple sections for different content areas
+- Links to external websites and internal navigation
+- Images with descriptive alt text for accessibility
+- At least three pages linked together
+- Appropriate semantic elements to support SEO
 
-## Défi Supplémentaire
-Ajoutez un tableau pour afficher les informations nutritionnelles de votre recette :
+## Extra Challenge
+Add a table to display nutrition information for your recipe:
 
 ```html
 <table>
-    <caption>Informations Nutritionnelles (par cookie)</caption>
-    <thead>
-        <tr>
-            <th>Nutriment</th>
-            <th>Quantité</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Calories</td>
-            <td>150</td>
-        </tr>
-        <tr>
-            <td>Protéines</td>
-            <td>2g</td>
-        </tr>
-    </tbody>
+  <caption>Nutrition Information (per cookie)</caption>
+  <thead>
+    <tr>
+      <th>Nutrient</th>
+      <th>Amount</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Calories</td>
+      <td>150</td>
+    </tr>
+    <tr>
+      <td>Protein</td>
+      <td>2 g</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
-## Prochaines Étapes
-Excellent travail avec le HTML sémantique ! Ensuite, nous ajouterons de jolis styles avec CSS pour rendre vos pages visuellement attrayantes.
+## Next Steps
+Great work with semantic HTML. In the next module, you will start using CSS to style your pages and make them visually engaging.
 
-## Ressources
-- [MDN : HTML Sémantique](https://developer.mozilla.org/fr/docs/Glossary/Semantics)
-- [WebAIM : Accessibilité Web](https://webaim.org/)
-- [HTML5 Doctor : Éléments Sémantiques](http://html5doctor.com/)
+## Resources
+- [MDN: HTML semantics](https://developer.mozilla.org/en-US/docs/Glossary/Semantics)
+- [WebAIM: Web accessibility](https://webaim.org/)
+- [HTML5 Doctor: Semantic elements](http://html5doctor.com/)

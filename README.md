@@ -1,145 +1,167 @@
-# Cours HTML, CSS et JavaScript 2025-2026
+# HTML, CSS and JavaScript Course 2025-2026
 
-## Vue d'ensemble du Cours
+## Course Overview
 
-Ce cours complet de 2 mois (16 sessions) est spécialement conçu pour les débutants absolus en programmation. Il transforme les apprenants en développeurs web compétents capables de créer des applications web modernes et interactives.
+This 2-month (16-session) course is designed for absolute beginners in programming. It helps learners become confident web developers able to build modern, interactive web applications.
 
-## Structure du Cours
+## Course Structure
 
-### Durée Totale
-- **2 mois** (environ 8 semaines)
-- **2 sessions par semaine**
-- **16 sessions au total**
+### Total Duration
 
-### Prérequis
-- Aucun expérience en programmation requise
-- Connaissances informatiques de base
-- Ordinateur avec navigateur web moderne
-- Éditeur VS Code (fourni gratuitement)
+- 2 months (around 8 weeks)
+- 2 sessions per week
+- 16 sessions in total
 
-## Modules du Cours
+### Prerequisites
 
-### Module 1 : Introduction au Développement Web
-- **Durée** : 1-2 sessions
-- **Objectifs** : Comprendre HTML, CSS, JavaScript et l'écosystème web
-- **Projet** : Première page web personnelle avec objectifs clairs
+- No prior programming experience required
+- Basic computer skills
+- A computer with a modern web browser
+- Visual Studio Code editor (free)
 
-### Module 2 : Structure et Sémantique HTML
-- **Durée** : 1-2 sessions
-- **Objectifs** : Éléments HTML sémantiques, accessibilité
-- **Projet** : Page de recette avec structure sémantique
+## Course Modules
 
-### Module 3 : Notions Fondamentales du CSS
-- **Durée** : 1-2 sessions
-- **Objectifs** : Couleurs, polices, espacement, sélecteurs
-- **Projet** : Page de profil stylisée
+### Module 01 - Introduction to Web Development
 
-### Module 4 : Mise en Page et Design Responsive avec CSS
-- **Durée** : 1-2 sessions
-- **Objectifs** : Flexbox, CSS Grid, design responsive
-- **Projet** : Portfolio responsive
+- Duration: 1–2 sessions
+- Objectives: Understand HTML, CSS, JavaScript, and the web ecosystem
+- Project: First personal web page with clear goals
 
-### Module 5 : Notions de Base JavaScript
-- **Durée** : 2 sessions
-- **Objectifs** : Variables, fonctions, DOM manipulation, événements
-- **Projet** : Calculateur interactif avec validation et historique
+### Module 02 - HTML Structure and Semantics
 
-### Module 6 : Fonctions et Objets JavaScript
-- **Durée** : 2 sessions
-- **Objectifs** : Objets, tableaux, classes, gestion d'erreurs
-- **Projet** : Application de gestion de tâches
+- Duration: 1–2 sessions
+- Objectives: Semantic HTML elements, accessibility basics
+- Project: Recipe page with semantic structure
 
-### Module 7 : JavaScript Avancé et APIs
-- **Durée** : 2 sessions
-- **Objectifs** : Programmation asynchrone, APIs REST, stockage local
-- **Projet** : Application météo avec API externe
+### Module 03 - CSS Fundamentals
 
-### Module 8 : Applications Web Full-Stack
-- **Durée** : 2 sessions
-- **Objectifs** : Backend Node.js, authentification, déploiement, architecture
-- **Projet** : Blog personnel complet avec authentification, commentaires et gestion d'utilisateurs
+- Duration: 1–2 sessions
+- Objectives: Colors, fonts, spacing, selectors
+- Project: Styled profile page
 
-### Module 9 : Sujets Avancés et Bonnes Pratiques
-- **Durée** : 2 sessions
-- **Objectifs** : Patterns de conception, tests, optimisation, outils de développement
-- **Projet** : Refactorisation et optimisation du blog avec tests et CI/CD
+### Module 04 - CSS Layout and Responsive Design
 
-## Méthodologie Pédagogique
+- Duration: 1–2 sessions
+- Objectives: Flexbox, CSS Grid, responsive design
+- Project: Responsive portfolio
 
-### Approche Active
-- **Pas de cours magistraux passifs**
-- **Activités pratiques dès la première session**
-- **Projets concrets à chaque module**
-- **Apprentissage par la réalisation**
+### Module 05 - JavaScript Basics
 
-### Progression Progressive
-- **Difficulté croissante** : débutant → intermédiaire → avancé
-- **Concepts fondamentaux maîtrisés avant avancés**
-- **Révision régulière des acquis**
-- **Projets de plus en plus complexes**
+- Duration: 2 sessions
+- Objectives: Variables, functions, DOM manipulation, events
+- Project: Interactive calculator with validation and history
 
-### Accompagnement Personnalisé
-- **Taille de classe réduite** (max 15 apprenants)
-- **Suivi individuel hebdomadaire**
-- **Support technique continu**
-- **Communauté d'entraide**
+### Module 06 - JavaScript Functions and Objects
 
-## Technologies et Outils
+- Duration: 2 sessions
+- Objectives: Objects, arrays, classes, error handling
+- Project: Task management application
 
-### Environnement de Développement
-- **Éditeur** : Visual Studio Code
-- **Navigateur** : Chrome/Firefox/Edge/Safari
-- **Extension** : Live Server pour VS Code
-- **Contrôle de version** : Git et GitHub
+### Module 07 - Advanced JavaScript and APIs
 
-### Technologies Apprises
-- **HTML5** : Structure sémantique et accessible
-- **CSS3** : Design moderne et responsive
-- **JavaScript ES6+** : Programmation interactive
-- **Node.js** : Développement backend
-- **APIs REST** : Communication client-serveur
+- Duration: 2 sessions
+- Objectives: Asynchronous programming, REST APIs, local storage
+- Project: Weather application using an external API
 
-## Évaluation et Certification
+### Module 08 - Full-Stack Web Applications
 
-### Évaluation Continue
-- **Exercices pratiques** à chaque session avec feedback immédiat
-- **Projets individuels** à la fin de chaque module avec critères d'évaluation clairs
-- **Participation active** en classe et révision des pairs
-- **Auto-évaluation** hebdomadaire et portfolio progressif
+- Duration: 2 sessions
+- Objectives: Node.js backend basics, authentication, deployment, architecture
+- Project: Personal blog with authentication, comments, and user management
 
-### Projet Final
-- **Application web complète** full-stack
-- **Présentation devant le groupe**
-- **Évaluation par les pairs**
-- **Feedback constructif**
+### Module 09 - Advanced Topics and Best Practices
 
-## Débouchés Professionnels
+- Duration: 2 sessions
+- Objectives: Design patterns, testing, optimization, developer tooling
+- Project: Refactoring and optimizing the blog with tests and CI/CD
 
-### Carrières Possibles
-- **Développeur Web Front-end**
-- **Intégrateur Web**
-- **Développeur Full-Stack Junior**
-- **Spécialiste UX/UI**
-- **Développeur d'Applications Web**
+## Teaching Approach
 
-## Calendrier Prévisionnel
+### Active Learning
 
-### Session 1-4 : HTML et CSS Fondamentaux
-- Semaine 1-2 : Structure et présentation web
-- Focus : Création de pages statiques élégantes
+- No passive, long theoretical lectures
+- Hands-on activities from the first session
+- Real-world projects in every module
+- Learn by building
 
-### Session 5-8 : JavaScript Interactif
-- Semaine 3-4 : Programmation et dynamisme
-- Focus : Applications web interactives
+### Progressive Difficulty
 
-### Session 9-12 : Développement Avancé
-- Semaine 5-6 : APIs et backend
-- Focus : Applications complètes
+- Gradual progression: beginner → intermediate → advanced
+- Strong foundations before advanced topics
+- Regular review of key concepts
+- Increasingly complex projects
 
-### Session 13-16 : Projet Final et Certification
-- Semaine 7-8 : Consolidation et spécialisation
-- Focus : Projet professionnel et débouchés
+### Personalized Support
 
+- Small groups (max ~15 learners)
+- Weekly individual follow-up
+- Continuous technical support
+- Peer-learning community
 
-**Prêt à commencer votre carrière en développement web ?**
-**Inscrivez-vous dès maintenant et transformez votre avenir numérique !** 🚀
+## Technologies and Tools
+
+### Development Environment
+
+- Editor: Visual Studio Code
+- Browsers: Chrome, Firefox, Edge, or Safari
+- Extension: Live Server for VS Code
+- Version control: Git and GitHub
+
+### Technologies Covered
+
+- HTML5: Semantic and accessible structure
+- CSS3: Modern and responsive design
+- JavaScript ES6+: Interactive programming
+- Node.js: Backend development basics
+- REST APIs: Client-server communication
+
+## Assessment and Certification
+
+### Continuous Assessment
+
+- Practical exercises in each session with direct feedback
+- Individual mini-projects at the end of each module with clear criteria
+- Active participation and peer review
+- Weekly self-assessment and growing portfolio
+
+### Final Project
+
+- Complete full-stack web application
+- Presentation to the group
+- Peer and instructor evaluation
+- Structured, constructive feedback
+
+## Career Opportunities
+
+### Possible Paths
+
+- Front-End Web Developer
+- Web Integrator
+- Junior Full-Stack Developer
+- UX/UI-focused Web Implementer
+- Web Application Developer
+
+## Example Schedule
+
+### Sessions 1–4: HTML and CSS Fundamentals
+
+- Weeks 1–2: Web structure and presentation
+- Focus: Building clean, static pages
+
+### Sessions 5–8: Interactive JavaScript
+
+- Weeks 3–4: Programming and interactivity
+- Focus: Dynamic, interactive web pages
+
+### Sessions 9–12: Advanced Development
+
+- Weeks 5–6: APIs and backend basics
+- Focus: More complete web applications
+
+### Sessions 13–16: Final Project and Certification
+
+- Weeks 7–8: Consolidation and specialization
+- Focus: Professional final project and portfolio
+
+**Ready to start your web development journey?**
+**Join the course and build your first real-world web applications.** 🚀
