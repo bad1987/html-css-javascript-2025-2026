@@ -1,0 +1,76 @@
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        .container {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .nav {
+            background-color: #f0f0f0;
+            padding: 10px;
+        }
+        .nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            /* Example 1: Centered navigation horizontally */
+            /* display: flex makes the ul a flex container */
+            /* justify-content: center centers the items horizontally */
+            display: flex;
+            justify-content: center;
+        }
+        .nav li {
+            margin: 0 15px;
+        }
+        .card {
+            max-width: 300px;
+            border: 1px solid #ddd;
+            padding: 10px;
+            /* Example 2: Card with image and text aligned */
+            /* display: flex aligns image and text side by side */
+            /* align-items: center vertically centers the content */
+            display: flex;
+            align-items: center;
+        }
+        .card img {
+            width: 100px;
+            height: 100px;
+            margin-right: 10px;
+        }
+        .buttons {
+            /* Example 3: Buttons aligned to the right */
+            /* display: flex makes the container a flex container */
+            /* justify-content: flex-end aligns items to the right */
+            display: flex;
+            justify-content: flex-end;
+        }
+        .buttons button {
+            margin-left: 10px;
+        }
+        .centered-content {
+            height: 200px;
+            background-color: #e0e0e0;
+            /* Example 4: Content centered both vertically and horizontally */
+            /* display: flex makes it a flex container */
+            /* justify-content: center centers horizontally */
+            /* align-items: center centers vertically */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .vertical-layout {
+            /* Example 5: Vertical layout using flex-direction: column */
+            /* display: flex makes it a flex container */
+            /* flex-direction: column stacks items vertically */
+            display: flex;
+            flex-direction: column;
+        }
+        .vertical-layout div {
+            padding: 10px;
+            border: 1px solid #aaa;
+            margin-bottom: 5px;
+        }

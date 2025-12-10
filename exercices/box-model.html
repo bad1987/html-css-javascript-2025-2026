@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model Demonstration</title>
+    <link rel="stylesheet" href="box-model.css">
+</head>
+<body>
+    <h1>CSS Box Model Demonstration</h1>
+    <p>Use browser dev tools to inspect the box model of each element below.</p>
+
+    <div class="container">
+        <!-- Box 1: Content-box example - width and height apply to content only, total width = width + padding + border -->
+        <div class="box-content-1">
+            <p>Content Box 1</p>
+            <p>Width: 200px (content), Padding: 20px, Border: 10px, Total Width: 240px</p>
+        </div>
+
+        <!-- Box 2: Another content-box example with different values -->
+        <div class="box-content-2">
+            <p>Content Box 2</p>
+            <p>Width: 150px (content), Padding: 15px, Border: 5px, Total Width: 170px</p>
+        </div>
+
+        <!-- Box 3: Border-box example - width and height include padding and border, total width = specified width -->
+        <div class="box-border-1">
+            <p>Border Box 1</p>
+            <p>Width: 200px (total), Padding: 20px, Border: 10px, Content Width: 160px</p>
+        </div>
+
+        <!-- Box 4: Another border-box example with different values -->
+        <div class="box-border-2">
+            <p>Border Box 2</p>
+            <p>Width: 150px (total), Padding: 15px, Border: 5px, Content Width: 120px</p>
+        </div>
+    </div>
+
+    <p>The key difference: content-box calculates total size as content + padding + border, while border-box includes padding and border in the specified width/height.</p>
+</body>
+</html>

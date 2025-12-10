@@ -1,0 +1,29 @@
+nav ul {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+nav ul li{
+    list-style: none;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+nav ul li a:hover{
+    border-bottom: solid;
+}
+
+.card{
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.buttons{
+    display: flex;
+    justify-content: flex-end;
+}

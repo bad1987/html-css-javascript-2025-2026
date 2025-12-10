@@ -1,0 +1,58 @@
+/* Basic reset and body styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #f0f0f0;
+}
+
+/* Container for boxes */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Box 1: Content-box example - width and height apply to content only */
+.box-content-1 {
+  box-sizing: content-box;
+  width: 200px;
+  height: 100px;
+  padding: 20px;
+  border: 10px solid #333;
+  margin: 10px;
+  background-color: #ffcccc;
+}
+
+/* Box 2: Content-box example - different padding and border */
+.box-content-2 {
+  box-sizing: content-box;
+  width: 150px;
+  height: 80px;
+  padding: 15px;
+  border: 5px solid #0066cc;
+  margin: 15px;
+  background-color: #ccffcc;
+}
+
+/* Box 3: Border-box example - width and height include padding and border */
+.box-border-1 {
+  box-sizing: border-box;
+  width: 200px;
+  height: 100px;
+  padding: 20px;
+  border: 10px solid #333;
+  margin: 10px;
+  background-color: #ccccff;
+}
+
+/* Box 4: Border-box example - different padding and border */
+.box-border-2 {
+  box-sizing: border-box;
+  width: 150px;
+  height: 80px;
+  padding: 15px;
+  border: 5px solid #cc6600;
+  margin: 15px;
+  background-color: #ffffcc;
+}

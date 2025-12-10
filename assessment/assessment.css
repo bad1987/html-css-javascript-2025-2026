@@ -1,0 +1,242 @@
+/* Task Manager - Complete CSS */
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    /* 
+    TODO:
+    Add the following styles to the header:
+    - Text align center
+    - Margin bottom 30px
+    - Padding 30px
+    - Background rgba(255, 255, 255, 0.95)
+    */
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+/* 
+    TODO:
+    Add the following styles to the h1 inside the header:
+    - Color #4a5568
+    - Font size 2.5rem
+    - Margin bottom 10px
+    - Font weight 700
+*/
+
+header p {
+    color: #718096;
+    font-size: 1.1rem;
+}
+
+/* Main content */
+/* 
+    TODO:
+    Add the following styles to the main:
+    - Max width 800px
+    - Margin auto
+    - Display grid
+    - Gap 30px
+ */
+main {
+    /* Add your styles here */
+}
+
+/* Sections */
+/* 
+    TODO:
+    Style all section elements with the following styles:
+    - Background rgba(255, 255, 255, 0.95)
+    - Padding 30px
+    - Border radius 15px
+    - Box shadow 0 8px 32px rgba(0, 0, 0, 0.1)
+    - Backdrop filter blur(10px)
+ */
+
+/* 
+    TODO:
+    Style all h2 elements inside a section with the following styles:
+    - Color should be #4a5568
+    - Margin bottom 20px
+    - Font size 1.8rem
+    - Font weight 600
+*/
+
+/* Task form */
+#task-form {
+    /* TODO: use the flexbox layout to arrange the form elements in a column with a gap of 15px */
+    /* Add your styles here */
+}
+
+#task-form label {
+    font-weight: 600;
+    color: #4a5568;
+    font-size: 1rem;
+}
+
+#task-form input {
+    padding: 15px;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: #f8fafc;
+}
+
+#task-form input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    background: white;
+}
+
+#task-form button {
+    /* 
+        TODO: remove the border from the button and add
+        a vertical padding of 15px and a horizontal padding of 30px
+    */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+}
+
+#task-form button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+}
+
+#task-form button:active {
+    transform: translateY(0);
+}
+
+/* Task list */
+#task-list {
+    list-style: none;
+    display: grid;
+    gap: 15px;
+}
+
+#task-list li {
+    /* 
+        TODO: use flexbox to arrange the task text and actions
+        in a row with space between them and centered vertically
+        change the border color to #e2e8f0
+    */
+    padding: 20px;
+    background: #f8fafc;
+    border: 2px solid #adc3df;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#task-list li:hover {
+    border-color: #667eea;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+}
+
+#task-list li.completed {
+    background: #f0f9ff;
+    border-color: #10b981;
+    opacity: 0.8;
+}
+
+#task-list li.completed .task-text {
+    text-decoration: line-through;
+    color: #64748b;
+}
+
+.task-text {
+    flex: 1;
+    font-size: 1.1rem;
+    color: #374151;
+    margin-right: 15px;
+}
+
+.task-actions {
+    /* 
+        TODO: use flexbox to arrange the buttons in a row with a gap of 10px
+    */
+}
+
+.task-actions button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.complete-btn {
+    background: #10b981;
+    color: white;
+}
+
+.complete-btn:hover {
+    background: #059669;
+    transform: translateY(-1px);
+}
+
+.delete-btn {
+    background: #ef4444;
+    color: white;
+}
+
+.delete-btn:hover {
+    background: #dc2626;
+    transform: translateY(-1px);
+}
+
+/* Empty state */
+#task-list:empty::after {
+    content: "No tasks yet. Add one above!";
+    color: #9ca3af;
+    font-style: italic;
+    text-align: center;
+    padding: 40px;
+    display: block;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+}
